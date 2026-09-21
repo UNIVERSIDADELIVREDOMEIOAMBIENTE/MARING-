@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Campo IAM · Maringá</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* ─── Leaflet 1.9.4 (inlined — Artifact CSP) ─────────────── */
+.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer{position:absolute;left:0;top:0}
+.leaflet-container{overflow:hidden;-webkit-tap-highlight-color:transparent}
+.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow{-webkit-user-select:none;user-select:none;-webkit-user-drag:none}
+.leaflet-tile::selection{background:transparent}
+.leaflet-marker-icon,.leaflet-marker-shadow{display:block}
+.leaflet-container .leaflet-overlay-pane svg,.leaflet-container .leaflet-marker-pane img,.leaflet-container .leaflet-shadow-pane img,.leaflet-container .leaflet-tile-pane img,.leaflet-container img.leaflet-image-layer,.leaflet-container .leaflet-layer img:not(.leaflet-tile){max-width:none!important;max-height:none!important}
+.leaflet-container.leaflet-touch-zoom{touch-action:pan-x pan-y}
+.leaflet-container.leaflet-touch-drag{touch-action:none;-webkit-touch-callout:none}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom{touch-action:none}
+.leaflet-tile{filter:inherit;visibility:hidden}
+.leaflet-tile-loaded{visibility:inherit}
+.leaflet-zoom-box{width:0;height:0;box-sizing:border-box;z-index:800}
+.leaflet-pane{z-index:400}.leaflet-tile-pane{z-index:200}.leaflet-overlay-pane{z-index:400}
+.leaflet-shadow-pane{z-index:500}.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}
+.leaflet-popup-pane{z-index:700}.leaflet-map-pane canvas{z-index:100}.leaflet-map-pane svg{z-index:200}
+.leaflet-control{position:relative;z-index:800;pointer-events:auto}
+.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}
+.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}
+.leaflet-control{float:left;clear:both}.leaflet-right .leaflet-control{float:right}
+.leaflet-top .leaflet-control{margin-top:10px}.leaflet-bottom .leaflet-control{margin-bottom:10px}
+.leaflet-left .leaflet-control{margin-left:10px}.leaflet-right .leaflet-control{margin-right:10px}
+.leaflet-fade-anim .leaflet-popup{opacity:0;transition:opacity .2s linear}
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup{opacity:1}
+.leaflet-zoom-animated{transform-origin:0 0}
+.leaflet-zoom-anim .leaflet-zoom-animated{transition:transform .25s cubic-bezier(0,0,.25,1)}
+.leaflet-zoom-anim .leaflet-tile,.leaflet-pan-anim .leaflet-tile{transition:none}
+.leaflet-interactive{cursor:pointer}.leaflet-grab{cursor:grab}
+.leaflet-crosshair,.leaflet-crosshair .leaflet-interactive{cursor:crosshair}
+.leaflet-popup-pane,.leaflet-control{cursor:auto}
+.leaflet-dragging .leaflet-grab,.leaflet-dragging .leaflet-grab .leaflet-interactive,.leaflet-dragging .leaflet-marker-draggable{cursor:grabbing}
+.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-image-layer,.leaflet-pane>svg path,.leaflet-tile-container{pointer-events:none}
+.leaflet-marker-icon.leaflet-interactive,.leaflet-image-layer.leaflet-interactive,.leaflet-pane>svg path.leaflet-interactive,path.leaflet-interactive{pointer-events:auto}
+.leaflet-container{background:#ddd;font-family:system-ui,sans-serif;font-size:12px;line-height:1.5}
+.leaflet-container a{color:#0078A8}
+.leaflet-zoom-box{border:2px dotted #38f;background:rgba(255,255,255,.5)}
+.leaflet-bar{box-shadow:0 1px 5px rgba(0,0,0,.65);border-radius:4px}
+.leaflet-bar a,.leaflet-bar a:hover,.leaflet-bar a:focus{background-color:#fff;border-bottom:1px solid #ccc;width:26px;height:26px;line-height:26px;display:block;text-align:center;text-decoration:none;color:#000}
+.leaflet-bar a:hover,.leaflet-bar a:focus{background-color:#f4f4f4}
+.leaflet-bar a:first-child{border-top-left-radius:4px;border-top-right-radius:4px}
+.leaflet-bar a:last-child{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom:none}
+.leaflet-bar a.leaflet-disabled{cursor:default;background-color:#f4f4f4;color:#bbb}
+.leaflet-control-zoom-in,.leaflet-control-zoom-out{font:bold 18px/26px Lucida Console,Monaco,monospace;text-indent:1px}
+.leaflet-control-attribution{background:rgba(255,255,255,.8);margin:0;padding:0 5px}
+.leaflet-control-attribution a{text-decoration:none}
+.leaflet-control-scale-line{border:2px solid #777;border-top:none;line-height:1.1;padding:2px 5px 1px;font-size:11px;white-space:nowrap;overflow:hidden;box-sizing:border-box;background:rgba(255,255,255,.8)}
+.leaflet-popup{position:absolute;text-align:center;margin-bottom:20px}
+.leaflet-popup-content-wrapper{padding:1px;text-align:left;border-radius:12px}
+.leaflet-popup-content{margin:13px 20px 13px 16px;line-height:1.3;font-size:13px;min-height:1px}
+.leaflet-popup-content p{margin:1.3em 0}
+.leaflet-popup-tip-container{width:40px;height:20px;position:absolute;left:50%;margin-left:-20px;overflow:hidden;pointer-events:none}
+.leaflet-popup-tip{width:17px;height:17px;padding:1px;margin:-10px auto 0;pointer-events:auto;transform:rotate(45deg)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#fff;color:#333;box-shadow:0 3px 14px rgba(0,0,0,.4)}
+.leaflet-container a.leaflet-popup-close-button{position:absolute;top:0;right:0;border:none;text-align:center;width:24px;height:24px;font:16px/24px Tahoma,Verdana,sans-serif;color:#757575;text-decoration:none;background:transparent}
+.leaflet-container a.leaflet-popup-close-button:hover{color:#333}
+.leaflet-tooltip{position:absolute;padding:6px;background-color:#fff;border:1px solid #fff;border-radius:3px;color:#222;white-space:nowrap;user-select:none;pointer-events:none;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+
+/* ─── Tokens ──────────────────────────────────────────────── */
+:root{
+  --green:#1A9B6C;--green-dk:#107A50;--green-lt:#E4F5EE;
+  --amber:#C87F00;--amber-lt:#FEF3C7;
+  --red:#DC2626;--red-lt:#FEE2E2;
+  --gray:#6B7280;--gray-lt:#F3F4F6;
+  --blue:#2563EB;--teal:#0E7490;--purple:#7C3AED;
+  --bg:#FFFFFF;--surface:#F7F9F8;--border:#E2E8E4;
+  --text:#111827;--text-2:#374151;--text-muted:#6B7280;
+  --sidebar-w:320px;--header-h:50px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1A14;--surface:#1A2820;--border:#2A3D34;--text:#F0F5F2;
+  --text-2:#C4D4CB;--text-muted:#7A9B8A;--gray-lt:#1F2C25;
+  --green-lt:#0D2A1E;--amber-lt:#2A1E00;--red-lt:#2A0A0A;
+}}
+:root[data-theme="dark"]{
+  --bg:#0F1A14;--surface:#1A2820;--border:#2A3D34;--text:#F0F5F2;
+  --text-2:#C4D4CB;--text-muted:#7A9B8A;--gray-lt:#1F2C25;
+  --green-lt:#0D2A1E;--amber-lt:#2A1E00;--red-lt:#2A0A0A;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);
+  display:grid;grid-template-rows:var(--header-h) 1fr}
+
+/* ─── Header ─────────────────────────────────────────────── */
+header{background:var(--green);color:#fff;display:flex;align-items:center;
+  padding:0 14px;gap:10px;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.logo{width:28px;height:28px;background:rgba(255,255,255,.2);border-radius:6px;
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0}
+header h1{font-size:14px;font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hbtn{background:rgba(255,255,255,.15);border:none;color:#fff;border-radius:6px;
+  padding:5px 11px;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:4px}
+.hbtn:hover{background:rgba(255,255,255,.25)}
+.hsep{width:1px;height:20px;background:rgba(255,255,255,.25)}
+
+/* ─── Layout ─────────────────────────────────────────────── */
+.main{display:grid;grid-template-columns:var(--sidebar-w) 1fr;overflow:hidden}
+
+/* ─── Sidebar ─────────────────────────────────────────────── */
+.sidebar{background:var(--surface);border-right:1px solid var(--border);
+  display:flex;flex-direction:column;overflow:hidden}
+.sb-scroll{flex:1;overflow-y:auto;padding:12px 14px 20px;scroll-behavior:smooth}
+.sb-scroll::-webkit-scrollbar{width:4px}
+.sb-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.stitle{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--text-muted);margin:14px 0 8px}
+.stitle:first-child{margin-top:0}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.scard{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.scard .v{font-size:22px;font-weight:700;line-height:1}
+.scard .l{font-size:11px;color:var(--text-muted);margin-top:2px}
+
+/* Phase bars */
+.prow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.pname{font-size:12px;color:var(--text-2);flex:1;min-width:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pbar{flex:1.4;height:5px;background:var(--border);border-radius:3px;overflow:hidden}
+.pfill{height:100%;background:var(--green);border-radius:3px;transition:width .4s}
+.ppct{font-size:11px;color:var(--text-muted);width:28px;text-align:right}
+
+/* Layer toggles */
+.layer-row{display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer}
+.layer-row:hover .llabel{color:var(--green)}
+.layer-row input[type=checkbox]{width:14px;height:14px;accent-color:var(--green);cursor:pointer;flex-shrink:0}
+.llabel{font-size:12px;color:var(--text-2);flex:1;user-select:none}
+.lcount{font-size:11px;color:var(--text-muted);background:var(--border);
+  border-radius:10px;padding:1px 7px}
+
+/* Records */
+.reccard{background:var(--bg);border:1px solid var(--border);border-radius:8px;
+  padding:9px 12px;cursor:pointer;margin-bottom:6px;transition:border-color .15s}
+.reccard:hover{border-color:var(--green)}
+.rectop{display:flex;align-items:center;gap:6px;margin-bottom:2px}
+.recdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.recaddr{font-size:13px;font-weight:500;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.recmeta{font-size:11px;color:var(--text-muted)}
+.recphase{font-size:11px;background:var(--green-lt);color:var(--green-dk);
+  border-radius:4px;padding:1px 6px}
+
+/* Search */
+.sbox{position:relative;margin-bottom:0}
+.sinput{width:100%;border:1px solid var(--border);border-radius:8px;
+  background:var(--bg);color:var(--text);font-size:13px;padding:8px 34px 8px 10px;
+  outline:none;font-family:inherit}
+.sinput:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(26,155,108,.12)}
+.sspin{position:absolute;right:9px;top:50%;transform:translateY(-50%);
+  width:14px;height:14px;border:2px solid var(--border);border-top-color:var(--green);
+  border-radius:50%;animation:spin .6s linear infinite;display:none}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+.sres{position:absolute;z-index:1100;width:100%;background:var(--bg);
+  border:1px solid var(--border);border-radius:8px;
+  box-shadow:0 4px 18px rgba(0,0,0,.12);margin-top:4px;
+  max-height:220px;overflow-y:auto;display:none}
+.sresitem{padding:9px 12px;cursor:pointer;font-size:13px;
+  border-bottom:1px solid var(--border);color:var(--text-2)}
+.sresitem:last-child{border-bottom:none}
+.sresitem:hover{background:var(--green-lt);color:var(--green-dk)}
+
+/* Note */
+.note{background:var(--amber-lt);border:1px solid var(--amber);border-radius:8px;
+  padding:9px 12px;font-size:12px;color:#854D0E;margin-bottom:12px;line-height:1.5}
+.note strong{display:block;margin-bottom:2px;font-size:12px}
+
+/* ─── Map ─────────────────────────────────────────────────── */
+.mapwrap{position:relative;display:flex;flex-direction:column}
+#map{flex:1}
+
+/* Floating legend */
+.flegend{position:absolute;top:12px;right:12px;z-index:900;
+  background:var(--bg);border:1px solid var(--border);border-radius:10px;
+  padding:10px 14px;box-shadow:0 2px 14px rgba(0,0,0,.12);font-size:11px;min-width:200px}
+.fleg-title{font-weight:700;font-size:12px;color:var(--text);display:flex;align-items:center;gap:6px}
+.fleg-toggle{background:none;border:none;color:var(--text-muted);cursor:pointer;
+  font-size:11px;margin-left:auto;padding:2px 4px;border-radius:4px}
+.fleg-toggle:hover{background:var(--gray-lt)}
+.fleg-section{font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--text-muted);margin:8px 0 4px}
+.fleg-row{display:flex;align-items:center;gap:7px;margin-bottom:4px;color:var(--text-2)}
+.lsym{width:16px;height:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* Mode bar */
+.modebar{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+  z-index:900;display:flex;gap:3px;background:var(--bg);border:1px solid var(--border);
+  border-radius:24px;padding:4px 6px;box-shadow:0 2px 14px rgba(0,0,0,.12)}
+.mbtn{border:none;background:none;padding:6px 14px;border-radius:18px;font-size:12px;
+  font-weight:500;cursor:pointer;color:var(--text-muted);transition:all .15s}
+.mbtn.on{background:var(--green);color:#fff}
+.mbtn:hover:not(.on){background:var(--gray-lt);color:var(--text)}
+
+/* ─── Modal ───────────────────────────────────────────────── */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:2000;
+  display:none;align-items:center;justify-content:center;padding:16px}
+.overlay.open{display:flex}
+.modal{background:var(--bg);border-radius:14px;width:100%;max-width:500px;
+  max-height:90dvh;display:flex;flex-direction:column;box-shadow:0 16px 50px rgba(0,0,0,.25)}
+.mhead{padding:16px 18px 12px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:8px}
+.mhead h2{font-size:15px;font-weight:700;flex:1}
+.mclose{background:none;border:none;cursor:pointer;color:var(--text-muted);
+  font-size:20px;line-height:1;padding:2px 6px;border-radius:6px}
+.mclose:hover{background:var(--gray-lt)}
+.mbody{padding:16px 18px;overflow-y:auto;flex:1}
+.mfoot{padding:12px 18px;border-top:1px solid var(--border);
+  display:flex;justify-content:flex-end;gap:8px}
+.fg{margin-bottom:13px}
+.fg label{display:block;font-size:11px;font-weight:600;color:var(--text-2);margin-bottom:4px}
+.fg input,.fg select,.fg textarea{width:100%;border:1px solid var(--border);border-radius:7px;
+  padding:7px 9px;font-size:13px;background:var(--bg);color:var(--text);font-family:inherit;outline:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  border-color:var(--green);box-shadow:0 0 0 3px rgba(26,155,108,.12)}
+.fg textarea{resize:vertical;min-height:65px}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pstrip{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}
+.pthumb{width:56px;height:56px;object-fit:cover;border-radius:6px;border:2px solid var(--border);cursor:pointer}
+.padd{width:56px;height:56px;border:2px dashed var(--border);border-radius:6px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  color:var(--text-muted);font-size:22px;background:var(--gray-lt)}
+.padd:hover{border-color:var(--green);color:var(--green)}
+.izone{border:2px dashed var(--border);border-radius:10px;padding:26px 18px;
+  text-align:center;cursor:pointer;transition:all .15s;color:var(--text-muted)}
+.izone:hover,.izone.drag{border-color:var(--green);color:var(--green);background:var(--green-lt)}
+.izone .big{font-size:30px}
+.izone p{font-size:13px;margin-top:6px}
+.btn{padding:8px 18px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:none;transition:all .15s}
+.btn-p{background:var(--green);color:#fff}.btn-p:hover{background:var(--green-dk)}
+.btn-o{background:transparent;border:1px solid var(--border);color:var(--text-2)}.btn-o:hover{background:var(--gray-lt)}
+.btn-d{background:var(--red-lt);color:var(--red);border:1px solid transparent}.btn-d:hover{background:var(--red);color:#fff}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:#1F2937;color:#fff;padding:9px 18px;border-radius:20px;font-size:12px;
+  z-index:9999;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">IAM</div>
+  <h1>Maringá · Contrato 007/2025 · UNILIVRE</h1>
+  <button class="hbtn" onclick="openImport()">⬆ Importar</button>
+  <div class="hsep"></div>
+  <button class="hbtn" onclick="exportCSV()">⬇ CSV</button>
+  <div class="hsep"></div>
+  <button class="hbtn" onclick="toggleTheme()">◑</button>
+</header>
+
+<div class="main">
+  <!-- sidebar -->
+  <aside class="sidebar">
+    <div class="sb-scroll">
+
+      <div class="note">
+        <strong>⚠ Dados por dispositivo</strong>
+        Registros ficam no navegador local. Para compartilhar com a Prefeitura, use <em>Exportar CSV</em>.
+      </div>
+
+      <!-- search -->
+      <div class="stitle" style="margin-top:0">Buscar logradouro</div>
+      <div class="sbox">
+        <input id="sinp" class="sinput" type="text" placeholder="Rua, avenida… Maringá" autocomplete="off"
+          oninput="onSearchInput()" onkeydown="if(event.key==='Enter')doSearch()">
+        <div class="sspin" id="sspin"></div>
+        <div class="sres" id="sres"></div>
+      </div>
+
+      <!-- stats -->
+      <div class="stitle">Resumo do projeto</div>
+      <div class="stats" id="statsEl"></div>
+
+      <!-- phases -->
+      <div class="stitle">Progresso por etapa</div>
+      <div id="phaseEl"></div>
+
+      <!-- layer toggles -->
+      <div class="stitle">Meta 01 — Estabilidade de Encostas</div>
+      <div id="layersM01El"></div>
+      <div class="stitle">Meta 03 — Microdrenagem Urbana</div>
+      <div id="layersM03El"></div>
+      <div class="stitle">Base Cartográfica</div>
+      <div id="layersBaseEl"></div>
+      <div class="stitle">Registros de campo</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div id="layersCampoEl" style="flex:1"></div>
+        <button class="btn btn-p" style="padding:4px 10px;font-size:11px;margin-left:8px" onclick="openForm(null)">+ Novo</button>
+      </div>
+      <div id="recList"></div>
+    </div>
+  </aside>
+
+  <!-- map -->
+  <div class="mapwrap">
+    <div id="map"></div>
+
+    <!-- floating legend -->
+    <div class="flegend" id="flegend">
+      <div class="fleg-title">
+        Legenda
+        <button class="fleg-toggle" id="flegtoggle" onclick="toggleLegend()">▲</button>
+      </div>
+      <div id="flegbody">
+        <div class="fleg-section">Meta 01 — Estabilidade</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="14"><rect x="1" y="1" width="12" height="12" fill="rgba(200,127,0,.15)" stroke="#C87F00" stroke-width="2" stroke-dasharray="4,2"/></svg></div>Áreas LIDER (16)</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="14"><polygon points="7,1 13,7 7,13 1,7" fill="#DC2626" stroke="white" stroke-width="1.2"/><circle cx="7" cy="7" r="2" fill="white"/></svg></div>Prioridade Erosão (30 mapeados / 50 total)</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#1D4ED8" stroke="white" stroke-width="1.2"/><line x1="7" y1="2" x2="7" y2="12" stroke="white" stroke-width="1.2"/></svg></div>Sondagem SPT/SM (55)</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="14"><rect x="1" y="1" width="12" height="12" rx="2" fill="#D97706" stroke="white" stroke-width="1.2"/></svg></div>Caract. Solo AI (14)</div>
+        <div class="fleg-section">Meta 03 — Microdrenagem</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="14"><rect x="1" y="1" width="12" height="12" fill="rgba(249,115,22,.2)" stroke="#F97316" stroke-width="2" stroke-dasharray="3,2"/></svg></div>Áreas Prioritárias (37)</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="14"><polygon points="7,1 13,7 7,13 1,7" fill="#059669" stroke="white" stroke-width="1.2"/></svg></div>Seções concluídas (86)</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="14"><polygon points="7,1 13,7 7,13 1,7" fill="none" stroke="#9CA3AF" stroke-width="2"/></svg></div>Seções pendentes (28)</div>
+        <div class="fleg-section">Base Cartográfica</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="14"><rect x="1" y="1" width="12" height="12" fill="rgba(14,116,144,.1)" stroke="#0E7490" stroke-width="2"/></svg></div>Subbacias IAM (18)</div>
+        <div class="fleg-row"><div class="lsym"><svg width="14" height="5"><line x1="0" y1="2.5" x2="14" y2="2.5" stroke="#2563EB" stroke-width="3"/></svg></div>Hidrografia (285)</div>
+        <div class="fleg-section">Campo Geral</div>
+        <div class="fleg-row"><div class="lsym"><svg width="11" height="15"><path d="M5.5 0C2.46 0 0 2.46 0 5.5C0 9.63 5.5 15 5.5 15S11 9.63 11 5.5C11 2.46 8.54 0 5.5 0Z" fill="#1A9B6C"/></svg></div>Concluído</div>
+        <div class="fleg-row"><div class="lsym"><svg width="11" height="15"><path d="M5.5 0C2.46 0 0 2.46 0 5.5C0 9.63 5.5 15 5.5 15S11 9.63 11 5.5C11 2.46 8.54 0 5.5 0Z" fill="#C87F00"/></svg></div>Em andamento</div>
+        <div class="fleg-row"><div class="lsym"><svg width="11" height="15"><path d="M5.5 0C2.46 0 0 2.46 0 5.5C0 9.63 5.5 15 5.5 15S11 9.63 11 5.5C11 2.46 8.54 0 5.5 0Z" fill="#DC2626"/></svg></div>Problema</div>
+      </div>
+    </div>
+
+    <!-- mode bar -->
+    <div class="modebar">
+      <button class="mbtn on" id="mbview" onclick="setMode('view')">👁 Visualizar</button>
+      <button class="mbtn"    id="mbpin"  onclick="setMode('pin')">📍 Marcar ponto</button>
+    </div>
+  </div>
+</div>
+
+<!-- record modal -->
+<div class="overlay" id="formOverlay">
+  <div class="modal">
+    <div class="mhead">
+      <h2 id="formTitle">Novo registro</h2>
+      <button class="mclose" onclick="closeForm()">×</button>
+    </div>
+    <div class="mbody">
+      <input type="hidden" id="fId">
+      <div class="fg2">
+        <div class="fg"><label>Latitude</label><input id="fLat" type="number" step="any"></div>
+        <div class="fg"><label>Longitude</label><input id="fLng" type="number" step="any"></div>
+      </div>
+      <div class="fg2">
+        <div class="fg"><label>Logradouro</label><input id="fRua" placeholder="Ex.: Rua das Flores"></div>
+        <div class="fg"><label>Bairro</label><input id="fBairro" placeholder="Ex.: Zona 01"></div>
+      </div>
+      <div class="fg2">
+        <div class="fg"><label>Etapa</label>
+          <select id="fFase">
+            <option value="diagnostico">Diagnóstico</option>
+            <option value="topografia">Topografia</option>
+            <option value="hidrologico">Hidrológico</option>
+            <option value="plano">Plano de Ação</option>
+            <option value="relatorio">Relatório Final</option>
+          </select>
+        </div>
+        <div class="fg"><label>Status</label>
+          <select id="fStatus">
+            <option value="concluido">Concluído</option>
+            <option value="em_andamento">Em andamento</option>
+            <option value="nao_iniciado">Não iniciado</option>
+            <option value="problema">Problema</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg"><label>Atividade</label><input id="fAtiv" placeholder="Descreva a atividade realizada"></div>
+      <div class="fg2">
+        <div class="fg"><label>Técnico</label><input id="fTec" placeholder="Nome"></div>
+        <div class="fg"><label>Data</label><input id="fData" type="date"></div>
+      </div>
+      <div class="fg"><label>Observações</label><textarea id="fObs"></textarea></div>
+      <div class="fg"><label>Fotos (máx. 5)</label>
+        <div class="pstrip" id="pstrip">
+          <div class="padd" onclick="document.getElementById('photoInp').click()">+</div>
+        </div>
+        <input type="file" id="photoInp" accept="image/*" multiple style="display:none" onchange="addPhotos(this)">
+      </div>
+    </div>
+    <div class="mfoot">
+      <button class="btn btn-d" id="delBtn" onclick="deleteRec()" style="display:none;margin-right:auto">Excluir</button>
+      <button class="btn btn-o" onclick="closeForm()">Cancelar</button>
+      <button class="btn btn-p" onclick="saveRec()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- import modal -->
+<div class="overlay" id="importOverlay">
+  <div class="modal" style="max-width:440px">
+    <div class="mhead">
+      <h2>Importar dados geoespaciais</h2>
+      <button class="mclose" onclick="closeImport()">×</button>
+    </div>
+    <div class="mbody">
+      <p style="font-size:13px;color:var(--text-2);margin-bottom:12px">
+        Arraste ou selecione um arquivo <strong>GeoJSON</strong> ou <strong>CSV</strong>
+        (colunas: <code>lat</code>, <code>lng</code>, <code>name</code>).
+      </p>
+      <div class="izone" id="izone"
+        onclick="document.getElementById('ifile').click()"
+        ondragover="event.preventDefault();this.classList.add('drag')"
+        ondragleave="this.classList.remove('drag')"
+        ondrop="handleDrop(event)">
+        <div class="big">📂</div>
+        <p>Clique ou arraste aqui</p>
+        <p style="font-size:11px;margin-top:3px">.geojson · .json · .csv</p>
+      </div>
+      <input type="file" id="ifile" accept=".geojson,.json,.csv" style="display:none" onchange="handleIFile(this)">
+      <div id="iresult" style="margin-top:12px;font-size:13px"></div>
+      <div id="ilayerrow" style="display:none;margin-top:10px">
+        <div class="fg"><label>Camada de destino</label>
+          <select id="ilayer">
+            <option value="prio_erosao">Prioridade Erosão (Meta 01)</option>
+            <option value="campo">Registro de campo</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="mfoot">
+      <button class="btn btn-o" onclick="closeImport()">Fechar</button>
+      <button class="btn btn-p" id="iconfirm" onclick="confirmImport()" style="display:none">Importar</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+/* ═══════════ LAYER DEFINITIONS ═══════════ */
+const LDEFS = {
+  lider_areas:  {label:'Áreas LIDER',       color:'#C87F00', type:'polygon'},
+  prio_erosao:  {label:'Prioridade Erosão',  color:'#DC2626', type:'point'},
+  subbacias:    {label:'Subbacias IAM',      color:'#0E7490', type:'polygon'},
+  hidrografia:  {label:'Hidrografia',        color:'#2563EB', type:'line'},
+  campo:        {label:'Registros campo',    color:null,       type:'point'},
+  sond_spt:     {label:'Sondagem SPT/SM',    color:'#1D4ED8', type:'point'},
+  sond_ai:      {label:'Caract. Solo (AI)',  color:'#D97706', type:'point'},
+  areas_prio:   {label:'Cadastro Microdrenagem', color:'#F97316', type:'polygon'},
+  sec_feito:    {label:'Seção (concluída)',  color:'#059669', type:'point'},
+  sec_pend:     {label:'Seção (pendente)',   color:'#9CA3AF', type:'point'},
+};
+
+/* ═══════════ REAL KMZ DATA ═══════════ */
+const PRIO_TOTAL = 50; // total de pontos de erosão previstos
+const DATA_LIDER = [{"name":"Área de Erosão 6","coords":[[-23.402306,-51.931895],[-23.40155,-51.934337],[-23.399005,-51.935819],[-23.397548,-51.938833],[-23.396958,-51.941983],[-23.399186,-51.941958],[-23.397174,-51.947638],[-23.393983,-51.945287],[-23.390982,-51.945521],[-23.390269,-51.94511],[-23.389906,-51.944328],[-23.39026,-51.943101],[-23.393287,-51.942304],[-23.395902,-51.939305],[-23.397279,-51.935296],[-23.399855,-51.932476],[-23.402306,-51.931895]]},{"name":"Área de Erosão 8","coords":[[-23.38637,-51.947078],[-23.386036,-51.947732],[-23.384184,-51.948303],[-23.382591,-51.948403],[-23.382014,-51.94772],[-23.382377,-51.946882],[-23.385257,-51.945924],[-23.386077,-51.946203],[-23.38637,-51.947078]]},{"name":"Área de Erosão 9","coords":[[-23.402708,-51.968208],[-23.402128,-51.969219],[-23.3993,-51.967992],[-23.397441,-51.966664],[-23.397389,-51.965578],[-23.398483,-51.96517],[-23.402326,-51.967355],[-23.402708,-51.968208]]},{"name":"Área de Erosão 10","coords":[[-23.419493,-51.984248],[-23.42011,-51.982862],[-23.424399,-51.978361],[-23.426423,-51.978702],[-23.427147,-51.98078],[-23.422472,-51.988697],[-23.421104,-51.997181],[-23.420204,-51.999557],[-23.41869,-52.000995],[-23.417145,-51.999689],[-23.419493,-51.984248]]},{"name":"Área de Erosão 21","coords":[[-23.409012,-51.964373],[-23.410579,-51.963311],[-23.41221,-51.963018],[-23.412586,-51.964202],[-23.410926,-51.965564],[-23.404954,-51.967137],[-23.404319,-51.966843],[-23.404631,-51.966016],[-23.40715,-51.965342],[-23.407651,-51.964528],[-23.409012,-51.964373]]},{"name":"Área de Erosão 22","coords":[[-23.405742,-51.949155],[-23.403993,-51.948998],[-23.404246,-51.948047],[-23.410462,-51.948715],[-23.412367,-51.948357],[-23.413175,-51.948941],[-23.413329,-51.949775],[-23.41222,-51.950832],[-23.408643,-51.949584],[-23.405742,-51.949155]]},{"name":"Área de Erosão 23","coords":[[-23.411653,-51.919179],[-23.409013,-51.916861],[-23.408346,-51.918112],[-23.407757,-51.917871],[-23.408277,-51.916028],[-23.408051,-51.91512],[-23.405553,-51.911438],[-23.403958,-51.90807],[-23.400066,-51.907254],[-23.399175,-51.908956],[-23.399521,-51.907101],[-23.397698,-51.906867],[-23.397273,-51.90629],[-23.397462,-51.905591],[-23.400109,-51.905535],[-23.401061,-51.903845],[-23.400797,-51.905757],[-23.404873,-51.906691],[-23.410632,-51.906578],[-23.41085,-51.907333],[-23.410463,-51.907824],[-23.405989,-51.908391],[-23.408444,-51.913453],[-23.409031,-51.913891],[-23.409341,-51.913478],[-23.40981,-51.913872],[-23.40954,-51.914611],[-23.410608,-51.915757],[-23.413055,-51.91698],[-23.413108,-51.918512],[-23.411653,-51.919179]]},{"name":"Área de Erosão 0","coords":[[-23.401151,-51.899481],[-23.400757,-51.900439],[-23.399857,-51.90064],[-23.391433,-51.89752],[-23.391148,-51.896869],[-23.392159,-51.896434],[-23.39679,-51.898044],[-23.400333,-51.89859],[-23.401151,-51.899481]]},{"name":"19","coords":[[-23.371841,-51.929258],[-23.372519,-51.930352],[-23.373974,-51.930971],[-23.37467,-51.93107],[-23.375645,-51.930105],[-23.375378,-51.929396],[-23.373149,-51.928172],[-23.372589,-51.924691],[-23.371187,-51.92476],[-23.371841,-51.929258]]},{"name":"15","coords":[[-23.410046,-51.899338],[-23.41025,-51.900405],[-23.411211,-51.900257],[-23.41106,-51.899109],[-23.410046,-51.899338]]},{"name":"17","coords":[[-23.447567,-51.937748],[-23.447381,-51.939047],[-23.448632,-51.939326],[-23.44889,-51.93797],[-23.448317,-51.93755],[-23.447567,-51.937748]]},{"name":"21","coords":[[-23.440641,-51.944547],[-23.440406,-51.946013],[-23.441039,-51.946465],[-23.441464,-51.944916],[-23.440641,-51.944547]]},{"name":"25","coords":[[-23.453415,-51.969881],[-23.453424,-51.97082],[-23.454445,-51.971877],[-23.455216,-51.972044],[-23.455902,-51.971582],[-23.456092,-51.970665],[-23.455601,-51.96989],[-23.45421,-51.969363],[-23.453415,-51.969881]]},{"name":"12","coords":[[-23.411493,-51.965752],[-23.411487,-51.965217],[-23.409991,-51.965926],[-23.410557,-51.966455],[-23.414083,-51.968116],[-23.414087,-51.966793],[-23.411493,-51.965752]]},{"name":"23","coords":[[-23.411809,-51.994533],[-23.411553,-51.996118],[-23.41224,-51.996622],[-23.412963,-51.996511],[-23.413493,-51.99582],[-23.413364,-51.994826],[-23.412677,-51.994322],[-23.411809,-51.994533]]},{"name":"26-27","coords":[[-23.432593,-51.927173],[-23.438071,-51.922703],[-23.437195,-51.921544],[-23.432007,-51.925848],[-23.431559,-51.924223],[-23.42996,-51.926155],[-23.428716,-51.92675],[-23.423352,-51.927898],[-23.422901,-51.93148],[-23.424791,-51.933264],[-23.427701,-51.933088],[-23.433617,-51.928787],[-23.432593,-51.927173]]}];
+const DATA_SUB = [{"name":"Subbacia 1","coords":[[-23.426599,-51.883624],[-23.416023,-51.877402],[-23.41505,-51.870524],[-23.415674,-51.864462],[-23.415321,-51.862144],[-23.412951,-51.858364],[-23.410387,-51.848867],[-23.409269,-51.846836],[-23.406078,-51.844497],[-23.406908,-51.841639],[-23.406327,-51.840109],[-23.40365,-51.8409],[-23.402387,-51.840496],[-23.399788,-51.842369],[-23.397876,-51.842311],[-23.396466,-51.842942],[-23.394415,-51.842533],[-23.391763,-51.843888],[-23.392013,-51.844407],[-23.389754,-51.846084],[-23.38762,-51.845339],[-23.387211,-51.842868],[-23.386761,-51.842805],[-23.386235,-51.841369],[-23.385113,-51.840783],[-23.384578,-51.840734],[-23.383871,-51.841491],[-23.38321,-51.844016],[-23.381574,-51.844829],[-23.380397,-51.844059],[-23.379477,-51.84253],[-23.378884,-51.842892],[-23.378408,-51.842554],[-23.378012,-51.843008],[-23.377564,-51.842518],[-23.374634,-51.841876],[-23.372433,-51.839483],[-23.371524,-51.839674],[-23.368763,-51.842553],[-23.367765,-51.843022],[-23.367582,-51.842414],[-23.366269,-51.843659],[-23.36564,-51.842625],[-23.365226,-51.843309],[-23.364558,-51.842618],[-23.361985,-51.842238],[-23.360951,-51.840251],[-23.358791,-51.839429],[-23.356547,-51.840385],[-23.354515,-51.843605],[-23.354504,-51.845505],[-23.353488,-51.847196],[-23.354757,-51.847163],[-23.355982,-51.848384],[-23.355976,-51.849394],[-23.354699,-51.850962],[-23.351605,-51.850336],[-23.348003,-51.846999],[-23.34682,-51.845052],[-23.346112,-51.844886],[-23.344311,-51.846652],[-23.342301,-51.845791],[-23.341925,-51.846314],[-23.341591,-51.845827],[-23.34129,-51.84635],[-23.341771,-51.84704],[-23.340092,-51.847151],[-23.339825,-51.848079],[-23.339154,-51.848034],[-23.339523,-51.848724],[-23.338058,-51.84886],[-23.337459,-51.850933],[-23.335258,-51.850717],[-23.333526,-51.849462],[-23.331945,-51.849259],[-23.331583,-51.848088],[-23.330326,-51.848053],[-23.329461,-51.846316],[-23.328716,-51.846149],[-23.327298,-51.849096],[-23.325398,-51.850636],[-23.32503,-51.852316],[-23.325813,-51.854581],[-23.328313,-51.857915],[-23.330446,-51.859296],[-23.336045,-51.856884],[-23.337853,-51.853937],[-23.337971,-51.850619],[-23.341813,-51.850081],[-23.348813,-51.853822],[-23.350031,-51.856299],[-23.351114,-51.857254],[-23.356647,-51.856415],[-23.358585,-51.856771],[-23.365912,-51.86294],[-23.368536,-51.863693],[-23.372926,-51.863517],[-23.37748,-51.864248],[-23.384647,-51.863415],[-23.387228,-51.864071],[-23.390018,-51.865331],[-23.404313,-51.876415],[-23.418063,-51.889007],[-23.423423,-51.891575],[-23.424994,-51.891922],[-23.428221,-51.884508],[-23.426599,-51.883624]]},{"name":"Subbacia 2","coords":[[-23.328416,-51.84635],[-23.327225,-51.84627],[-23.324769,-51.843938],[-23.323592,-51.843396],[-23.324563,-51.841442],[-23.324489,-51.839808],[-23.321135,-51.836208],[-23.31721,-51.836659],[-23.314697,-51.83991],[-23.311005,-51.842901],[-23.310162,-51.846637],[-23.310704,-51.847977],[-23.311306,-51.848218],[-23.314,-51.847018],[-23.315729,-51.846821],[-23.316782,-51.849916],[-23.316711,-51.853005],[-23.313282,-51.852968],[-23.307014,-51.855601],[-23.306186,-51.856516],[-23.304409,-51.860617],[-23.302123,-51.862295],[-23.302253,-51.863514],[-23.304757,-51.867004],[-23.305323,-51.868849],[-23.304242,-51.87095],[-23.303033,-51.871388],[-23.301744,-51.871231],[-23.297502,-51.869615],[-23.293087,-51.869438],[-23.290296,-51.868262],[-23.288733,-51.868222],[-23.287631,-51.869016],[-23.287322,-51.87035],[-23.287638,-51.872787],[-23.28859,-51.8741],[-23.291527,-51.873703],[-23.292207,-51.874747],[-23.292742,-51.877245],[-23.29666,-51.877998],[-23.298053,-51.879076],[-23.299501,-51.884965],[-23.304919,-51.892054],[-23.303701,-51.898697],[-23.303396,-51.899349],[-23.302655,-51.899403],[-23.300885,-51.89712],[-23.297846,-51.896208],[-23.294386,-51.901634],[-23.289334,-51.90736],[-23.288361,-51.90958],[-23.2897,-51.910421],[-23.290134,-51.911374],[-23.289351,-51.913789],[-23.288162,-51.915592],[-23.287648,-51.918914],[-23.286645,-51.921668],[-23.286578,-51.923746],[-23.283879,-51.925643],[-23.282342,-51.92578],[-23.281741,-51.925361],[-23.281422,-51.923696],[-23.280875,-51.923454],[-23.280278,-51.926924],[-23.280484,-51.929212],[-23.278731,-51.928724],[-23.277173,-51.932514],[-23.273322,-51.934432],[-23.272436,-51.935702],[-23.272311,-51.938343],[-23.273503,-51.940786],[-23.273309,-51.941201],[-23.269622,-51.943075],[-23.269301,-51.941707],[-23.267162,-51.941751],[-23.266397,-51.941211],[-23.266818,-51.939582],[-23.266518,-51.939223],[-23.264903,-51.938737],[-23.26386,-51.938937],[-23.263842,-51.944236],[-23.26338,-51.944557],[-23.262234,-51.943802],[-23.262071,-51.944075],[-23.262131,-51.945669],[-23.26353,-51.946426],[-23.263304,-51.949475],[-23.261435,-51.950358],[-23.259782,-51.949873],[-23.259933,-51.951418],[-23.258663,-51.952305],[-23.258877,-51.954922],[-23.257669,-51.956731],[-23.256855,-51.961917],[-23.256018,-51.963455],[-23.253889,-51.965505],[-23.254039,-51.965821],[-23.263944,-51.962965],[-23.273075,-51.959366],[-23.276962,-51.958792],[-23.283032,-51.959738],[-23.289168,-51.962203],[-23.295082,-51.965792],[-23.295263,-51.962039],[-23.294808,-51.959029],[-23.294078,-51.956677],[-23.290857,-51.952033],[-23.289732,-51.947772],[-23.284553,-51.942356],[-23.278733,-51.942047],[-23.276916,-51.940274],[-23.27325,-51.939767],[-23.27362,-51.936949],[-23.274603,-51.935993],[-23.278768,-51.934228],[-23.280489,-51.932809],[-23.28474,-51.930597],[-23.290925,-51.930493],[-23.295766,-51.929515],[-23.293817,-51.928875],[-23.290036,-51.9259],[-23.286987,-51.922027],[-23.28889,-51.917899],[-23.292535,-51.912131],[-23.299628,-51.909753],[-23.304923,-51.905954],[-23.30843,-51.901672],[-23.309313,-51.89886],[-23.310618,-51.897857],[-23.305085,-51.892462],[-23.308165,-51.889063],[-23.316521,-51.882581],[-23.325258,-51.87947],[-23.327263,-51.877613],[-23.330619,-51.877581],[-23.332476,-51.876993],[-23.337434,-51.871719],[-23.336427,-51.867077],[-23.332321,-51.864938],[-23.330967,-51.863506],[-23.330045,-51.861598],[-23.330446,-51.859296],[-23.328313,-51.857915],[-23.325284,-51.853284],[-23.325398,-51.850636],[-23.327788,-51.848415],[-23.328416,-51.84635]]},{"name":"Subbacia 3","coords":[[-23.539331,-52.044385],[-23.537854,-52.0437],[-23.535608,-52.043682],[-23.529861,-52.045399],[-23.527359,-52.047971],[-23.525665,-52.051119],[-23.524562,-52.054598],[-23.52448,-52.05825],[-23.522737,-52.06086],[-23.522916,-52.062598],[-23.529346,-52.073924],[-23.539981,-52.044964],[-23.539331,-52.044385]]},{"name":"Subbacia 4","coords":[[-23.527428,-52.070907],[-23.526974,-52.069231],[-23.522916,-52.062598],[-23.522737,-52.06086],[-23.52448,-52.05825],[-23.524562,-52.054598],[-23.519033,-52.054882],[-23.513778,-52.053523],[-23.513132,-52.051902],[-23.512845,-52.045539],[-23.509408,-52.044361],[-23.5084,-52.043154],[-23.507902,-52.04166],[-23.507733,-52.037553],[-23.507049,-52.03633],[-23.505404,-52.035519],[-23.502246,-52.032225],[-23.498718,-52.031494],[-23.495954,-52.030025],[-23.491253,-52.025454],[-23.488074,-52.024438],[-23.481591,-52.023694],[-23.477517,-52.022651],[-23.476384,-52.021355],[-23.475158,-52.015263],[-23.472914,-52.008061],[-23.468813,-52.0005],[-23.466495,-51.997635],[-23.463221,-51.99493],[-23.462871,-51.993699],[-23.451367,-51.991283],[-23.449496,-52.000934],[-23.450903,-52.017361],[-23.455908,-52.00474],[-23.457195,-52.010774],[-23.462654,-52.016988],[-23.46581,-52.023311],[-23.467049,-52.024737],[-23.468419,-52.029948],[-23.467306,-52.03311],[-23.46677,-52.037418],[-23.467594,-52.042603],[-23.468402,-52.044258],[-23.47154,-52.047327],[-23.475681,-52.057845],[-23.479544,-52.063266],[-23.48272,-52.066505],[-23.48495,-52.071132],[-23.487087,-52.072333],[-23.489644,-52.074764],[-23.491082,-52.07508],[-23.492022,-52.07617],[-23.493392,-52.076587],[-23.497974,-52.081726],[-23.502047,-52.084641],[-23.504885,-52.085774],[-23.506747,-52.087238],[-23.511559,-52.087954],[-23.514923,-52.085099],[-23.517543,-52.085283],[-23.518102,-52.087398],[-23.517319,-52.088745],[-23.518409,-52.089918],[-23.517872,-52.091754],[-23.518987,-52.092846],[-23.519106,-52.093686],[-23.520552,-52.093969],[-23.520468,-52.095213],[-23.520961,-52.096165],[-23.519677,-52.097724],[-23.519762,-52.100001],[-23.529346,-52.073924],[-23.527428,-52.070907]]},{"name":"Subbacia 5","coords":[[-23.378925,-52.048692],[-23.378099,-52.046288],[-23.376716,-52.044937],[-23.374833,-52.041292],[-23.375624,-52.038618],[-23.378219,-52.036013],[-23.381081,-52.032015],[-23.38331,-52.030189],[-23.386565,-52.029097],[-23.387192,-52.027761],[-23.387186,-52.012961],[-23.388223,-52.009962],[-23.38363,-52.003984],[-23.380781,-52.001984],[-23.376035,-52.000942],[-23.370979,-51.998942],[-23.36428,-51.994298],[-23.360833,-51.989852],[-23.35243,-51.991678],[-23.34602,-51.992017],[-23.341385,-51.995548],[-23.336425,-51.997471],[-23.32818,-51.999207],[-23.326789,-51.998506],[-23.323293,-51.992001],[-23.318595,-51.990083],[-23.316764,-51.988085],[-23.313813,-51.987166],[-23.311085,-51.982915],[-23.309209,-51.975082],[-23.305181,-51.971358],[-23.292996,-51.964696],[-23.290799,-51.963042],[-23.283032,-51.959738],[-23.276962,-51.958792],[-23.273075,-51.959366],[-23.263944,-51.962965],[-23.254699,-51.965323],[-23.254636,-51.965625],[-23.255173,-51.965476],[-23.254844,-51.967206],[-23.255723,-51.967802],[-23.254834,-51.968949],[-23.255275,-51.96893],[-23.255619,-51.970024],[-23.256278,-51.969682],[-23.257996,-51.971014],[-23.258303,-51.969734],[-23.259247,-51.969591],[-23.259434,-51.969144],[-23.25996,-51.969621],[-23.260706,-51.968689],[-23.261206,-51.969132],[-23.26192,-51.968938],[-23.264282,-51.96644],[-23.26561,-51.967558],[-23.26628,-51.967065],[-23.266692,-51.967391],[-23.267064,-51.966771],[-23.2675,-51.967024],[-23.270179,-51.965275],[-23.272015,-51.966072],[-23.272287,-51.966747],[-23.273872,-51.967132],[-23.275219,-51.968885],[-23.275032,-51.969282],[-23.274643,-51.96898],[-23.2742,-51.969973],[-23.274643,-51.972641],[-23.275013,-51.972445],[-23.276431,-51.973775],[-23.277242,-51.972834],[-23.277748,-51.972888],[-23.277721,-51.973548],[-23.278321,-51.973203],[-23.278271,-51.973925],[-23.279669,-51.974782],[-23.280352,-51.975908],[-23.281708,-51.976117],[-23.282133,-51.978138],[-23.283433,-51.97999],[-23.284658,-51.979077],[-23.283351,-51.978296],[-23.285546,-51.976855],[-23.286693,-51.977386],[-23.287202,-51.976892],[-23.287913,-51.977345],[-23.28856,-51.976902],[-23.291411,-51.977184],[-23.293049,-51.976374],[-23.295344,-51.977288],[-23.296186,-51.97885],[-23.294437,-51.982649],[-23.295785,-51.984078],[-23.296781,-51.986776],[-23.298112,-51.987284],[-23.299003,-51.988237],[-23.299995,-51.987771],[-23.301552,-51.988966],[-23.301523,-51.990036],[-23.301935,-51.990289],[-23.302883,-51.989623],[-23.302972,-51.990047],[-23.303987,-51.989656],[-23.305016,-51.990585],[-23.306814,-51.99091],[-23.308319,-51.992142],[-23.307988,-51.993584],[-23.30959,-51.994941],[-23.309878,-51.996712],[-23.311001,-51.997318],[-23.310342,-51.999643],[-23.311365,-52.001643],[-23.310343,-52.003105],[-23.310049,-52.006017],[-23.312085,-52.007702],[-23.312334,-52.008476],[-23.310696,-52.009086],[-23.314138,-52.010445],[-23.315798,-52.013621],[-23.315349,-52.015412],[-23.315596,-52.016285],[-23.314484,-52.017423],[-23.315716,-52.019052],[-23.315061,-52.02079],[-23.315627,-52.022115],[-23.317029,-52.022325],[-23.318532,-52.024803],[-23.319726,-52.025086],[-23.320877,-52.026314],[-23.321319,-52.027584],[-23.324236,-52.028678],[-23.325155,-52.032632],[-23.323295,-52.034907],[-23.324679,-52.036525],[-23.324805,-52.037988],[-23.324121,-52.039298],[-23.324514,-52.041055],[-23.32684,-52.043192],[-23.328636,-52.043742],[-23.329257,-52.045014],[-23.332579,-52.04616],[-23.335141,-52.046424],[-23.33765,-52.0481],[-23.339123,-52.049769],[-23.339464,-52.052646],[-23.337729,-52.056433],[-23.339139,-52.060805],[-23.338722,-52.062604],[-23.338887,-52.064749],[-23.341934,-52.066674],[-23.343147,-52.06683],[-23.344346,-52.069178],[-23.344914,-52.07157],[-23.344727,-52.072641],[-23.345753,-52.073965],[-23.346278,-52.076064],[-23.349284,-52.077404],[-23.35738,-52.078645],[-23.358808,-52.079454],[-23.361667,-52.082304],[-23.363293,-52.081391],[-23.364759,-52.078822],[-23.363706,-52.078172],[-23.361816,-52.075532],[-23.36162,-52.074079],[-23.362364,-52.070846],[-23.363302,-52.069346],[-23.365532,-52.067465],[-23.367028,-52.067254],[-23.374062,-52.064015],[-23.375809,-52.05716],[-23.378941,-52.051433],[-23.378925,-52.048692]]},{"name":"Subbacia 6","coords":[[-23.290925,-51.930493],[-23.28474,-51.930597],[-23.282064,-51.931857],[-23.278768,-51.934228],[-23.274603,-51.935993],[-23.27362,-51.936949],[-23.27325,-51.939767],[-23.276916,-51.940274],[-23.278733,-51.942047],[-23.284553,-51.942356],[-23.288077,-51.945613],[-23.289732,-51.947772],[-23.290857,-51.952033],[-23.294078,-51.956677],[-23.295263,-51.962039],[-23.295082,-51.965792],[-23.305181,-51.971358],[-23.309209,-51.975082],[-23.311085,-51.982915],[-23.313813,-51.987166],[-23.316764,-51.988085],[-23.318595,-51.990083],[-23.323293,-51.992001],[-23.326789,-51.998506],[-23.32818,-51.999207],[-23.336425,-51.997471],[-23.341385,-51.995548],[-23.34602,-51.992017],[-23.35243,-51.991678],[-23.360833,-51.989852],[-23.360266,-51.98471],[-23.357116,-51.981041],[-23.353789,-51.979345],[-23.344944,-51.971818],[-23.342742,-51.963177],[-23.33548,-51.957582],[-23.33267,-51.955955],[-23.331462,-51.954161],[-23.329625,-51.946416],[-23.328313,-51.944582],[-23.321772,-51.94211],[-23.318197,-51.941281],[-23.315025,-51.939472],[-23.310695,-51.932791],[-23.303983,-51.928612],[-23.301522,-51.928071],[-23.290925,-51.930493]]},{"name":"Subbacia 7","coords":[[-23.388601,-52.009397],[-23.392557,-52.003451],[-23.395099,-52.001068],[-23.395986,-51.999399],[-23.397307,-51.99427],[-23.39997,-51.988928],[-23.405369,-51.983103],[-23.411251,-51.982364],[-23.412852,-51.981818],[-23.414304,-51.980543],[-23.41576,-51.978487],[-23.42025,-51.969526],[-23.424859,-51.966152],[-23.427824,-51.96176],[-23.42851,-51.959195],[-23.428006,-51.957403],[-23.419716,-51.947288],[-23.417549,-51.939004],[-23.413714,-51.930641],[-23.413594,-51.928112],[-23.409705,-51.92504],[-23.39298,-51.927337],[-23.388214,-51.926204],[-23.384712,-51.922847],[-23.379687,-51.913625],[-23.374597,-51.908016],[-23.370288,-51.90473],[-23.365635,-51.899237],[-23.359088,-51.894896],[-23.357385,-51.894519],[-23.35408,-51.896248],[-23.345866,-51.905076],[-23.342612,-51.905106],[-23.338145,-51.902623],[-23.336471,-51.900761],[-23.334507,-51.899519],[-23.331399,-51.898279],[-23.317189,-51.899229],[-23.314781,-51.899166],[-23.310618,-51.897857],[-23.309313,-51.89886],[-23.30843,-51.901672],[-23.304923,-51.905954],[-23.299628,-51.909753],[-23.292535,-51.912131],[-23.28889,-51.917899],[-23.286987,-51.922027],[-23.290036,-51.9259],[-23.293817,-51.928875],[-23.295766,-51.929515],[-23.301522,-51.928071],[-23.303983,-51.928612],[-23.310695,-51.932791],[-23.315025,-51.939472],[-23.318197,-51.941281],[-23.321772,-51.94211],[-23.328313,-51.944582],[-23.329625,-51.946416],[-23.331462,-51.954161],[-23.33267,-51.955955],[-23.33548,-51.957582],[-23.342742,-51.963177],[-23.344944,-51.971818],[-23.353789,-51.979345],[-23.357116,-51.981041],[-23.360266,-51.98471],[-23.360833,-51.989852],[-23.36428,-51.994298],[-23.370979,-51.998942],[-23.376035,-52.000942],[-23.380781,-52.001984],[-23.38363,-52.003984],[-23.388223,-52.009962],[-23.388601,-52.009397]]},{"name":"Subbacia 8","coords":[[-23.354649,-51.89595],[-23.357385,-51.894519],[-23.35798,-51.893832],[-23.357976,-51.892666],[-23.355573,-51.885174],[-23.351958,-51.87927],[-23.349124,-51.875317],[-23.347355,-51.873623],[-23.341626,-51.872061],[-23.338509,-51.871792],[-23.337434,-51.871719],[-23.336199,-51.872774],[-23.332476,-51.876993],[-23.330619,-51.877581],[-23.327263,-51.877613],[-23.325258,-51.87947],[-23.316521,-51.882581],[-23.308165,-51.889063],[-23.305085,-51.892462],[-23.310618,-51.897857],[-23.314781,-51.899166],[-23.316938,-51.899248],[-23.331399,-51.898279],[-23.334507,-51.899519],[-23.336471,-51.900761],[-23.338145,-51.902623],[-23.342612,-51.905106],[-23.345866,-51.905076],[-23.354649,-51.89595]]},{"name":"Subbacia 9","coords":[[-23.359088,-51.894896],[-23.365635,-51.899237],[-23.370288,-51.90473],[-23.374597,-51.908016],[-23.379687,-51.913625],[-23.384712,-51.922847],[-23.388214,-51.926204],[-23.39298,-51.927337],[-23.409705,-51.92504],[-23.413594,-51.928112],[-23.414229,-51.925127],[-23.422281,-51.914736],[-23.424686,-51.909054],[-23.425179,-51.903973],[-23.424663,-51.895254],[-23.424994,-51.891922],[-23.418063,-51.889007],[-23.413814,-51.885499],[-23.407149,-51.878726],[-23.390018,-51.865331],[-23.384647,-51.863415],[-23.37748,-51.864248],[-23.372926,-51.863517],[-23.368536,-51.863693],[-23.365912,-51.86294],[-23.358585,-51.856771],[-23.356647,-51.856415],[-23.351114,-51.857254],[-23.350031,-51.856299],[-23.348813,-51.853822],[-23.341813,-51.850081],[-23.337971,-51.850619],[-23.337853,-51.853937],[-23.336519,-51.85618],[-23.33548,-51.857354],[-23.330453,-51.859259],[-23.33022,-51.862453],[-23.332321,-51.864938],[-23.336427,-51.867077],[-23.337434,-51.871719],[-23.341626,-51.872061],[-23.346101,-51.873149],[-23.347355,-51.873623],[-23.349124,-51.875317],[-23.355573,-51.885174],[-23.357976,-51.892666],[-23.35798,-51.893832],[-23.357385,-51.894519],[-23.359088,-51.894896]]},{"name":"Subbacia 10","coords":[[-23.430229,-51.960627],[-23.434924,-51.960916],[-23.438605,-51.960291],[-23.444411,-51.958069],[-23.446995,-51.956067],[-23.451465,-51.948264],[-23.461175,-51.944388],[-23.46798,-51.942583],[-23.470614,-51.940414],[-23.471958,-51.940447],[-23.473673,-51.937265],[-23.475729,-51.930521],[-23.475526,-51.930204],[-23.473177,-51.930488],[-23.470594,-51.927994],[-23.466664,-51.926267],[-23.463314,-51.923749],[-23.461552,-51.921201],[-23.460772,-51.917466],[-23.458258,-51.915082],[-23.448416,-51.911848],[-23.447008,-51.910221],[-23.442078,-51.907018],[-23.428069,-51.901841],[-23.425833,-51.89607],[-23.425347,-51.892],[-23.424994,-51.891922],[-23.424663,-51.895254],[-23.425179,-51.903973],[-23.424686,-51.909054],[-23.422281,-51.914736],[-23.414229,-51.925127],[-23.413593,-51.928083],[-23.413682,-51.930542],[-23.417549,-51.939004],[-23.419716,-51.947288],[-23.427291,-51.956225],[-23.42851,-51.959195],[-23.428182,-51.960424],[-23.430229,-51.960627]]},{"name":"Subbacia 11","coords":[[-23.361889,-52.072462],[-23.361816,-52.075532],[-23.363706,-52.078172],[-23.364759,-52.078822],[-23.368036,-52.072146],[-23.375853,-52.073866],[-23.378542,-52.075374],[-23.383463,-52.079362],[-23.387954,-52.080519],[-23.389379,-52.082651],[-23.38994,-52.086116],[-23.392425,-52.091108],[-23.394621,-52.092247],[-23.396374,-52.092554],[-23.399733,-52.094775],[-23.401413,-52.092498],[-23.401664,-52.088771],[-23.403023,-52.087417],[-23.405938,-52.082322],[-23.406015,-52.077643],[-23.407872,-52.075952],[-23.410129,-52.074849],[-23.412279,-52.069531],[-23.41009,-52.066087],[-23.408188,-52.06425],[-23.40298,-52.061503],[-23.391313,-52.06175],[-23.381883,-52.058548],[-23.379884,-52.056512],[-23.378477,-52.052744],[-23.375809,-52.05716],[-23.374062,-52.064015],[-23.364755,-52.067962],[-23.363302,-52.069346],[-23.361889,-52.072462]]},{"name":"Subbacia 12","coords":[[-23.376716,-52.044937],[-23.378099,-52.046288],[-23.378811,-52.047858],[-23.378941,-52.051433],[-23.378477,-52.052744],[-23.379884,-52.056512],[-23.381037,-52.058103],[-23.391313,-52.06175],[-23.40298,-52.061503],[-23.408188,-52.06425],[-23.41009,-52.066087],[-23.412279,-52.069531],[-23.413929,-52.065276],[-23.422456,-52.048475],[-23.424799,-52.047884],[-23.428834,-52.048326],[-23.43124,-52.046887],[-23.433353,-52.047098],[-23.43466,-52.046718],[-23.435602,-52.047213],[-23.43858,-52.046069],[-23.429095,-52.040997],[-23.423608,-52.032409],[-23.421657,-52.031047],[-23.403887,-52.029666],[-23.396251,-52.02795],[-23.390945,-52.028013],[-23.386782,-52.028636],[-23.386565,-52.029097],[-23.38331,-52.030189],[-23.382067,-52.031073],[-23.375624,-52.038618],[-23.374833,-52.041292],[-23.376716,-52.044937]]},{"name":"Subbacia 13","coords":[[-23.425045,-51.965832],[-23.42025,-51.969526],[-23.41576,-51.978487],[-23.414304,-51.980543],[-23.412852,-51.981818],[-23.411251,-51.982364],[-23.405369,-51.983103],[-23.39997,-51.988928],[-23.397307,-51.99427],[-23.395986,-51.999399],[-23.395099,-52.001068],[-23.392557,-52.003451],[-23.38782,-52.010564],[-23.387186,-52.012961],[-23.387192,-52.027761],[-23.386782,-52.028636],[-23.390947,-52.028013],[-23.396253,-52.02795],[-23.403889,-52.029666],[-23.421659,-52.031047],[-23.42361,-52.032409],[-23.429097,-52.040997],[-23.438582,-52.046069],[-23.439441,-52.045196],[-23.450904,-52.017361],[-23.449498,-52.000934],[-23.451369,-51.991283],[-23.44539,-51.984983],[-23.441057,-51.982241],[-23.434663,-51.979249],[-23.428205,-51.968624],[-23.425045,-51.965832]]},{"name":"Subbacia 14","coords":[[-23.551953,-52.012088],[-23.546904,-52.011272],[-23.541582,-52.008315],[-23.538569,-52.008642],[-23.537533,-52.00809],[-23.535255,-52.005546],[-23.524255,-52.004879],[-23.521429,-52.004002],[-23.51519,-52.004266],[-23.504087,-51.992808],[-23.501326,-51.991051],[-23.491576,-51.987325],[-23.488569,-51.986784],[-23.483834,-51.987215],[-23.482498,-51.986894],[-23.479926,-51.985528],[-23.47874,-51.984017],[-23.4755,-51.981804],[-23.471184,-51.986915],[-23.462871,-51.993699],[-23.463221,-51.99493],[-23.466495,-51.997635],[-23.468813,-52.0005],[-23.472914,-52.008061],[-23.475158,-52.015263],[-23.476384,-52.021355],[-23.477517,-52.022651],[-23.481591,-52.023694],[-23.488074,-52.024438],[-23.491253,-52.025454],[-23.495954,-52.030025],[-23.498718,-52.031494],[-23.502246,-52.032225],[-23.505404,-52.035519],[-23.507049,-52.03633],[-23.507733,-52.037553],[-23.507902,-52.04166],[-23.5084,-52.043154],[-23.509408,-52.044361],[-23.512845,-52.045539],[-23.513132,-52.051902],[-23.513778,-52.053523],[-23.519033,-52.054882],[-23.524562,-52.054598],[-23.525665,-52.051119],[-23.527359,-52.047971],[-23.529861,-52.045399],[-23.535608,-52.043682],[-23.537854,-52.0437],[-23.539981,-52.044964],[-23.551953,-52.012088]]},{"name":"Subbacia 15","coords":[[-23.42633,-51.966826],[-23.428203,-51.968624],[-23.434661,-51.979249],[-23.441057,-51.982241],[-23.44539,-51.984983],[-23.451369,-51.991283],[-23.462871,-51.993699],[-23.471199,-51.986915],[-23.474374,-51.983581],[-23.480203,-51.973697],[-23.481888,-51.971766],[-23.484009,-51.966826],[-23.484567,-51.96356],[-23.486439,-51.960399],[-23.486872,-51.951892],[-23.483707,-51.949099],[-23.480923,-51.944727],[-23.475655,-51.943425],[-23.471958,-51.940447],[-23.470614,-51.940414],[-23.46798,-51.942583],[-23.461175,-51.944388],[-23.451465,-51.948264],[-23.446995,-51.956067],[-23.444411,-51.958069],[-23.438605,-51.960291],[-23.434924,-51.960916],[-23.428182,-51.960424],[-23.427824,-51.96176],[-23.425045,-51.965832],[-23.42633,-51.966826]]},{"name":"Subbacia 16","coords":[[-23.486439,-51.960399],[-23.484567,-51.96356],[-23.483096,-51.969605],[-23.4755,-51.981804],[-23.47874,-51.984017],[-23.479926,-51.985528],[-23.483834,-51.987215],[-23.488569,-51.986784],[-23.491576,-51.987325],[-23.501326,-51.991051],[-23.504087,-51.992808],[-23.51519,-52.004266],[-23.521429,-52.004002],[-23.524255,-52.004879],[-23.535255,-52.005546],[-23.537533,-52.00809],[-23.538569,-52.008642],[-23.541582,-52.008315],[-23.546904,-52.011272],[-23.552038,-52.012107],[-23.556894,-51.998861],[-23.556271,-51.99732],[-23.558139,-51.996254],[-23.556806,-51.993911],[-23.556391,-51.993595],[-23.555135,-51.994142],[-23.554201,-51.994762],[-23.553227,-51.996357],[-23.552168,-51.996314],[-23.551134,-51.997455],[-23.549882,-51.997411],[-23.549406,-51.996641],[-23.54719,-51.996833],[-23.547175,-51.995103],[-23.54896,-51.992999],[-23.547914,-51.991933],[-23.54805,-51.990792],[-23.546998,-51.990561],[-23.546311,-51.989692],[-23.544325,-51.991042],[-23.542658,-51.990696],[-23.542355,-51.98983],[-23.542898,-51.989221],[-23.541646,-51.988307],[-23.541681,-51.986719],[-23.542331,-51.985582],[-23.539277,-51.985197],[-23.538514,-51.984049],[-23.537436,-51.984014],[-23.537826,-51.983125],[-23.536814,-51.98075],[-23.53337,-51.98124],[-23.532038,-51.980729],[-23.531174,-51.979274],[-23.529351,-51.979177],[-23.528931,-51.980608],[-23.527362,-51.981126],[-23.526816,-51.982041],[-23.52551,-51.981474],[-23.524251,-51.981687],[-23.522895,-51.980898],[-23.521372,-51.982014],[-23.520577,-51.981897],[-23.519207,-51.983279],[-23.517912,-51.980958],[-23.516856,-51.981424],[-23.516244,-51.980751],[-23.515728,-51.981137],[-23.514604,-51.980237],[-23.515202,-51.979058],[-23.515291,-51.977193],[-23.515833,-51.976668],[-23.518607,-51.976661],[-23.519964,-51.977283],[-23.52061,-51.976648],[-23.519997,-51.97617],[-23.520005,-51.974805],[-23.519291,-51.974048],[-23.520416,-51.970742],[-23.520241,-51.969905],[-23.51891,-51.969325],[-23.517583,-51.967922],[-23.516198,-51.967662],[-23.514766,-51.966593],[-23.513577,-51.967893],[-23.512091,-51.967284],[-23.50983,-51.967573],[-23.507926,-51.968089],[-23.506996,-51.969029],[-23.503984,-51.965985],[-23.505554,-51.961319],[-23.504895,-51.959949],[-23.503614,-51.959355],[-23.499857,-51.960734],[-23.498702,-51.960531],[-23.49541,-51.957208],[-23.494699,-51.955894],[-23.492899,-51.956187],[-23.492187,-51.955179],[-23.491315,-51.954923],[-23.491168,-51.953752],[-23.491609,-51.953031],[-23.491124,-51.95261],[-23.486872,-51.951892],[-23.486439,-51.960399]]},{"name":"Subbacia 17","coords":[[-23.479152,-51.933091],[-23.477997,-51.932847],[-23.4765,-51.930853],[-23.475729,-51.930521],[-23.473673,-51.937265],[-23.471958,-51.940447],[-23.475655,-51.943425],[-23.480923,-51.944727],[-23.483707,-51.949099],[-23.48662,-51.951541],[-23.484962,-51.948975],[-23.485031,-51.94821],[-23.48611,-51.944877],[-23.487397,-51.944468],[-23.488336,-51.943083],[-23.488473,-51.941726],[-23.487322,-51.940935],[-23.483465,-51.941743],[-23.482635,-51.941006],[-23.482607,-51.94024],[-23.481225,-51.940474],[-23.47982,-51.939246],[-23.479606,-51.937487],[-23.480268,-51.934221],[-23.479152,-51.933091]]},{"name":"Subbacia 18","coords":[[-23.431498,-51.886199],[-23.428221,-51.884508],[-23.424994,-51.891922],[-23.425347,-51.892],[-23.425833,-51.89607],[-23.428069,-51.901841],[-23.442078,-51.907018],[-23.447008,-51.910221],[-23.448416,-51.911848],[-23.458258,-51.915082],[-23.460772,-51.917466],[-23.461552,-51.921201],[-23.463314,-51.923749],[-23.466664,-51.926267],[-23.470594,-51.927994],[-23.473177,-51.930488],[-23.475526,-51.930204],[-23.475459,-51.927749],[-23.477338,-51.924821],[-23.476927,-51.923879],[-23.477639,-51.922805],[-23.478726,-51.918149],[-23.478417,-51.916059],[-23.478715,-51.914564],[-23.476996,-51.912099],[-23.477687,-51.909285],[-23.476425,-51.905448],[-23.473898,-51.9039],[-23.469765,-51.904357],[-23.464457,-51.905876],[-23.45935,-51.904879],[-23.457719,-51.903929],[-23.456544,-51.901313],[-23.451313,-51.895848],[-23.446598,-51.894416],[-23.440778,-51.889281],[-23.440096,-51.887625],[-23.437208,-51.886794],[-23.431498,-51.886199]]}];
+const DATA_PRIO = [{"name":"Ponto 1 - Córrego Osório (Rua Guarino Bassetto)","desc":"Localização: Córrego Osório (Rua Guarino Bassetto)\nPeríodo de Entrega: 4 Meses\nQuantidade de Pontos: 4 pontos\nMP: N\nUTM E: 408310.00 / UTM N: 7412755.00","lat":-23.392405,"lng":-51.897287},{"name":"Ponto 2 - Rua Califórnia","desc":"Localização: Rua Califórnia\nPeríodo de Entrega: 4 Meses\nQuantidade de Pontos: 4 pontos\nMP: N\nUTM E: 401388.75 / UTM N: 7410836.63","lat":-23.409328,"lng":-51.965138},{"name":"Ponto 3 - Jusante do Parque Alfredo Nyffeler","desc":"Localização: Jusante do Parque Alfredo Nyffeler\nPeríodo de Entrega: 4 Meses\nQuantidade de Pontos: 4 pontos\nMP: S\nUTM E: 406544.22 / UTM N: 7410959.88","lat":-23.408518,"lng":-51.914677},{"name":"Ponto 4 - Av. Sofia Rasgulaeff","desc":"Localização: Av. Sofia Rasgulaeff\nPeríodo de Entrega: 4 Meses\nQuantidade de Pontos: 4 pontos\nMP: N\nUTM E: 407382.22 / UTM N: 7411912.20","lat":-23.399964,"lng":-51.906418},{"name":"Ponto 5 - Av. das Palmeiras","desc":"Localização: Av. das Palmeiras\nPeríodo de Entrega: 7 Meses\nQuantidade de Pontos: 7 pontos\nMP: N\nUTM E: 403174.51 / UTM N: 7413630.76","lat":-23.384199,"lng":-51.947482},{"name":"Ponto 6 - Av. Alziro Zarur","desc":"Localização: Av. Alziro Zarur\nPeríodo de Entrega: 7 Meses\nQuantidade de Pontos: 7 pontos\nMP: N\nUTM E: 401238.29 / UTM N: 7412005.97","lat":-23.398757,"lng":-51.966533},{"name":"Ponto 7 - Av. Ranulfo Rodrigues da Mota","desc":"Localização: Av. Ranulfo Rodrigues da Mota\nPeríodo de Entrega: 7 Meses\nQuantidade de Pontos: 7 pontos\nMP: S\nUTM E: 403681.20 / UTM N: 7412167.77","lat":-23.397442,"lng":-51.942618},{"name":"Ponto 8 - Ribeirão Bandeirantes do Sul*","desc":"Localização: Ribeirão Bandeirantes do Sul*\nPeríodo de Entrega: 7 Meses\nQuantidade de Pontos: 7 pontos\nMP: S\nUTM E: 399558.02 / UTM N: 7409219.14","lat":-23.423824,"lng":-51.983162},{"name":"Ponto 9 - Rua Rio Tocantins","desc":"Localização: Rua Rio Tocantins\nPeríodo de Entrega: 7 Meses\nQuantidade de Pontos: 7 pontos\nMP: N\nUTM E: 408117.00 / UTM N: 7412112.25","lat":-23.395228,"lng":-51.898132},{"name":"Ponto 10 - Rua Rio Paranapanema II","desc":"Localização: Rua Rio Paranapanema II\nPeríodo de Entrega: 7 Meses\nQuantidade de Pontos: 7 pontos\nMP: S\nUTM E: 407308.19 / UTM N: 7410892.36","lat":-23.409171,"lng":-51.907205},{"name":"Ponto 11 - Cabeceira Córrego Mandacaru","desc":"Localização: Cabeceira Córrego Mandacaru\nPeríodo de Entrega: 7 Meses\nQuantidade de Pontos: 7 pontos\nMP: S\nUTM E: 403010.72 / UTM N: 7410582.66","lat":-23.411719,"lng":-51.949281},{"name":"Ponto 12 - Horta Jardim Montreal","desc":"Localização: Horta Jardim Montreal\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 401178.50 / UTM N: 7410405.88","lat":-23.413205,"lng":-51.967224},{"name":"Ponto 13 - Horta Av. Herval","desc":"Localização: Horta Av. Herval\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 404188.50 / UTM N: 7412187.85","lat":-23.39729,"lng":-51.937653},{"name":"Ponto 14 - R. Jacy Aguiar de Souza","desc":"Localização: R. Jacy Aguiar de Souza\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 399794.80 / UTM N: 7404763.27","lat":-23.464083,"lng":-51.981141},{"name":"Ponto 15 - Av. Jinroku Kubota","desc":"Localização: Av. Jinroku Kubota\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 408070.22 / UTM N: 7410732.84","lat":-23.410655,"lng":-51.899757},{"name":"Ponto 16 - R. Rio Ligeiro","desc":"Localização: R. Rio Ligeiro\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 408116.10 / UTM N: 7412113.65","lat":-23.398186,"lng":-51.899224},{"name":"Ponto 17 - Av. Nildo Ribeiro","desc":"Localização: Av. Nildo Ribeiro\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 404118.62 / UTM N: 7406553.34","lat":-23.448176,"lng":-51.938696},{"name":"Ponto 18 - R. Yoshimori Kubota*","desc":"Localização: R. Yoshimori Kubota*\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 404904.02 / UTM N: 7414741.41","lat":-23.374269,"lng":-51.93049},{"name":"Ponto 19 - R. Almerinda Silveira Coelho","desc":"Localização: R. Almerinda Silveira Coelho\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 405026.60 / UTM N: 7414889.72","lat":-23.372937,"lng":-51.929281},{"name":"Ponto 20 - R. Max Richar Curt Phillip*","desc":"Localização: R. Max Richar Curt Phillip*\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 401349.93 / UTM N: 7410961.26","lat":-23.4082,"lng":-51.965509},{"name":"Ponto 21 - Av. Joaquim Duarte Moleirinho","desc":"Localização: Av. Joaquim Duarte Moleirinho\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 403438.83 / UTM N: 7407342.14","lat":-23.441011,"lng":-51.945299},{"name":"Ponto 22 - R. Caxias (Floriano)","desc":"Localização: R. Caxias (Floriano)\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 392284.79 / UTM N: 7398211.89","lat":-23.522771,"lng":-52.055136},{"name":"Ponto 23 - Córrego Burigui*","desc":"Localização: Córrego Burigui*\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nObs: coordenada Latitude não disponível (Lote Rural 144 - Zona 49)\nUTM E: 398272.88 / UTM N: 7410495.95","lat":-23.412213,"lng":-51.995653},{"name":"Ponto 24 - Rua Mario Clapier Urbinati*","desc":"Localização: Rua Mario Clapier Urbinati*\nPeríodo de Entrega: 10 Meses\nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 403070.24 / UTM N: 7411345.20","lat":-23.404835,"lng":-51.94865},{"name":"Ponto 25 - Av. Sincler Sambatti","desc":"Localização: Av. Sincler Sambatti\nPeríodo de Entrega: 13 meses \nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 400832.29 / UTM N: 7405712.26","lat":-23.455575,"lng":-51.970921},{"name":"Ponto 26 - Rua Marciano Halchuck","desc":"Localização: Rua Marciano Halchuck\nPeríodo de Entrega: 13 meses \nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 405540.50 / UTM N: 7408049.73","lat":-23.434744,"lng":-51.924682},{"name":"Ponto 27 - Parque do Ingá (Canais)","desc":"Localização: Parque do Ingá (Canais)\nPeríodo de Entrega: 13 meses \nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 405152.16 / UTM N: 7408564.75","lat":-23.43007,"lng":-51.928451},{"name":"Ponto 28 - Ribeirão Morangueiro (Rua Guarino Basseto)","desc":"Localização: Ribeirão Morangueiro (Rua Guarino Basseto)\nPeríodo de Entrega: 13 meses \nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 407998.97 / UTM N: 7412957.74","lat":-23.390556,"lng":-51.900318},{"name":"Ponto 29 - Rua Guarino Basseto (Córrego sem denominação)","desc":"Localização: Rua Guarino Basseto (Córrego sem denominação)\nPeríodo de Entrega: 13 meses \nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 408807.58 / UTM N: 7412458.36","lat":-23.395112,"lng":-51.892436},{"name":"Ponto 30 - Parque Cinquentenario","desc":"Localização: Parque Cinquentenario\nPeríodo de Entrega: 13 meses \nQuantidade de Pontos: 13 pontos \nMP: \nUTM E: 403583.96 / UTM N: 7412779.15","lat":-23.391914,"lng":-51.943531}];
+const DATA_HIDRO = [{"name":"","coords":[[-23.517613,-52.086299],[-23.520432,-52.084894],[-23.521526,-52.083083],[-23.522511,-52.079932],[-23.522922,-52.076732]]},{"name":"","coords":[[-23.412113,-51.949593],[-23.40981,-51.9494],[-23.406827,-51.948496],[-23.404317,-51.948729],[-23.400676,-51.948188],[-23.398678,-51.947266],[-23.394776,-51.944011]]},{"name":"","coords":[[-23.515514,-52.023695],[-23.514443,-52.02445],[-23.513507,-52.026561],[-23.512513,-52.027763],[-23.511584,-52.030104]]},{"name":"","coords":[[-23.401438,-51.967994],[-23.395981,-51.964983],[-23.392927,-51.964332],[-23.383625,-51.968012],[-23.381815,-51.969406],[-23.381204,-51.970999],[-23.380113,-51.971172],[-23.377337,-51.970288],[-23.376178,-51.96955],[-23.374522,-51.969211],[-23.370154,-51.966912],[-23.366838,-51.966084],[-23.363647,-51.964259],[-23.358287,-51.962215]]},{"name":"","coords":[[-23.511028,-52.07679],[-23.512712,-52.074977],[-23.513419,-52.073645],[-23.513956,-52.073506],[-23.514347,-52.072077],[-23.517867,-52.06801],[-23.517492,-52.065518],[-23.51828,-52.063672],[-23.517835,-52.062896],[-23.517868,-52.062081],[-23.521361,-52.059163]]},{"name":"","coords":[[-23.438906,-51.920987],[-23.442677,-51.920335],[-23.446378,-51.9213],[-23.451784,-51.925185],[-23.45381,-51.928117],[-23.454737,-51.931059],[-23.455306,-51.931408],[-23.455939,-51.932684],[-23.456592,-51.932672]]},{"name":"","coords":[[-23.43418,-51.915296],[-23.434866,-51.916994],[-23.437463,-51.920582],[-23.438906,-51.920987]]},{"name":"","coords":[[-23.345112,-51.860271],[-23.343422,-51.863149],[-23.343176,-51.864374],[-23.341813,-51.866325]]},{"name":"","coords":[[-23.418526,-52.053812],[-23.416954,-52.054806]]},{"name":"","coords":[[-23.514906,-51.980417],[-23.51284,-51.980658],[-23.509852,-51.981895],[-23.503985,-51.983416]]},{"name":"","coords":[[-23.438885,-52.046414],[-23.437149,-52.047275],[-23.433495,-52.047149],[-23.432221,-52.047779],[-23.431194,-52.047163],[-23.430811,-52.047608],[-23.430326,-52.047512],[-23.429904,-52.047899],[-23.42759,-52.048539],[-23.426277,-52.048052],[-23.422192,-52.04777],[-23.42191,-52.046838],[-23.42112,-52.045886],[-23.421111,-52.044816],[-23.420254,-52.044369],[-23.41994,-52.043527],[-23.419043,-52.043343],[-23.418168,-52.043672],[-23.418026,-52.044109],[-23.417249,-52.043932],[-23.416858,-52.044305],[-23.416689,-52.04387],[-23.415625,-52.044415],[-23.41512,-52.045559],[-23.414358,-52.046159],[-23.410564,-52.046476],[-23.40661,-52.044958],[-23.405288,-52.044963],[-23.40416,-52.044365],[-23.402372,-52.044054],[-23.400388,-52.041976],[-23.398086,-52.040836],[-23.397106,-52.040014],[-23.396077,-52.039997],[-23.395375,-52.040445],[-23.395017,-52.041213],[-23.392924,-52.042025],[-23.39177,-52.043151],[-23.390227,-52.043368],[-23.389196,-52.044068],[-23.386037,-52.04324],[-23.384774,-52.043198],[-23.379471,-52.040197]]},{"name":"","coords":[[-23.396455,-52.019825],[-23.39519,-52.020404],[-23.394266,-52.022349],[-23.391437,-52.023351]]},{"name":"","coords":[[-23.322663,-51.856552],[-23.3242,-51.855874],[-23.325531,-51.856247],[-23.327727,-51.855859],[-23.328784,-51.856934]]},{"name":"","coords":[[-23.371581,-51.924874],[-23.370398,-51.92687]]},{"name":"","coords":[[-23.38811,-52.035563],[-23.387457,-52.035706]]},{"name":"","coords":[[-23.342211,-51.932778],[-23.343506,-51.931542],[-23.344718,-51.931196],[-23.345761,-51.931286],[-23.345961,-51.931652],[-23.350908,-51.930788],[-23.354493,-51.929486],[-23.358394,-51.929637],[-23.358787,-51.929271],[-23.361602,-51.929264],[-23.362114,-51.927995],[-23.362557,-51.927718],[-23.366674,-51.926769],[-23.368094,-51.92672]]},{"name":"","coords":[[-23.553418,-51.996409],[-23.553287,-51.997046],[-23.55279,-51.996592],[-23.55152,-51.99714],[-23.551333,-51.997947],[-23.550628,-51.997509],[-23.550152,-51.998128],[-23.549751,-51.996887],[-23.547488,-51.997378],[-23.546962,-51.997111],[-23.547582,-51.996078],[-23.547015,-51.995369],[-23.548737,-51.993904],[-23.548637,-51.993382],[-23.549296,-51.992778],[-23.547868,-51.99178],[-23.548499,-51.990966],[-23.546936,-51.990877],[-23.546626,-51.990559],[-23.546831,-51.989784],[-23.546595,-51.98954],[-23.545946,-51.989602],[-23.545501,-51.990681],[-23.544424,-51.991262],[-23.542736,-51.990839],[-23.542447,-51.989815],[-23.543266,-51.989564],[-23.542805,-51.988865],[-23.541888,-51.988407],[-23.542176,-51.987655],[-23.541843,-51.986921],[-23.542639,-51.986423],[-23.542686,-51.985866],[-23.542348,-51.985493],[-23.541441,-51.985359],[-23.540874,-51.985706],[-23.539681,-51.985298],[-23.539244,-51.985486],[-23.538498,-51.984102],[-23.537698,-51.984459],[-23.537928,-51.982885],[-23.536976,-51.981703],[-23.536997,-51.980793],[-23.536132,-51.981235],[-23.535119,-51.981101],[-23.534314,-51.981727],[-23.534385,-51.980356],[-23.533795,-51.979964],[-23.533166,-51.980146],[-23.531768,-51.979742],[-23.531744,-51.978908],[-23.531489,-51.978805],[-23.529988,-51.97965],[-23.529444,-51.979644],[-23.529172,-51.980036],[-23.529448,-51.981097],[-23.52877,-51.981519],[-23.528088,-51.981145],[-23.52716,-51.982234],[-23.526444,-51.981555],[-23.52462,-51.981822],[-23.523311,-51.980996],[-23.522508,-51.98134],[-23.522217,-51.982229],[-23.52062,-51.982308],[-23.519465,-51.983604],[-23.51934,-51.982945],[-23.518941,-51.982896],[-23.518543,-51.981231],[-23.517858,-51.981114],[-23.517386,-51.981603],[-23.515033,-51.980569],[-23.51485,-51.980221],[-23.51515,-51.979644],[-23.515774,-51.979808],[-23.515598,-51.978893],[-23.515833,-51.978363],[-23.515532,-51.977509],[-23.515886,-51.976732],[-23.518579,-51.976518],[-23.518483,-51.976991],[-23.519312,-51.9768],[-23.519697,-51.977365],[-23.520103,-51.977236],[-23.520375,-51.977535],[-23.521018,-51.976795],[-23.520088,-51.975594],[-23.520444,-51.974525],[-23.519948,-51.974568],[-23.519594,-51.973566],[-23.520845,-51.969927],[-23.51999,-51.970002],[-23.519154,-51.96905],[-23.518458,-51.969108],[-23.517741,-51.968375],[-23.517644,-51.96766],[-23.516271,-51.968036],[-23.514887,-51.966726],[-23.514228,-51.967464],[-23.514048,-51.968585],[-23.512974,-51.968144],[-23.512988,-51.967693],[-23.512153,-51.967357],[-23.507952,-51.968498],[-23.507737,-51.969243],[-23.507354,-51.969364],[-23.50578,-51.968299],[-23.504287,-51.966271],[-23.505059,-51.964771],[-23.505199,-51.96252],[-23.505953,-51.961248],[-23.504835,-51.959803],[-23.503318,-51.959214],[-23.501529,-51.959409],[-23.500615,-51.958364],[-23.500169,-51.958776],[-23.4983,-51.958822],[-23.498155,-51.959278],[-23.497266,-51.959086],[-23.496952,-51.95858],[-23.496517,-51.958619],[-23.496407,-51.958136],[-23.496009,-51.958078],[-23.495947,-51.957673],[-23.495104,-51.957437],[-23.494631,-51.95639],[-23.494787,-51.955793],[-23.493013,-51.956277],[-23.49277,-51.955518],[-23.491418,-51.954426],[-23.491743,-51.953068],[-23.491077,-51.952401],[-23.490374,-51.952811],[-23.489337,-51.952147],[-23.487513,-51.952172],[-23.485888,-51.95053],[-23.48499,-51.948528],[-23.485853,-51.947153],[-23.486085,-51.944811],[-23.4863,-51.944502],[-23.486875,-51.944678],[-23.487508,-51.944361],[-23.487648,-51.943712],[-23.488292,-51.943081],[-23.488575,-51.941561],[-23.487995,-51.940939],[-23.487579,-51.940911],[-23.485603,-51.941454],[-23.484169,-51.9414],[-23.48366,-51.941939],[-23.48294,-51.940994],[-23.482776,-51.940206],[-23.482081,-51.940546],[-23.481272,-51.940144],[-23.479937,-51.938302],[-23.48058,-51.933644],[-23.47828,-51.932927],[-23.477545,-51.93216],[-23.477027,-51.932157],[-23.476701,-51.930723],[-23.47573,-51.929843],[-23.475614,-51.928456],[-23.475939,-51.927569],[-23.476441,-51.927338],[-23.476602,-51.926235],[-23.477441,-51.924631],[-23.477134,-51.923772],[-23.479002,-51.917635],[-23.478588,-51.916687],[-23.478718,-51.914842],[-23.47836,-51.91384],[-23.477017,-51.912027],[-23.477945,-51.910504],[-23.47789,-51.909031],[-23.477064,-51.90666],[-23.475871,-51.905435],[-23.475915,-51.905109],[-23.474104,-51.904143],[-23.470328,-51.903923],[-23.468577,-51.90427],[-23.464711,-51.905745],[-23.459451,-51.904882],[-23.457716,-51.903576],[-23.456718,-51.901166],[-23.45258,-51.896834],[-23.452022,-51.896886],[-23.450257,-51.895328],[-23.447722,-51.894735],[-23.44627,-51.893859],[-23.444233,-51.892019],[-23.443155,-51.891443],[-23.441259,-51.889269]]},{"name":"","coords":[[-23.448679,-51.973669],[-23.447739,-51.97423],[-23.447323,-51.975361],[-23.446815,-51.975388]]},{"name":"","coords":[[-23.341984,-51.981606],[-23.340455,-51.981508],[-23.337102,-51.980367],[-23.334483,-51.980104],[-23.33025,-51.980878],[-23.328231,-51.981917],[-23.326291,-51.981804]]},{"name":"","coords":[[-23.380925,-51.995763],[-23.382685,-51.996595],[-23.384742,-51.998586]]},{"name":"","coords":[[-23.41612,-52.044307],[-23.413505,-52.039798],[-23.412116,-52.038228],[-23.410921,-52.034992]]},{"name":"","coords":[[-23.3938,-52.053883],[-23.392761,-52.05462]]},{"name":"","coords":[[-23.384807,-52.026354],[-23.380309,-52.02295],[-23.379769,-52.022826],[-23.379073,-52.021802],[-23.376866,-52.020711],[-23.375741,-52.021064],[-23.375297,-52.02019],[-23.372784,-52.020775],[-23.370138,-52.020341],[-23.367919,-52.019485],[-23.365007,-52.019446],[-23.361283,-52.017654],[-23.357352,-52.017048],[-23.354437,-52.015882],[-23.352657,-52.015955],[-23.34986,-52.015306],[-23.349085,-52.014268],[-23.34789,-52.013887],[-23.346599,-52.013787],[-23.345221,-52.014379],[-23.34465,-52.01411],[-23.343392,-52.015151],[-23.338773,-52.01342],[-23.337904,-52.013391],[-23.337124,-52.012561],[-23.336665,-52.01268],[-23.333088,-52.010868],[-23.330996,-52.010924],[-23.329772,-52.01028],[-23.32753,-52.010781],[-23.326512,-52.011484],[-23.325379,-52.01155],[-23.324822,-52.012013],[-23.323587,-52.012279],[-23.323062,-52.011425],[-23.321724,-52.012448],[-23.320923,-52.012209],[-23.32037,-52.012637],[-23.318831,-52.0122],[-23.31808,-52.012498],[-23.317913,-52.011681],[-23.317212,-52.012283],[-23.316922,-52.01161],[-23.315102,-52.012311]]},{"name":"","coords":[[-23.419647,-52.043504],[-23.419641,-52.042815]]},{"name":"","coords":[[-23.486415,-51.965492],[-23.488197,-51.962908],[-23.489702,-51.959087],[-23.492207,-51.957633],[-23.492967,-51.956225]]},{"name":"","coords":[[-23.416449,-51.878048],[-23.416303,-51.877185],[-23.4152,-51.875325],[-23.415445,-51.873161],[-23.41493,-51.868963],[-23.415317,-51.866895]]},{"name":"","coords":[[-23.530597,-52.012711],[-23.532279,-52.014744],[-23.532749,-52.016765],[-23.533952,-52.019509],[-23.535944,-52.021424],[-23.536024,-52.02399]]},{"name":"","coords":[[-23.514249,-52.023223],[-23.513345,-52.023817]]},{"name":"","coords":[[-23.374569,-52.020412],[-23.375243,-52.021828],[-23.375694,-52.025179],[-23.376708,-52.027056],[-23.379508,-52.030498]]},{"name":"","coords":[[-23.510353,-52.030306],[-23.507439,-52.032424],[-23.506411,-52.033677]]},{"name":"","coords":[[-23.379114,-51.842618],[-23.37883,-51.843345],[-23.379021,-51.844437]]},{"name":"","coords":[[-23.484871,-51.975845],[-23.486992,-51.975513],[-23.488698,-51.976543]]},{"name":"","coords":[[-23.439287,-52.04722],[-23.438942,-52.047157]]},{"name":"","coords":[[-23.519471,-52.035892],[-23.519236,-52.037335],[-23.51976,-52.037907],[-23.520097,-52.03969],[-23.519766,-52.041196],[-23.519963,-52.042875],[-23.519667,-52.043296],[-23.520022,-52.044582],[-23.519502,-52.046209],[-23.519509,-52.047268]]},{"name":"","coords":[[-23.362538,-51.913914],[-23.364666,-51.914213],[-23.368688,-51.914176],[-23.370507,-51.913514],[-23.373826,-51.913931],[-23.37546,-51.914698]]},{"name":"","coords":[[-23.341984,-51.981606],[-23.344159,-51.98157]]},{"name":"","coords":[[-23.347968,-51.876271],[-23.346537,-51.879397],[-23.346661,-51.881442],[-23.345125,-51.883259]]},{"name":"","coords":[[-23.397426,-51.942727],[-23.396711,-51.943812],[-23.394993,-51.943884]]},{"name":"","coords":[[-23.296687,-51.977492],[-23.300132,-51.975914]]},{"name":"","coords":[[-23.475118,-51.930674],[-23.474292,-51.930471],[-23.473204,-51.929345],[-23.470515,-51.924473],[-23.469594,-51.923618],[-23.468375,-51.923048]]},{"name":"","coords":[[-23.328451,-51.849948],[-23.326837,-51.852161]]},{"name":"","coords":[[-23.406104,-51.973818],[-23.405708,-51.97416]]},{"name":"","coords":[[-23.440649,-51.948564],[-23.440977,-51.946661],[-23.440964,-51.942667],[-23.440721,-51.942222]]},{"name":"","coords":[[-23.511816,-52.04067],[-23.512941,-52.038865],[-23.516616,-52.036015],[-23.518113,-52.036269],[-23.519471,-52.035892]]},{"name":"","coords":[[-23.527326,-51.982866],[-23.526459,-51.984685],[-23.52491,-51.986583]]},{"name":"","coords":[[-23.354991,-51.869803],[-23.354505,-51.872651],[-23.351859,-51.874604]]},{"name":"","coords":[[-23.289571,-51.938618],[-23.295039,-51.934365],[-23.29925,-51.933837]]},{"name":"","coords":[[-23.490986,-51.973548],[-23.490019,-51.97317],[-23.489295,-51.973437],[-23.485763,-51.97311],[-23.483045,-51.973832]]},{"name":"","coords":[[-23.409274,-51.90718],[-23.405367,-51.907768]]},{"name":"","coords":[[-23.362538,-51.913914],[-23.355965,-51.914013],[-23.351394,-51.913497],[-23.349374,-51.914078],[-23.347809,-51.915172],[-23.344645,-51.916325],[-23.342585,-51.918061],[-23.339571,-51.918214],[-23.335237,-51.91898]]},{"name":"","coords":[[-23.354076,-52.052569],[-23.354186,-52.053189],[-23.353714,-52.054902],[-23.353699,-52.059061],[-23.35408,-52.059944],[-23.355047,-52.060906]]},{"name":"","coords":[[-23.513926,-51.980543],[-23.511687,-51.976596]]},{"name":"","coords":[[-23.400269,-52.012673],[-23.402709,-52.018201]]},{"name":"","coords":[[-23.519475,-52.05101],[-23.519071,-52.051909]]},{"name":"","coords":[[-23.536063,-52.023369],[-23.537176,-52.021367]]},{"name":"","coords":[[-23.369614,-51.913853],[-23.369669,-51.913463]]},{"name":"","coords":[[-23.509709,-52.036079],[-23.510835,-52.034906],[-23.51154,-52.033215]]},{"name":"","coords":[[-23.373406,-51.887509],[-23.374921,-51.883382],[-23.375391,-51.880029],[-23.37636,-51.876912],[-23.376352,-51.875553],[-23.376958,-51.874962],[-23.377322,-51.874]]},{"name":"","coords":[[-23.310754,-51.868029],[-23.310533,-51.868667]]},{"name":"","coords":[[-23.318067,-51.874855],[-23.319231,-51.875675],[-23.322104,-51.875761],[-23.322425,-51.875494],[-23.322947,-51.875826],[-23.325091,-51.8755],[-23.328096,-51.874481],[-23.32976,-51.871981],[-23.330679,-51.871112],[-23.332068,-51.870505]]},{"name":"","coords":[[-23.366686,-52.030296],[-23.365349,-52.031155],[-23.364455,-52.0322]]},{"name":"","coords":[[-23.520658,-52.025213],[-23.521963,-52.022181]]},{"name":"","coords":[[-23.319271,-51.891451],[-23.319172,-51.889389]]},{"name":"","coords":[[-23.356307,-51.849209],[-23.358176,-51.848723],[-23.360811,-51.84916],[-23.361889,-51.850162],[-23.364144,-51.853554],[-23.364783,-51.855907],[-23.366979,-51.857224],[-23.367218,-51.857699],[-23.369456,-51.858339],[-23.370864,-51.859251]]},{"name":"","coords":[[-23.328487,-51.874077],[-23.330496,-51.875108]]},{"name":"","coords":[[-23.505633,-52.009831],[-23.504146,-52.009915],[-23.500352,-52.009244],[-23.498243,-52.009561],[-23.492988,-52.0086],[-23.488636,-52.009116]]},{"name":"","coords":[[-23.319526,-51.866458],[-23.322346,-51.86846]]},{"name":"","coords":[[-23.332055,-51.990452],[-23.330729,-51.989437],[-23.32917,-51.985797],[-23.327381,-51.982968],[-23.326291,-51.981804],[-23.321204,-51.979172],[-23.316526,-51.974142],[-23.31365,-51.968573],[-23.311744,-51.966175],[-23.30981,-51.964442],[-23.304231,-51.96119],[-23.301374,-51.958194],[-23.299839,-51.955265],[-23.298907,-51.952231],[-23.293426,-51.946836],[-23.291506,-51.943551],[-23.290152,-51.939555],[-23.287713,-51.936659],[-23.285196,-51.935657],[-23.283273,-51.935474],[-23.279615,-51.93609],[-23.277491,-51.93682],[-23.277396,-51.937179],[-23.27554,-51.936549],[-23.273268,-51.939861]]},{"name":"","coords":[[-23.360391,-52.081113],[-23.357761,-52.078821],[-23.355303,-52.078554],[-23.352204,-52.077696],[-23.350264,-52.077708],[-23.346429,-52.076371],[-23.345855,-52.07434],[-23.344725,-52.072688],[-23.344579,-52.070837],[-23.343586,-52.067769],[-23.34306,-52.067026]]},{"name":"","coords":[[-23.473689,-51.948998],[-23.47162,-51.947282],[-23.468539,-51.946541],[-23.466263,-51.946523]]},{"name":"","coords":[[-23.502645,-52.023849],[-23.504149,-52.020041]]},{"name":"","coords":[[-23.503822,-52.02584],[-23.502645,-52.023849]]},{"name":"","coords":[[-23.517555,-52.048706],[-23.518429,-52.048388],[-23.519509,-52.047268]]},{"name":"","coords":[[-23.440675,-51.98973],[-23.440851,-51.991337],[-23.44,-51.993779],[-23.439976,-51.994843],[-23.438621,-51.9976],[-23.43814,-52.000428]]},{"name":"","coords":[[-23.314619,-51.854956],[-23.315374,-51.853069]]},{"name":"","coords":[[-23.417945,-51.96177],[-23.419957,-51.96081],[-23.421015,-51.959874]]},{"name":"","coords":[[-23.46838,-51.970157],[-23.4679,-51.974202],[-23.466326,-51.978299]]},{"name":"","coords":[[-23.530643,-52.030952],[-23.530324,-52.031788],[-23.528228,-52.033625],[-23.527223,-52.036736],[-23.526496,-52.037734]]},{"name":"","coords":[[-23.329456,-52.007619],[-23.330214,-52.009861]]},{"name":"","coords":[[-23.341585,-51.892725],[-23.340136,-51.892219],[-23.33883,-51.890597],[-23.337273,-51.890517]]},{"name":"","coords":[[-23.368867,-51.842232],[-23.37029,-51.843648],[-23.371484,-51.844196],[-23.372832,-51.846325],[-23.376308,-51.848659],[-23.375773,-51.855665],[-23.376879,-51.859126]]},{"name":"","coords":[[-23.44559,-51.969002],[-23.445778,-51.967702]]},{"name":"","coords":[[-23.521446,-52.050381],[-23.520161,-52.049102],[-23.519612,-52.049222]]},{"name":"","coords":[[-23.376308,-51.848659],[-23.379727,-51.850683],[-23.382265,-51.852779],[-23.383792,-51.853637]]},{"name":"","coords":[[-23.400612,-51.933538],[-23.39911,-51.934764],[-23.398132,-51.936133],[-23.397136,-51.938247],[-23.396297,-51.941465],[-23.395648,-51.942856],[-23.395149,-51.943154],[-23.395299,-51.943693],[-23.394776,-51.944011]]},{"name":"","coords":[[-23.423635,-52.047894],[-23.42201,-52.048779],[-23.419746,-52.052543],[-23.418526,-52.053812]]},{"name":"","coords":[[-23.328903,-51.904166],[-23.327603,-51.905024],[-23.327084,-51.905903],[-23.323898,-51.907614],[-23.323601,-51.909504],[-23.322596,-51.910568],[-23.321923,-51.913233]]},{"name":"","coords":[[-23.487458,-51.967446],[-23.489351,-51.966971],[-23.492073,-51.966936],[-23.492986,-51.967464],[-23.493581,-51.968699]]},{"name":"","coords":[[-23.427038,-52.013459],[-23.428425,-52.011297],[-23.430655,-52.009577],[-23.43814,-52.000428]]},{"name":"","coords":[[-23.500632,-52.025162],[-23.502645,-52.023849]]},{"name":"","coords":[[-23.439963,-51.887663],[-23.440267,-51.888379],[-23.441259,-51.889269]]},{"name":"","coords":[[-23.530597,-52.012711],[-23.528988,-52.011231]]},{"name":"","coords":[[-23.361721,-52.029856],[-23.360641,-52.029015],[-23.357863,-52.02568],[-23.35648,-52.024791],[-23.355555,-52.024795],[-23.353948,-52.023141],[-23.352469,-52.022886],[-23.350708,-52.021155],[-23.34924,-52.018996],[-23.346905,-52.017326],[-23.34601,-52.016226],[-23.343392,-52.015151]]},{"name":"","coords":[[-23.310564,-51.999045],[-23.312663,-51.999737],[-23.314566,-51.999163],[-23.315964,-51.998113]]},{"name":"","coords":[[-23.358287,-51.962215],[-23.358812,-51.965984],[-23.366391,-51.975688],[-23.366616,-51.976547],[-23.367766,-51.978074],[-23.370006,-51.986225],[-23.371496,-51.98833],[-23.37301,-51.991366],[-23.374407,-51.992817],[-23.377349,-51.993593],[-23.380925,-51.995763]]},{"name":"","coords":[[-23.344177,-51.867928],[-23.343387,-51.870155],[-23.344024,-51.871384]]},{"name":"","coords":[[-23.409409,-51.993481],[-23.409843,-51.993943],[-23.411556,-51.994432],[-23.41269,-51.995649],[-23.415231,-51.996514],[-23.418752,-51.999033]]},{"name":"","coords":[[-23.376866,-52.020711],[-23.377941,-52.019923],[-23.383918,-52.020139]]},{"name":"","coords":[[-23.48432,-51.954739],[-23.484906,-51.955274],[-23.484291,-51.956873],[-23.485414,-51.96012]]},{"name":"","coords":[[-23.464609,-51.954461],[-23.468024,-51.953796],[-23.469822,-51.953049],[-23.473689,-51.948998]]},{"name":"","coords":[[-23.530815,-52.062783],[-23.528445,-52.059043]]},{"name":"","coords":[[-23.390842,-51.8519],[-23.390872,-51.850525],[-23.389785,-51.846967],[-23.389779,-51.84599]]},{"name":"","coords":[[-23.351394,-51.913497],[-23.353054,-51.909334],[-23.355897,-51.906652],[-23.356698,-51.905152],[-23.358554,-51.903235],[-23.359295,-51.901897]]},{"name":"","coords":[[-23.328738,-51.87906],[-23.327813,-51.880178],[-23.327356,-51.884136],[-23.326471,-51.885514],[-23.326675,-51.886578],[-23.326228,-51.889037],[-23.326505,-51.89058]]},{"name":"","coords":[[-23.353141,-51.909229],[-23.353205,-51.906174]]},{"name":"","coords":[[-23.279733,-51.947533],[-23.279991,-51.947775]]},{"name":"","coords":[[-23.355604,-51.906838],[-23.355623,-51.903022]]},{"name":"","coords":[[-23.488529,-52.020383],[-23.491508,-52.0172],[-23.492694,-52.017061]]},{"name":"","coords":[[-23.527326,-51.982866],[-23.52716,-51.982234]]},{"name":"","coords":[[-23.533239,-52.037587],[-23.531874,-52.032304],[-23.531011,-52.031713],[-23.530643,-52.030952]]},{"name":"","coords":[[-23.310087,-51.911869],[-23.311086,-51.915519],[-23.313724,-51.920405],[-23.318464,-51.924348],[-23.319978,-51.926631],[-23.321453,-51.929779]]},{"name":"","coords":[[-23.537632,-51.984328],[-23.534391,-51.98595]]},{"name":"","coords":[[-23.360481,-52.066522],[-23.361624,-52.06116],[-23.360814,-52.059951],[-23.360912,-52.05903],[-23.359874,-52.056673],[-23.356904,-52.053456]]},{"name":"","coords":[[-23.412396,-51.900027],[-23.409071,-51.900088],[-23.40661,-51.900797],[-23.404108,-51.900058],[-23.401371,-51.899966],[-23.398393,-51.89925],[-23.391693,-51.896958],[-23.389629,-51.897772]]},{"name":"","coords":[[-23.372723,-52.048123],[-23.37394,-52.04802],[-23.375129,-52.048802]]},{"name":"","coords":[[-23.528511,-52.041787],[-23.526736,-52.039339],[-23.526496,-52.037734]]},{"name":"","coords":[[-23.512001,-52.019755],[-23.510371,-52.020109],[-23.506675,-52.019267],[-23.504149,-52.020041],[-23.499602,-52.01745],[-23.496869,-52.017136],[-23.494046,-52.017483],[-23.492883,-52.01719],[-23.4916,-52.016153],[-23.490184,-52.015824],[-23.48767,-52.016367]]},{"name":"","coords":[[-23.485691,-51.980216],[-23.485871,-51.979749],[-23.487154,-51.978787],[-23.488522,-51.976594],[-23.490755,-51.974297],[-23.491025,-51.973381]]},{"name":"","coords":[[-23.509079,-52.041812],[-23.510262,-52.04069],[-23.511816,-52.04067]]},{"name":"","coords":[[-23.474837,-51.923346],[-23.477309,-51.923426]]},{"name":"","coords":[[-23.439567,-51.942137],[-23.440715,-51.942225],[-23.441876,-51.941216],[-23.444211,-51.940562],[-23.446774,-51.938835],[-23.449162,-51.938257],[-23.456655,-51.93265],[-23.460485,-51.933003],[-23.461502,-51.933323],[-23.462341,-51.934065],[-23.464511,-51.934544],[-23.465196,-51.934123],[-23.465962,-51.934482],[-23.467984,-51.934674],[-23.469703,-51.934248],[-23.472029,-51.931998],[-23.473392,-51.931866],[-23.476007,-51.930101]]},{"name":"","coords":[[-23.404539,-52.049644],[-23.403364,-52.05182]]},{"name":"","coords":[[-23.476301,-51.968347],[-23.476221,-51.967442]]},{"name":"","coords":[[-23.317192,-51.850153],[-23.318079,-51.849731],[-23.318642,-51.848822]]},{"name":"","coords":[[-23.332464,-51.916309],[-23.333021,-51.915244],[-23.333483,-51.908981],[-23.333976,-51.907447]]},{"name":"","coords":[[-23.340686,-51.855497],[-23.339978,-51.856832],[-23.337376,-51.859421],[-23.333179,-51.861164]]},{"name":"","coords":[[-23.4283,-51.945033],[-23.429411,-51.944767],[-23.431789,-51.942888],[-23.433618,-51.941991],[-23.439567,-51.942137]]},{"name":"","coords":[[-23.35614,-51.87044],[-23.357603,-51.866254],[-23.358945,-51.864641],[-23.360249,-51.863894],[-23.362861,-51.861518]]},{"name":"","coords":[[-23.331769,-51.889929],[-23.33246,-51.886073],[-23.332916,-51.885245],[-23.333969,-51.884619],[-23.33458,-51.883691],[-23.335508,-51.881931],[-23.335666,-51.880655]]},{"name":"","coords":[[-23.361371,-51.887437],[-23.361967,-51.887464]]},{"name":"","coords":[[-23.332055,-51.990452],[-23.332788,-51.990913]]},{"name":"","coords":[[-23.457451,-51.973223],[-23.45792,-51.970821]]},{"name":"","coords":[[-23.517981,-52.087479],[-23.518686,-52.087661],[-23.520577,-52.086976],[-23.521723,-52.085779],[-23.52324,-52.085405],[-23.524878,-52.083281],[-23.527648,-52.081813],[-23.528076,-52.079941],[-23.528609,-52.079422],[-23.529106,-52.077154],[-23.529086,-52.075498],[-23.528688,-52.074807]]},{"name":"","coords":[[-23.353984,-51.863156],[-23.355259,-51.860989]]},{"name":"","coords":[[-23.418317,-51.968289],[-23.415308,-51.967938],[-23.412586,-51.966879],[-23.411092,-51.966068],[-23.410273,-51.964602]]},{"name":"","coords":[[-23.521361,-52.059163],[-23.522659,-52.058198]]},{"name":"","coords":[[-23.511584,-52.030104],[-23.510353,-52.030306]]},{"name":"","coords":[[-23.360865,-51.875858],[-23.362999,-51.873861],[-23.365693,-51.872491],[-23.368985,-51.871688],[-23.371173,-51.869847]]},{"name":"","coords":[[-23.364963,-51.883848],[-23.364041,-51.884589],[-23.361927,-51.887513],[-23.361612,-51.891328]]},{"name":"","coords":[[-23.516193,-52.084802],[-23.515836,-52.084115],[-23.514868,-52.083386],[-23.513531,-52.082866],[-23.513279,-52.08158],[-23.512598,-52.081171],[-23.511689,-52.079806],[-23.511865,-52.078635],[-23.510485,-52.075857],[-23.507353,-52.074015],[-23.507145,-52.073538],[-23.505139,-52.071944],[-23.503222,-52.07099],[-23.502065,-52.06925],[-23.502066,-52.068651],[-23.500192,-52.066365],[-23.49984,-52.064287],[-23.498642,-52.062753],[-23.49837,-52.06065],[-23.49691,-52.05795],[-23.49641,-52.055016],[-23.498506,-52.051691],[-23.499042,-52.05004],[-23.499223,-52.048233],[-23.498987,-52.046618],[-23.49829,-52.045036],[-23.496804,-52.043336],[-23.494231,-52.041238],[-23.492482,-52.037172],[-23.491472,-52.033735],[-23.489948,-52.031756],[-23.487787,-52.029886]]},{"name":"","coords":[[-23.35907,-52.027214],[-23.357412,-52.030031]]},{"name":"","coords":[[-23.393604,-51.850729],[-23.395255,-51.849065]]},{"name":"","coords":[[-23.522195,-52.056384],[-23.521572,-52.057076],[-23.521362,-52.059163]]},{"name":"","coords":[[-23.397395,-52.092916],[-23.392921,-52.091104],[-23.391327,-52.089414],[-23.389543,-52.08566],[-23.389006,-52.081956],[-23.387883,-52.080259],[-23.384684,-52.079816],[-23.382227,-52.078337],[-23.378156,-52.074898],[-23.376459,-52.074349],[-23.375358,-52.073387],[-23.366103,-52.071978]]},{"name":"","coords":[[-23.486314,-52.009416],[-23.484705,-52.010383]]},{"name":"","coords":[[-23.415317,-51.866895],[-23.416224,-51.863347],[-23.41563,-51.863193],[-23.415568,-51.862276],[-23.414657,-51.860204],[-23.413951,-51.859597],[-23.412358,-51.856078],[-23.412394,-51.853986],[-23.412211,-51.853252],[-23.411257,-51.852321],[-23.410861,-51.84928],[-23.410034,-51.847362],[-23.410235,-51.847177],[-23.409834,-51.844732],[-23.407304,-51.84518]]},{"name":"","coords":[[-23.351376,-51.890165],[-23.351708,-51.890057]]},{"name":"","coords":[[-23.370889,-52.055922],[-23.371974,-52.056586]]},{"name":"","coords":[[-23.40195,-52.090579],[-23.40277,-52.088215],[-23.403788,-52.086693],[-23.404123,-52.085263],[-23.406377,-52.080879],[-23.406706,-52.077691],[-23.407521,-52.076135]]},{"name":"","coords":[[-23.342003,-51.856436],[-23.344088,-51.856268],[-23.346927,-51.854812],[-23.349017,-51.854516]]},{"name":"","coords":[[-23.427038,-52.01346],[-23.427895,-52.015344],[-23.430089,-52.018534],[-23.43517,-52.021787],[-23.436441,-52.025059],[-23.437371,-52.026423],[-23.435671,-52.032399],[-23.435398,-52.03873],[-23.435813,-52.039821],[-23.435748,-52.040603],[-23.436779,-52.041647],[-23.437195,-52.041574],[-23.437949,-52.042652],[-23.438906,-52.044965],[-23.438885,-52.046414]]},{"name":"","coords":[[-23.2532,-51.965405],[-23.253325,-51.965191],[-23.254339,-51.965327],[-23.255685,-51.964141],[-23.257586,-51.961096],[-23.257758,-51.957353],[-23.257996,-51.956443],[-23.258925,-51.955073],[-23.258497,-51.952638],[-23.258937,-51.952072],[-23.259828,-51.951936],[-23.259736,-51.950306],[-23.26024,-51.950038],[-23.262162,-51.950431],[-23.263489,-51.94972],[-23.26327,-51.948257],[-23.26374,-51.946722],[-23.262267,-51.946252],[-23.262128,-51.944486],[-23.262478,-51.943932],[-23.2634,-51.944585],[-23.263992,-51.944434],[-23.2637,-51.94041],[-23.263954,-51.938905],[-23.264642,-51.938781],[-23.266844,-51.939229],[-23.267259,-51.939743],[-23.266625,-51.940832],[-23.266936,-51.941836],[-23.269376,-51.941439],[-23.269857,-51.941863],[-23.270053,-51.943074],[-23.271859,-51.941703],[-23.273452,-51.941203],[-23.272183,-51.937489],[-23.272504,-51.935751],[-23.273647,-51.93444],[-23.277392,-51.932616],[-23.277723,-51.932231],[-23.278083,-51.930028],[-23.279114,-51.928464],[-23.279597,-51.928564],[-23.280081,-51.929544],[-23.280632,-51.929341],[-23.280359,-51.927082],[-23.28105,-51.923348],[-23.281456,-51.923306],[-23.281705,-51.923644],[-23.281872,-51.925728],[-23.282493,-51.925881],[-23.28485,-51.925354],[-23.286867,-51.923738],[-23.286773,-51.921422],[-23.287824,-51.918447],[-23.288251,-51.915947],[-23.289754,-51.913293],[-23.29013,-51.911174],[-23.28962,-51.910563],[-23.288475,-51.910303],[-23.288269,-51.909687],[-23.289527,-51.907115],[-23.294402,-51.901889],[-23.295351,-51.900059],[-23.296716,-51.898393],[-23.297505,-51.89638],[-23.298437,-51.896263],[-23.300752,-51.896835],[-23.301483,-51.897474],[-23.302744,-51.899513],[-23.30327,-51.899536],[-23.303691,-51.899015],[-23.304035,-51.895042],[-23.304807,-51.892467],[-23.303287,-51.890736],[-23.302035,-51.888296],[-23.29981,-51.885455],[-23.2981,-51.879402],[-23.297388,-51.878524],[-23.293747,-51.877921],[-23.292564,-51.877285],[-23.292207,-51.875012],[-23.291557,-51.873995],[-23.288994,-51.874603],[-23.288244,-51.87421],[-23.287593,-51.873166],[-23.287239,-51.870661],[-23.287674,-51.868807],[-23.288265,-51.868395],[-23.29028,-51.868346],[-23.292685,-51.869518],[-23.29542,-51.86937],[-23.297998,-51.86979],[-23.30137,-51.871116],[-23.302904,-51.871188],[-23.303951,-51.870757],[-23.304856,-51.869572],[-23.305158,-51.868573],[-23.304416,-51.866628],[-23.302012,-51.863736],[-23.301751,-51.863028],[-23.302395,-51.862038],[-23.304254,-51.860871],[-23.305221,-51.857628],[-23.306617,-51.855574],[-23.307179,-51.855066],[-23.309359,-51.854596],[-23.312378,-51.853062],[-23.314138,-51.852725],[-23.31653,-51.853179],[-23.316812,-51.852906],[-23.317012,-51.849553],[-23.31668,-51.848001],[-23.315989,-51.847124],[-23.315214,-51.846776],[-23.314227,-51.84697],[-23.311713,-51.848326],[-23.311045,-51.848192],[-23.310308,-51.847443],[-23.310111,-51.846433],[-23.311129,-51.842532],[-23.312261,-51.842048],[-23.314303,-51.840159],[-23.316795,-51.8367],[-23.320078,-51.836003],[-23.321183,-51.8361],[-23.322619,-51.837908],[-23.325046,-51.83987],[-23.325144,-51.841683],[-23.324033,-51.84284],[-23.324018,-51.843306],[-23.326024,-51.844264],[-23.327469,-51.84623],[-23.327936,-51.846062],[-23.327452,-51.845384],[-23.327554,-51.845019],[-23.328228,-51.846351],[-23.32789,-51.84666],[-23.32746,-51.846494],[-23.325894,-51.84452],[-23.323891,-51.84357],[-23.323878,-51.842666],[-23.324969,-51.841097],[-23.32489,-51.840268],[-23.320829,-51.836212],[-23.316868,-51.836999],[-23.31443,-51.840364],[-23.312431,-51.842173],[-23.311439,-51.842578],[-23.310253,-51.846928],[-23.310741,-51.847697],[-23.31148,-51.848012],[-23.314349,-51.846564],[-23.315902,-51.846716],[-23.316787,-51.847653],[-23.317244,-51.849351],[-23.317099,-51.852953],[-23.31654,-51.853461],[-23.314332,-51.853065],[-23.312083,-51.853516],[-23.309626,-51.854833],[-23.307431,-51.855298],[-23.306632,-51.856037],[-23.30527,-51.858234],[-23.304653,-51.860817],[-23.304309,-51.861332],[-23.302379,-51.862445],[-23.302065,-51.863013],[-23.304575,-51.866211],[-23.305518,-51.86863],[-23.304412,-51.870848],[-23.303465,-51.87145],[-23.302149,-51.87159],[-23.296519,-51.869885],[-23.292917,-51.869836],[-23.289656,-51.86856],[-23.288203,-51.868679],[-23.28765,-51.869355],[-23.287429,-51.870408],[-23.287832,-51.873192],[-23.28849,-51.874075],[-23.289175,-51.874319],[-23.291067,-51.873607],[-23.291724,-51.873728],[-23.292517,-51.875111],[-23.292977,-51.877222],[-23.294092,-51.87765],[-23.297292,-51.878072],[-23.298379,-51.879146],[-23.29997,-51.885198],[-23.301632,-51.887176],[-23.30362,-51.890649],[-23.305127,-51.892361],[-23.304335,-51.895098],[-23.303881,-51.899287],[-23.303382,-51.899814],[-23.302832,-51.89981],[-23.300887,-51.897287],[-23.297881,-51.896517],[-23.296683,-51.899012],[-23.295306,-51.9006],[-23.294623,-51.901993],[-23.289873,-51.907135],[-23.288496,-51.909726],[-23.288745,-51.910122],[-23.289664,-51.910193],[-23.29039,-51.910754],[-23.290102,-51.912996],[-23.288352,-51.916265],[-23.288181,-51.918315],[-23.286943,-51.921579],[-23.287109,-51.923818],[-23.28478,-51.925645],[-23.282286,-51.92612],[-23.28172,-51.925792],[-23.28154,-51.92387],[-23.281237,-51.923571],[-23.281169,-51.92509],[-23.280552,-51.92731],[-23.280894,-51.929156],[-23.280712,-51.929614],[-23.279976,-51.929783],[-23.279473,-51.92892],[-23.279127,-51.928872],[-23.278307,-51.930205],[-23.277652,-51.932813],[-23.273872,-51.934572],[-23.272819,-51.935664],[-23.272398,-51.937271],[-23.273811,-51.940734],[-23.273609,-51.941548],[-23.271526,-51.942135],[-23.269846,-51.943326],[-23.269532,-51.942884],[-23.269591,-51.942095],[-23.269234,-51.941737],[-23.268703,-51.941636],[-23.267374,-51.942183],[-23.266617,-51.941809],[-23.266376,-51.941232],[-23.266768,-51.939515],[-23.264148,-51.939121],[-23.26394,-51.940827],[-23.264296,-51.94425],[-23.263694,-51.944964],[-23.26242,-51.944237],[-23.262263,-51.944507],[-23.262588,-51.946139],[-23.263425,-51.946067],[-23.264008,-51.946485],[-23.263506,-51.948428],[-23.263755,-51.949743],[-23.263382,-51.950244],[-23.262447,-51.950632],[-23.259909,-51.950504],[-23.260127,-51.952051],[-23.259019,-51.952393],[-23.258772,-51.95285],[-23.259289,-51.955291],[-23.25815,-51.956874],[-23.257956,-51.960843],[-23.257442,-51.962154],[-23.256201,-51.964043],[-23.254054,-51.965763],[-23.254166,-51.966126],[-23.2532,-51.965405]]},{"name":"","coords":[[-23.375085,-52.035793],[-23.376397,-52.036419]]},{"name":"","coords":[[-23.341656,-52.030976],[-23.342345,-52.031235]]},{"name":"","coords":[[-23.297562,-51.973874],[-23.296767,-51.975242],[-23.296445,-51.977414]]},{"name":"","coords":[[-23.51582,-51.988466],[-23.514963,-51.98868]]},{"name":"","coords":[[-23.541738,-51.996214],[-23.541221,-51.994764],[-23.53938,-51.993435]]},{"name":"","coords":[[-23.515547,-52.052272],[-23.517555,-52.048706]]},{"name":"","coords":[[-23.404539,-52.049644],[-23.404887,-52.048082],[-23.406387,-52.044964]]},{"name":"","coords":[[-23.438881,-51.969325],[-23.438067,-51.970178],[-23.437731,-51.971598]]},{"name":"","coords":[[-23.407304,-51.84518],[-23.406339,-51.845117],[-23.406027,-51.844504],[-23.406339,-51.842862],[-23.407241,-51.84198],[-23.406988,-51.840731],[-23.406362,-51.839787],[-23.403747,-51.841071],[-23.403396,-51.841025],[-23.403151,-51.840493],[-23.402422,-51.840615],[-23.400176,-51.842556],[-23.398162,-51.842235],[-23.397812,-51.842366],[-23.397846,-51.842846],[-23.396209,-51.842943],[-23.394938,-51.842235],[-23.394578,-51.843106],[-23.393575,-51.843101],[-23.393175,-51.843532],[-23.391886,-51.843769],[-23.391651,-51.844077],[-23.392248,-51.844113],[-23.392312,-51.844483],[-23.391495,-51.845101],[-23.391486,-51.845416],[-23.390537,-51.845445],[-23.389779,-51.84599],[-23.388031,-51.845665],[-23.387527,-51.844381],[-23.387537,-51.842591],[-23.386985,-51.842938],[-23.38652,-51.841537],[-23.385701,-51.841134],[-23.384435,-51.841159],[-23.383451,-51.842797],[-23.383545,-51.843957],[-23.382703,-51.843804],[-23.382666,-51.844459],[-23.381918,-51.844937],[-23.380804,-51.844292],[-23.380066,-51.842627],[-23.37533,-51.842149],[-23.373927,-51.841329],[-23.373959,-51.840257],[-23.37336,-51.840366],[-23.372314,-51.839478],[-23.370514,-51.840148],[-23.369629,-51.840902],[-23.368173,-51.842983],[-23.367243,-51.842678],[-23.366314,-51.843394],[-23.365974,-51.842788],[-23.365684,-51.843243],[-23.365368,-51.842832],[-23.364803,-51.84299],[-23.364595,-51.842515],[-23.364324,-51.842778],[-23.362354,-51.842257],[-23.36247,-51.841714],[-23.362114,-51.84157],[-23.362045,-51.840839],[-23.361097,-51.840566],[-23.360658,-51.839683],[-23.360095,-51.8398],[-23.359147,-51.839288],[-23.358316,-51.83995],[-23.356417,-51.840205],[-23.356409,-51.841003],[-23.355973,-51.841204],[-23.356178,-51.841803],[-23.355438,-51.842105],[-23.355121,-51.843468],[-23.354602,-51.843539],[-23.354365,-51.843914],[-23.354532,-51.846042],[-23.353592,-51.846989],[-23.353561,-51.847421],[-23.353906,-51.847646],[-23.355501,-51.847183],[-23.355543,-51.847993],[-23.355992,-51.848069],[-23.356442,-51.848661],[-23.356117,-51.8497],[-23.355504,-51.849734],[-23.35478,-51.851086],[-23.353205,-51.850918],[-23.351688,-51.850066],[-23.347881,-51.846977],[-23.346604,-51.844931],[-23.345177,-51.845232],[-23.345253,-51.845959],[-23.344705,-51.846745],[-23.343857,-51.846698],[-23.342545,-51.845895],[-23.341576,-51.846013],[-23.342095,-51.846917],[-23.341716,-51.847134],[-23.34077,-51.846851],[-23.340773,-51.847571],[-23.340401,-51.847529],[-23.340427,-51.847851],[-23.339342,-51.847926],[-23.339906,-51.848709],[-23.339253,-51.849009],[-23.339106,-51.848523],[-23.338714,-51.849114],[-23.338371,-51.848807],[-23.337812,-51.849373],[-23.337965,-51.8501],[-23.337282,-51.84997],[-23.337198,-51.850481],[-23.336528,-51.850704],[-23.335239,-51.850513],[-23.335272,-51.849722],[-23.334918,-51.849812],[-23.334663,-51.850465],[-23.333897,-51.849651],[-23.332122,-51.849418],[-23.33189,-51.848968],[-23.332064,-51.848317],[-23.331755,-51.848137],[-23.332094,-51.847845],[-23.331848,-51.847202],[-23.331007,-51.84688],[-23.331144,-51.847828],[-23.330948,-51.847955],[-23.330737,-51.847511],[-23.330425,-51.847983],[-23.329947,-51.847551],[-23.330447,-51.84719],[-23.329841,-51.847136],[-23.329405,-51.846401],[-23.329503,-51.845872],[-23.329017,-51.84638],[-23.32861,-51.84592],[-23.328336,-51.846439],[-23.327829,-51.846462]]},{"name":"","coords":[[-23.328451,-51.849948],[-23.328241,-51.851272],[-23.328586,-51.851538],[-23.328822,-51.852629]]},{"name":"","coords":[[-23.382032,-51.883169],[-23.382923,-51.883211],[-23.385514,-51.882093],[-23.387085,-51.880965],[-23.38911,-51.879042],[-23.391129,-51.875739]]},{"name":"","coords":[[-23.351888,-51.866825],[-23.350589,-51.867723],[-23.34902,-51.869708]]},{"name":"","coords":[[-23.519435,-51.983319],[-23.518693,-51.983575],[-23.51582,-51.988466]]},{"name":"","coords":[[-23.317948,-52.01171],[-23.31925,-52.01005]]},{"name":"","coords":[[-23.487096,-51.951964],[-23.485786,-51.951166],[-23.484893,-51.951685],[-23.484185,-51.952916],[-23.48433,-51.954673],[-23.483896,-51.956664],[-23.482808,-51.957262],[-23.482323,-51.958146],[-23.481244,-51.958704],[-23.481048,-51.959156],[-23.479961,-51.959047],[-23.477964,-51.959896],[-23.477649,-51.960799],[-23.476697,-51.961817],[-23.474223,-51.963003],[-23.473799,-51.963796],[-23.472269,-51.964467],[-23.470855,-51.966173],[-23.470373,-51.967848],[-23.46838,-51.970157],[-23.463799,-51.969827],[-23.462883,-51.970281],[-23.462567,-51.969959],[-23.461798,-51.969997],[-23.461253,-51.970468],[-23.459762,-51.970841],[-23.458177,-51.970768]]},{"name":"","coords":[[-23.327629,-52.010761],[-23.327098,-52.009299]]},{"name":"","coords":[[-23.340806,-51.885142],[-23.338071,-51.888059],[-23.337353,-51.88927],[-23.337273,-51.890517]]},{"name":"","coords":[[-23.340806,-51.885142],[-23.340838,-51.882854],[-23.341986,-51.878817],[-23.341668,-51.877729]]},{"name":"","coords":[[-23.343055,-52.067021],[-23.343987,-52.06616],[-23.344796,-52.065953]]},{"name":"","coords":[[-23.389415,-52.044023],[-23.38902,-52.045477],[-23.386682,-52.048431],[-23.385034,-52.05188],[-23.384223,-52.052669]]},{"name":"","coords":[[-23.450968,-51.970553],[-23.448488,-51.973919]]},{"name":"","coords":[[-23.533708,-52.06344],[-23.532199,-52.060603],[-23.532186,-52.05842],[-23.5318,-52.056822],[-23.532046,-52.055501],[-23.531501,-52.053227]]},{"name":"","coords":[[-23.391779,-51.845039],[-23.393412,-51.846198],[-23.396567,-51.850684],[-23.398701,-51.856023],[-23.398711,-51.857439],[-23.399263,-51.859086],[-23.399142,-51.861445]]},{"name":"","coords":[[-23.309525,-51.891213],[-23.309214,-51.892255]]},{"name":"","coords":[[-23.546962,-51.997004],[-23.542386,-51.996046],[-23.540779,-51.996438],[-23.538111,-51.996321],[-23.529219,-51.997882]]},{"name":"","coords":[[-23.384742,-51.998586],[-23.385741,-51.999802]]},{"name":"","coords":[[-23.347659,-51.862474],[-23.348309,-51.8627],[-23.34737,-51.86498],[-23.344999,-51.867586],[-23.344177,-51.867928]]},{"name":"","coords":[[-23.511646,-52.032693],[-23.511371,-52.031358],[-23.511584,-52.030104]]},{"name":"","coords":[[-23.442759,-52.01442],[-23.441563,-52.014659],[-23.440186,-52.016436],[-23.439163,-52.018667]]},{"name":"","coords":[[-23.50191,-52.01892],[-23.500904,-52.019329]]},{"name":"","coords":[[-23.417945,-51.96177],[-23.416267,-51.962689],[-23.413296,-51.963316],[-23.411535,-51.96427],[-23.410739,-51.964209],[-23.409579,-51.965014]]},{"name":"","coords":[[-23.396147,-52.038668],[-23.396361,-52.039955]]},{"name":"","coords":[[-23.362976,-51.880786],[-23.366013,-51.878055],[-23.368757,-51.877345],[-23.369717,-51.876788],[-23.370897,-51.875582],[-23.371517,-51.874064]]},{"name":"","coords":[[-23.273636,-51.941422],[-23.274765,-51.942458],[-23.275981,-51.944367],[-23.279733,-51.947533]]},{"name":"","coords":[[-23.476221,-51.967442],[-23.47684,-51.965107],[-23.476424,-51.963109],[-23.476674,-51.961825]]},{"name":"","coords":[[-23.378187,-51.888756],[-23.378425,-51.888054],[-23.380598,-51.885587],[-23.381098,-51.884232],[-23.382032,-51.883169]]},{"name":"","coords":[[-23.500862,-51.95881],[-23.499399,-51.959701],[-23.498132,-51.961089],[-23.494026,-51.968311],[-23.491301,-51.971558],[-23.491025,-51.973381]]},{"name":"","coords":[[-23.315517,-51.95261],[-23.316648,-51.953107],[-23.318099,-51.952994]]},{"name":"","coords":[[-23.519475,-52.05101],[-23.518512,-52.05252],[-23.517497,-52.053066]]},{"name":"","coords":[[-23.519509,-52.047268],[-23.519475,-52.05101]]},{"name":"","coords":[[-23.398936,-51.845912],[-23.39877,-51.842377]]},{"name":"","coords":[[-23.447201,-51.974543],[-23.447399,-51.97433],[-23.447674,-51.974578]]},{"name":"","coords":[[-23.396463,-51.883257],[-23.394847,-51.883873],[-23.392153,-51.885786],[-23.390992,-51.88585],[-23.390063,-51.886444],[-23.388828,-51.887871],[-23.387502,-51.888431],[-23.386318,-51.889374],[-23.384694,-51.892084]]},{"name":"","coords":[[-23.496679,-52.055768],[-23.492524,-52.055044],[-23.489935,-52.05346],[-23.489197,-52.052609]]},{"name":"","coords":[[-23.382223,-51.852745],[-23.381984,-51.85518]]},{"name":"","coords":[[-23.296687,-51.977492],[-23.296445,-51.977414]]},{"name":"","coords":[[-23.350685,-52.052407],[-23.350312,-52.054121]]},{"name":"","coords":[[-23.523363,-52.077531],[-23.522768,-52.078311]]},{"name":"","coords":[[-23.381126,-51.971053],[-23.384488,-51.974102],[-23.387537,-51.977745],[-23.390098,-51.980138],[-23.393301,-51.985216],[-23.396143,-51.987335],[-23.396876,-51.988855]]},{"name":"","coords":[[-23.548434,-51.997041],[-23.546961,-52.000853],[-23.546099,-52.004639],[-23.545274,-52.005423],[-23.543823,-52.005515]]},{"name":"","coords":[[-23.344177,-51.867928],[-23.343147,-51.86807],[-23.341073,-51.869232]]},{"name":"","coords":[[-23.366528,-51.84314],[-23.367354,-51.845325],[-23.369511,-51.847794],[-23.370395,-51.849925]]},{"name":"","coords":[[-23.261444,-51.95841],[-23.263884,-51.959514],[-23.265147,-51.960446]]},{"name":"","coords":[[-23.401437,-51.967994],[-23.402664,-51.970849],[-23.405397,-51.972824],[-23.406104,-51.973818],[-23.40762,-51.974442],[-23.407784,-51.974938],[-23.40845,-51.975345],[-23.411137,-51.976085],[-23.411656,-51.976565]]},{"name":"","coords":[[-23.534416,-52.001808],[-23.534655,-52.000323],[-23.536344,-51.996623]]},{"name":"","coords":[[-23.45595,-51.907491],[-23.458002,-51.90659],[-23.459451,-51.904882]]},{"name":"","coords":[[-23.400269,-52.012673],[-23.398691,-52.010746]]},{"name":"","coords":[[-23.43237,-52.019994],[-23.430191,-52.020555],[-23.429073,-52.020358],[-23.428432,-52.020912],[-23.426679,-52.021309],[-23.421011,-52.021358]]},{"name":"","coords":[[-23.379471,-52.040197],[-23.377856,-52.03955]]},{"name":"","coords":[[-23.361997,-51.87738],[-23.359528,-51.880284],[-23.357293,-51.881252]]},{"name":"","coords":[[-23.396455,-52.019825],[-23.398522,-52.019651],[-23.400536,-52.01847],[-23.402029,-52.018494],[-23.402709,-52.018201]]},{"name":"","coords":[[-23.372723,-52.048123],[-23.371456,-52.048503],[-23.369106,-52.048147],[-23.368498,-52.048494],[-23.366388,-52.048578],[-23.365038,-52.048981],[-23.362671,-52.050562],[-23.35973,-52.051448],[-23.35759,-52.053574],[-23.356308,-52.053433],[-23.353247,-52.052331],[-23.350797,-52.052422],[-23.349261,-52.051692],[-23.347974,-52.051708],[-23.347422,-52.051239],[-23.343909,-52.050344],[-23.343025,-52.049537],[-23.339014,-52.049966]]},{"name":"","coords":[[-23.52184,-52.046328],[-23.520899,-52.045489],[-23.519707,-52.045452]]},{"name":"","coords":[[-23.478981,-51.917769],[-23.476797,-51.917439],[-23.474263,-51.916543],[-23.471762,-51.91484],[-23.468638,-51.915221]]},{"name":"","coords":[[-23.400983,-51.889274],[-23.400321,-51.889491],[-23.399265,-51.890926],[-23.397957,-51.891626],[-23.395046,-51.892161],[-23.391012,-51.894007],[-23.389166,-51.896271]]},{"name":"","coords":[[-23.341585,-51.892725],[-23.342045,-51.892034],[-23.34268,-51.891738],[-23.346495,-51.89109],[-23.347244,-51.890674],[-23.349531,-51.890352],[-23.350061,-51.890556],[-23.351376,-51.890165]]},{"name":"","coords":[[-23.370398,-51.92687],[-23.368095,-51.92672]]},{"name":"","coords":[[-23.342345,-52.031235],[-23.34862,-52.036109],[-23.351669,-52.03756]]},{"name":"","coords":[[-23.375002,-52.004621],[-23.373228,-52.00378],[-23.37007,-52.002979],[-23.368827,-52.001676],[-23.361379,-51.998451],[-23.357288,-51.997391],[-23.355495,-51.997308],[-23.349492,-51.999174],[-23.343884,-51.999963],[-23.336228,-52.001967],[-23.333611,-52.00421],[-23.331565,-52.008309],[-23.329993,-52.010269]]},{"name":"","coords":[[-23.484893,-51.951685],[-23.482394,-51.951273],[-23.481574,-51.950112],[-23.480592,-51.949715],[-23.477106,-51.948887],[-23.47515,-51.949333],[-23.473689,-51.948998]]},{"name":"","coords":[[-23.383792,-51.853637],[-23.384178,-51.853704]]},{"name":"","coords":[[-23.351376,-51.865915],[-23.351436,-51.866145]]},{"name":"","coords":[[-23.326505,-51.89058],[-23.326287,-51.891386]]},{"name":"","coords":[[-23.367455,-51.857732],[-23.368052,-51.859881],[-23.368004,-51.861666]]},{"name":"","coords":[[-23.296687,-51.977492],[-23.296445,-51.977414]]},{"name":"","coords":[[-23.363841,-52.059508],[-23.360885,-52.058968]]},{"name":"","coords":[[-23.319526,-51.866458],[-23.321482,-51.866141],[-23.322976,-51.864881]]},{"name":"","coords":[[-23.314593,-52.017884],[-23.31471,-52.016762],[-23.315418,-52.016591],[-23.315694,-52.016121],[-23.315256,-52.014987],[-23.316153,-52.013903],[-23.314101,-52.010962],[-23.314222,-52.010419],[-23.312197,-52.009593],[-23.312391,-52.007708],[-23.310596,-52.006701],[-23.310087,-52.005647],[-23.310015,-52.00331],[-23.310453,-52.003219],[-23.310714,-52.002353],[-23.311464,-52.001782],[-23.310459,-51.999535],[-23.310522,-51.998621],[-23.311013,-51.998555],[-23.310974,-51.997457],[-23.310351,-51.996812],[-23.309749,-51.996749],[-23.309872,-51.996167],[-23.309362,-51.995675],[-23.309747,-51.995198],[-23.309129,-51.995249],[-23.309284,-51.994528],[-23.308389,-51.994089],[-23.307973,-51.993494],[-23.308515,-51.992113],[-23.306406,-51.990908],[-23.305759,-51.990903],[-23.305475,-51.990469],[-23.304881,-51.990824],[-23.303783,-51.989596],[-23.303076,-51.990428],[-23.302784,-51.989985],[-23.302997,-51.989595],[-23.30261,-51.989585],[-23.301707,-51.990638],[-23.301451,-51.990137],[-23.301903,-51.990102],[-23.301456,-51.98973],[-23.301311,-51.988753],[-23.299923,-51.98779],[-23.298631,-51.988151],[-23.298579,-51.987368],[-23.297791,-51.987275],[-23.296906,-51.986468],[-23.296861,-51.986959],[-23.296591,-51.98693],[-23.29673,-51.985246],[-23.296258,-51.985536],[-23.296115,-51.98507],[-23.296146,-51.984145],[-23.29655,-51.983997],[-23.296112,-51.983749],[-23.296075,-51.983258],[-23.295352,-51.983261],[-23.294694,-51.982374],[-23.295167,-51.982057],[-23.29545,-51.981109],[-23.295962,-51.98101],[-23.295442,-51.980188],[-23.296649,-51.979025],[-23.296319,-51.978611],[-23.296753,-51.978345],[-23.296687,-51.977492]]},{"name":"","coords":[[-23.388272,-51.99938],[-23.386769,-51.99904],[-23.385654,-51.999177],[-23.384742,-51.998586]]},{"name":"","coords":[[-23.318067,-51.874855],[-23.31616,-51.874261],[-23.315296,-51.874381],[-23.314076,-51.873481],[-23.313328,-51.87332],[-23.312239,-51.871696],[-23.309502,-51.868908],[-23.306598,-51.868309],[-23.305459,-51.868548]]},{"name":"","coords":[[-23.439163,-52.018667],[-23.438155,-52.020023],[-23.436276,-52.021495],[-23.435535,-52.022853]]},{"name":"","coords":[[-23.32451,-51.969088],[-23.320079,-51.967868],[-23.313866,-51.968982]]},{"name":"","coords":[[-23.530784,-51.987266],[-23.530312,-51.985931],[-23.529082,-51.984231],[-23.527326,-51.982866]]},{"name":"","coords":[[-23.351436,-51.866145],[-23.353574,-51.86882],[-23.356997,-51.870818],[-23.358075,-51.872846],[-23.359155,-51.874026],[-23.359529,-51.873956],[-23.360001,-51.874384],[-23.35996,-51.875329],[-23.36147,-51.87622],[-23.362755,-51.878814],[-23.362976,-51.880786],[-23.366273,-51.885463],[-23.369693,-51.887235],[-23.372083,-51.887536],[-23.374654,-51.887408],[-23.375719,-51.888441],[-23.378486,-51.888826],[-23.379222,-51.889499],[-23.380471,-51.88968],[-23.381788,-51.890381],[-23.384694,-51.892084],[-23.388036,-51.894582],[-23.38915,-51.896163],[-23.390831,-51.901172],[-23.393978,-51.904338],[-23.396049,-51.905468],[-23.402889,-51.906873],[-23.405367,-51.907768]]},{"name":"","coords":[[-23.396956,-52.032602],[-23.396147,-52.038668]]},{"name":"","coords":[[-23.556849,-52.006827],[-23.551449,-52.007405],[-23.550078,-52.008256],[-23.548927,-52.009545]]},{"name":"","coords":[[-23.382032,-51.883169],[-23.382584,-51.882722],[-23.384515,-51.876048]]},{"name":"","coords":[[-23.505102,-51.967257],[-23.503334,-51.968139],[-23.502036,-51.970129]]},{"name":"","coords":[[-23.379573,-51.922304],[-23.378583,-51.925201],[-23.376037,-51.927832],[-23.375636,-51.92845],[-23.375613,-51.929293],[-23.374869,-51.930081],[-23.373156,-51.9296],[-23.371112,-51.927775],[-23.371125,-51.927249],[-23.370398,-51.92687]]},{"name":"","coords":[[-23.349227,-51.847883],[-23.348279,-51.849578],[-23.348068,-51.85109]]},{"name":"","coords":[[-23.358647,-51.902994],[-23.358509,-51.902418]]},{"name":"","coords":[[-23.522106,-51.98226],[-23.522163,-51.983547],[-23.522957,-51.985879]]},{"name":"","coords":[[-23.544931,-52.030342],[-23.544051,-52.030783],[-23.543111,-52.031791],[-23.542351,-52.033579],[-23.539319,-52.035209],[-23.538306,-52.036368]]},{"name":"","coords":[[-23.421011,-52.021358],[-23.418274,-52.021424],[-23.415107,-52.020347],[-23.41229,-52.02011],[-23.405638,-52.018634],[-23.404678,-52.018132],[-23.402709,-52.018201]]},{"name":"","coords":[[-23.440649,-51.948564],[-23.440261,-51.949194],[-23.439525,-51.952611],[-23.438553,-51.953916]]},{"name":"","coords":[[-23.366273,-51.885463],[-23.367693,-51.887097],[-23.370127,-51.888796],[-23.371699,-51.893278],[-23.372246,-51.894022],[-23.372446,-51.895526],[-23.374023,-51.897789],[-23.376254,-51.904274],[-23.377098,-51.905477],[-23.380741,-51.908761],[-23.381901,-51.911194],[-23.383277,-51.912898]]},{"name":"","coords":[[-23.506311,-51.968681],[-23.505093,-51.971359]]},{"name":"","coords":[[-23.477135,-51.989885],[-23.478924,-51.989362],[-23.479407,-51.989498],[-23.481108,-51.990909],[-23.485447,-51.995656]]},{"name":"","coords":[[-23.396147,-52.038668],[-23.394468,-52.036833],[-23.390876,-52.0358],[-23.38811,-52.035563]]},{"name":"","coords":[[-23.533708,-52.06344],[-23.531863,-52.06325],[-23.530564,-52.062765],[-23.527341,-52.06312],[-23.526278,-52.06233]]},{"name":"","coords":[[-23.418752,-51.999033],[-23.418888,-51.998105],[-23.420063,-51.995749],[-23.420898,-51.990921],[-23.421818,-51.987846],[-23.421795,-51.986532],[-23.423095,-51.982557]]},{"name":"","coords":[[-23.327423,-52.0301],[-23.324631,-52.029253]]},{"name":"","coords":[[-23.462897,-51.981798],[-23.463333,-51.981045],[-23.465651,-51.97928],[-23.466326,-51.978299]]},{"name":"","coords":[[-23.363753,-51.914121],[-23.366967,-51.908266]]},{"name":"","coords":[[-23.439287,-52.04722],[-23.438885,-52.046414]]},{"name":"","coords":[[-23.317098,-51.852747],[-23.318514,-51.85286],[-23.320417,-51.854049],[-23.321152,-51.85556],[-23.322663,-51.856552]]},{"name":"","coords":[[-23.333212,-51.916619],[-23.33489,-51.914475],[-23.336288,-51.911813],[-23.337848,-51.905875]]},{"name":"","coords":[[-23.329045,-51.846355],[-23.329062,-51.848806],[-23.328451,-51.849948]]},{"name":"","coords":[[-23.515727,-51.988641],[-23.516109,-51.989941],[-23.515725,-51.99208]]},{"name":"","coords":[[-23.405367,-51.907768],[-23.405295,-51.908791],[-23.406364,-51.911352],[-23.408374,-51.914585],[-23.409901,-51.916178]]},{"name":"","coords":[[-23.396455,-52.019825],[-23.394069,-52.017449],[-23.393154,-52.01552]]},{"name":"","coords":[[-23.52079,-52.101191],[-23.520265,-52.101018],[-23.520103,-52.100397],[-23.519338,-52.099914],[-23.519193,-52.098895],[-23.519767,-52.098411],[-23.519649,-52.098012],[-23.520271,-52.097123],[-23.520905,-52.096765],[-23.520982,-52.096005],[-23.520778,-52.095402],[-23.520356,-52.095241],[-23.520388,-52.094157],[-23.519001,-52.093409],[-23.519142,-52.093086],[-23.517627,-52.09153],[-23.518202,-52.090867],[-23.518455,-52.08976],[-23.517479,-52.088949],[-23.517332,-52.08825],[-23.517981,-52.087479],[-23.518102,-52.086826],[-23.517212,-52.085335],[-23.516193,-52.084802],[-23.515329,-52.084849],[-23.514286,-52.085336],[-23.51368,-52.086131],[-23.511974,-52.08735],[-23.511956,-52.087651],[-23.510561,-52.087862],[-23.506524,-52.08685],[-23.504497,-52.085208],[-23.500763,-52.083934],[-23.50036,-52.083336],[-23.499121,-52.082952],[-23.498899,-52.082452],[-23.496597,-52.080991],[-23.495678,-52.079221],[-23.493152,-52.077109],[-23.493275,-52.076587],[-23.492991,-52.0767],[-23.492538,-52.076233],[-23.492114,-52.076391],[-23.490693,-52.075112],[-23.489775,-52.074955],[-23.487071,-52.072665],[-23.486925,-52.07213],[-23.484957,-52.071202],[-23.482901,-52.06705],[-23.479011,-52.062844],[-23.477849,-52.060748],[-23.475779,-52.058167],[-23.474061,-52.054766],[-23.472645,-52.04941],[-23.471935,-52.048704],[-23.471598,-52.047731],[-23.468879,-52.04474],[-23.467836,-52.042293],[-23.467348,-52.041972],[-23.466739,-52.039365],[-23.466761,-52.037087],[-23.467273,-52.033756],[-23.468269,-52.031288],[-23.468593,-52.029175],[-23.468387,-52.02853],[-23.467806,-52.028107],[-23.467719,-52.026757],[-23.466138,-52.024503],[-23.465062,-52.021493],[-23.462098,-52.016752],[-23.458597,-52.013346],[-23.457213,-52.010905],[-23.456943,-52.010892],[-23.456753,-52.009429],[-23.456044,-52.008267],[-23.456239,-52.007842]]},{"name":"","coords":[[-23.542605,-51.996049],[-23.540888,-52.000205],[-23.540431,-52.002627]]},{"name":"","coords":[[-23.345125,-51.883259],[-23.340806,-51.885142]]},{"name":"","coords":[[-23.548163,-52.029786],[-23.544931,-52.030342],[-23.543619,-52.028726],[-23.544015,-52.028467],[-23.544655,-52.026866],[-23.544512,-52.02588],[-23.541853,-52.026559],[-23.541202,-52.025896],[-23.540865,-52.026163],[-23.539187,-52.024442],[-23.538024,-52.024021],[-23.537589,-52.023953],[-23.537554,-52.024267],[-23.536366,-52.023848],[-23.535144,-52.024573],[-23.53466,-52.024107],[-23.534095,-52.024621],[-23.529665,-52.024055],[-23.529427,-52.024388],[-23.527406,-52.024818],[-23.527699,-52.024227],[-23.527196,-52.024217],[-23.526569,-52.024982],[-23.526709,-52.025775],[-23.525857,-52.026732],[-23.523658,-52.026495],[-23.523731,-52.02604],[-23.523057,-52.025869],[-23.522981,-52.025538],[-23.522558,-52.025742],[-23.520263,-52.025143],[-23.519711,-52.024484],[-23.517726,-52.023796],[-23.516305,-52.023838],[-23.514249,-52.023223],[-23.51288,-52.022216],[-23.511811,-52.01901],[-23.511919,-52.017012],[-23.510976,-52.015189],[-23.50809,-52.013118],[-23.506406,-52.011438],[-23.505844,-52.010399],[-23.505447,-52.009306],[-23.506484,-52.00688],[-23.506651,-52.003439],[-23.504551,-52.000362],[-23.503522,-51.997373],[-23.502619,-51.996124],[-23.501091,-51.995148],[-23.497926,-51.994584],[-23.495015,-51.995814],[-23.492059,-51.997727],[-23.49069,-51.997984],[-23.489388,-51.997834],[-23.487419,-51.997036],[-23.485447,-51.995656]]},{"name":"","coords":[[-23.257969,-51.959276],[-23.259264,-51.95838],[-23.261444,-51.95841]]},{"name":"","coords":[[-23.488636,-52.009116],[-23.487429,-52.008998],[-23.486314,-52.009416]]},{"name":"","coords":[[-23.533721,-52.024617],[-23.533452,-52.025695],[-23.531906,-52.028046],[-23.530643,-52.030952]]},{"name":"","coords":[[-23.522558,-52.025742],[-23.521499,-52.02647],[-23.520013,-52.030174],[-23.520035,-52.033017],[-23.519471,-52.035892]]},{"name":"","coords":[[-23.439723,-52.048098],[-23.439287,-52.04722]]},{"name":"","coords":[[-23.352365,-51.911044],[-23.351719,-51.909478]]},{"name":"","coords":[[-23.401807,-51.845164],[-23.401318,-51.844226],[-23.401229,-51.842326],[-23.40088,-51.841934]]},{"name":"","coords":[[-23.391437,-52.023351],[-23.390628,-52.023625]]},{"name":"","coords":[[-23.539949,-52.051432],[-23.538909,-52.050659],[-23.538721,-52.049346],[-23.538242,-52.048824]]},{"name":"","coords":[[-23.534498,-52.065735],[-23.533708,-52.06344]]},{"name":"","coords":[[-23.52958,-52.024196],[-23.528021,-52.023366],[-23.526964,-52.019718],[-23.527034,-52.017275],[-23.526075,-52.016307]]},{"name":"","coords":[[-23.308036,-51.86849],[-23.309184,-51.868181],[-23.311015,-51.868924],[-23.313369,-51.868779],[-23.315843,-51.867206],[-23.317655,-51.866592],[-23.319526,-51.866458]]},{"name":"","coords":[[-23.341585,-51.892725],[-23.342882,-51.895098],[-23.343286,-51.896814],[-23.346373,-51.900614]]},{"name":"","coords":[[-23.409463,-52.048883],[-23.409952,-52.04607]]},{"name":"","coords":[[-23.362764,-52.050498],[-23.36513,-52.052764],[-23.366366,-52.052838],[-23.370244,-52.054706],[-23.370889,-52.055922]]},{"name":"","coords":[[-23.402372,-52.044054],[-23.400799,-52.046037],[-23.399658,-52.048106],[-23.399044,-52.04836],[-23.397032,-52.050541],[-23.396016,-52.051091],[-23.3938,-52.053883]]},{"name":"","coords":[[-23.322663,-51.856552],[-23.323661,-51.858127],[-23.324905,-51.861108]]},{"name":"","coords":[[-23.440219,-51.969049],[-23.438149,-51.96722]]}];
+const DATA_AREASPRIO = [{"name":"Área 28","coords":[[-23.412946,-51.89985],[-23.411789,-51.901306],[-23.412178,-51.90154],[-23.413074,-51.900275],[-23.413346,-51.900431],[-23.412546,-51.901439],[-23.412699,-51.901723],[-23.413557,-51.900792],[-23.413758,-51.900921],[-23.413052,-51.902021],[-23.413334,-51.902562],[-23.416937,-51.898221],[-23.416478,-51.89764],[-23.414008,-51.900628],[-23.41382,-51.900472],[-23.41611,-51.897728],[-23.415345,-51.896888],[-23.41303,-51.899697],[-23.412946,-51.89985]]},{"name":"","coords":[[-23.448703,-51.999224],[-23.447727,-51.999923],[-23.448032,-52.000349],[-23.448972,-51.999753],[-23.452089,-52.005003],[-23.452554,-52.004595],[-23.449377,-51.999422],[-23.450543,-51.998583],[-23.450202,-51.998118],[-23.449013,-51.998777],[-23.44797,-51.997113],[-23.447564,-51.997521],[-23.448703,-51.999224]]},{"name":"","coords":[[-23.449888,-51.954274],[-23.450063,-51.955714],[-23.450419,-51.955646],[-23.450267,-51.954226],[-23.45054,-51.954164],[-23.450668,-51.955577],[-23.450958,-51.955553],[-23.450771,-51.954146],[-23.45102,-51.954122],[-23.451204,-51.956005],[-23.451483,-51.955974],[-23.451323,-51.954047],[-23.451524,-51.954036],[-23.451676,-51.955379],[-23.451913,-51.955348],[-23.451797,-51.953986],[-23.452017,-51.953949],[-23.452321,-51.956546],[-23.450216,-51.956794],[-23.450256,-51.957115],[-23.452633,-51.956811],[-23.452319,-51.953855],[-23.454057,-51.953592],[-23.454301,-51.956277],[-23.453115,-51.95641],[-23.453125,-51.956757],[-23.454393,-51.956637],[-23.454426,-51.957139],[-23.454805,-51.957064],[-23.454484,-51.953492],[-23.455859,-51.953271],[-23.456012,-51.955455],[-23.456344,-51.955367],[-23.456286,-51.953261],[-23.456532,-51.953616],[-23.456758,-51.95347],[-23.456476,-51.953127],[-23.456847,-51.952966],[-23.457881,-51.952942],[-23.458469,-51.952798],[-23.4588,-51.952916],[-23.459007,-51.952937],[-23.458998,-51.952468],[-23.457986,-51.95275],[-23.457883,-51.95264],[-23.457812,-51.952664],[-23.457897,-51.952778],[-23.457792,-51.952765],[-23.457784,-51.952622],[-23.457838,-51.952571],[-23.457795,-51.952535],[-23.457704,-51.952587],[-23.457691,-51.952767],[-23.45741,-51.952775],[-23.457402,-51.952576],[-23.456599,-51.952653],[-23.456586,-51.952329],[-23.457724,-51.95026],[-23.457769,-51.948697],[-23.457577,-51.948724],[-23.457535,-51.950246],[-23.457242,-51.950712],[-23.457269,-51.946767],[-23.457037,-51.94682],[-23.456955,-51.951108],[-23.456691,-51.951633],[-23.456679,-51.946837],[-23.456376,-51.946892],[-23.456388,-51.948889],[-23.456133,-51.949003],[-23.456095,-51.947385],[-23.455865,-51.947299],[-23.455783,-51.949084],[-23.455486,-51.949114],[-23.45546,-51.948587],[-23.455282,-51.948624],[-23.455194,-51.949401],[-23.456124,-51.949401],[-23.456163,-51.952753],[-23.455528,-51.952883],[-23.455395,-51.949498],[-23.455128,-51.949522],[-23.455205,-51.952573],[-23.454784,-51.952608],[-23.454755,-51.950515],[-23.454447,-51.950583],[-23.454562,-51.95296],[-23.452872,-51.953339],[-23.452829,-51.952549],[-23.453188,-51.951056],[-23.453129,-51.94902],[-23.451919,-51.949281],[-23.451929,-51.949564],[-23.452866,-51.949403],[-23.452906,-51.94966],[-23.452301,-51.949823],[-23.452305,-51.95008],[-23.452886,-51.950033],[-23.452943,-51.950341],[-23.452261,-51.95049],[-23.452266,-51.950773],[-23.452906,-51.950733],[-23.452821,-51.95104],[-23.452316,-51.951223],[-23.452308,-51.951499],[-23.452777,-51.951406],[-23.452575,-51.952534],[-23.451922,-51.952645],[-23.451696,-51.949889],[-23.4514,-51.949964],[-23.451525,-51.951692],[-23.451068,-51.951882],[-23.451066,-51.95219],[-23.451315,-51.952172],[-23.451379,-51.952359],[-23.451581,-51.952341],[-23.451588,-51.952104],[-23.451659,-51.952104],[-23.451707,-51.952965],[-23.452549,-51.952855],[-23.452575,-51.953491],[-23.449562,-51.954047],[-23.449378,-51.952139],[-23.448951,-51.952239],[-23.449254,-51.954103],[-23.448702,-51.954266],[-23.448724,-51.954488],[-23.449888,-51.954274]]},{"name":"","coords":[[-23.460543,-51.921302],[-23.459685,-51.932135],[-23.46004,-51.932124],[-23.460538,-51.926118],[-23.461625,-51.926601],[-23.46208,-51.92582],[-23.461832,-51.925626],[-23.461568,-51.926176],[-23.461415,-51.926111],[-23.462407,-51.924615],[-23.46118,-51.923708],[-23.461048,-51.924041],[-23.461874,-51.924637],[-23.461179,-51.92593],[-23.460919,-51.925799],[-23.461458,-51.924866],[-23.460869,-51.924284],[-23.46069,-51.924526],[-23.461079,-51.924825],[-23.460612,-51.925566],[-23.460693,-51.923884],[-23.460907,-51.923796],[-23.462774,-51.920688],[-23.462196,-51.920235],[-23.460892,-51.922345],[-23.460956,-51.921498],[-23.461949,-51.919976],[-23.461524,-51.919665],[-23.460543,-51.921302]]},{"name":"","coords":[[-23.45094,-51.9235],[-23.450698,-51.923338],[-23.45173,-51.92106],[-23.451529,-51.920968],[-23.451163,-51.921704],[-23.45062,-51.921366],[-23.450501,-51.921603],[-23.451067,-51.92196],[-23.450491,-51.923157],[-23.450214,-51.922962],[-23.450467,-51.922335],[-23.450266,-51.922211],[-23.449954,-51.922794],[-23.449817,-51.922947],[-23.450832,-51.923731],[-23.450472,-51.924402],[-23.450708,-51.924545],[-23.451487,-51.923067],[-23.451287,-51.922918],[-23.45094,-51.9235]]},{"name":"","coords":[[-23.422053,-51.960836],[-23.421725,-51.959719],[-23.421579,-51.959789],[-23.421854,-51.960889],[-23.422053,-51.960836]]},{"name":"","coords":[[-23.390715,-51.900348],[-23.390895,-51.900022],[-23.391273,-51.900708],[-23.391734,-51.901369],[-23.392135,-51.901772],[-23.392263,-51.90159],[-23.392199,-51.901513],[-23.392779,-51.900493],[-23.392637,-51.900396],[-23.392031,-51.901371],[-23.391766,-51.901041],[-23.39214,-51.900405],[-23.39201,-51.900299],[-23.391619,-51.900874],[-23.391393,-51.900513],[-23.391923,-51.899525],[-23.393006,-51.900228],[-23.393131,-51.899998],[-23.39193,-51.899207],[-23.391263,-51.900342],[-23.391029,-51.899852],[-23.39157,-51.89898],[-23.39139,-51.898863],[-23.390595,-51.900235],[-23.390715,-51.900348]]},{"name":"","coords":[[-23.391812,-51.898696],[-23.392171,-51.898114],[-23.39246,-51.898193],[-23.392125,-51.89882],[-23.392362,-51.898924],[-23.392762,-51.898317],[-23.393016,-51.898338],[-23.39286,-51.898787],[-23.393049,-51.898878],[-23.393318,-51.898437],[-23.393691,-51.898503],[-23.393452,-51.898842],[-23.393712,-51.898972],[-23.39389,-51.898883],[-23.393928,-51.898537],[-23.394359,-51.89872],[-23.394929,-51.898557],[-23.394665,-51.899113],[-23.394186,-51.898853],[-23.393643,-51.899678],[-23.393879,-51.899814],[-23.394244,-51.899187],[-23.394533,-51.89935],[-23.394174,-51.89997],[-23.394422,-51.900126],[-23.395122,-51.898911],[-23.395412,-51.898996],[-23.394705,-51.900269],[-23.394906,-51.900418],[-23.39578,-51.898864],[-23.395064,-51.89868],[-23.395161,-51.898295],[-23.39496,-51.898217],[-23.394425,-51.898496],[-23.392243,-51.897878],[-23.392877,-51.896778],[-23.394674,-51.897522],[-23.394818,-51.897266],[-23.394688,-51.897214],[-23.394975,-51.896709],[-23.394727,-51.896611],[-23.394446,-51.897052],[-23.394156,-51.896908],[-23.394689,-51.895969],[-23.395297,-51.896345],[-23.395411,-51.896108],[-23.395358,-51.896024],[-23.395728,-51.895494],[-23.395546,-51.895275],[-23.395145,-51.895882],[-23.394874,-51.895687],[-23.395185,-51.895144],[-23.394973,-51.894963],[-23.393878,-51.896868],[-23.393594,-51.896744],[-23.394449,-51.895357],[-23.394219,-51.895182],[-23.393352,-51.896621],[-23.393033,-51.896522],[-23.394001,-51.894969],[-23.3937,-51.894788],[-23.391522,-51.898553],[-23.391812,-51.898696]]},{"name":"","coords":[[-23.394382,-51.893752],[-23.396146,-51.894849],[-23.39629,-51.894638],[-23.395246,-51.893899],[-23.395742,-51.892979],[-23.395494,-51.892932],[-23.39498,-51.893724],[-23.394726,-51.89362],[-23.395013,-51.893115],[-23.395957,-51.892762],[-23.396099,-51.892827],[-23.396313,-51.892642],[-23.396444,-51.892611],[-23.396265,-51.892841],[-23.396111,-51.892814],[-23.396039,-51.892974],[-23.396635,-51.89337],[-23.396372,-51.893817],[-23.396554,-51.89394],[-23.396853,-51.893487],[-23.397733,-51.894006],[-23.400435,-51.895885],[-23.400519,-51.895693],[-23.400467,-51.895584],[-23.40119,-51.894459],[-23.400953,-51.894348],[-23.400248,-51.895505],[-23.400041,-51.895356],[-23.400789,-51.894136],[-23.400475,-51.894037],[-23.399788,-51.895156],[-23.397487,-51.893536],[-23.398024,-51.892744],[-23.398396,-51.891957],[-23.398179,-51.891692],[-23.397995,-51.891742],[-23.398082,-51.892006],[-23.397238,-51.89347],[-23.396943,-51.893269],[-23.397684,-51.892286],[-23.397798,-51.891998],[-23.395204,-51.892802],[-23.395588,-51.892085],[-23.395262,-51.891974],[-23.394382,-51.893752]]},{"name":"","coords":[[-23.413366,-51.874703],[-23.411737,-51.873563],[-23.411314,-51.872931],[-23.410569,-51.87281],[-23.408302,-51.87137],[-23.408384,-51.871499],[-23.407348,-51.872571],[-23.407607,-51.872791],[-23.408441,-51.871898],[-23.410224,-51.872988],[-23.410069,-51.873166],[-23.40857,-51.872245],[-23.40839,-51.872603],[-23.409949,-51.873499],[-23.409817,-51.873755],[-23.407964,-51.872524],[-23.407773,-51.872818],[-23.409638,-51.874062],[-23.409494,-51.874331],[-23.40705,-51.872774],[-23.405009,-51.875521],[-23.405221,-51.875689],[-23.407273,-51.873238],[-23.407792,-51.873601],[-23.407719,-51.87387],[-23.4072,-51.873623],[-23.407104,-51.873789],[-23.407528,-51.874125],[-23.407361,-51.874432],[-23.406865,-51.874108],[-23.406745,-51.874313],[-23.407193,-51.874701],[-23.407026,-51.874944],[-23.406507,-51.874594],[-23.406363,-51.874824],[-23.406906,-51.875212],[-23.406751,-51.875455],[-23.406172,-51.875105],[-23.406076,-51.875335],[-23.406584,-51.875711],[-23.406488,-51.875941],[-23.405885,-51.875706],[-23.40573,-51.875898],[-23.40626,-51.876402],[-23.406188,-51.876568],[-23.405232,-51.875972],[-23.405017,-51.876227],[-23.406292,-51.876993],[-23.408087,-51.873795],[-23.408264,-51.873963],[-23.407736,-51.875102],[-23.407948,-51.875309],[-23.408582,-51.874197],[-23.40876,-51.8743],[-23.408232,-51.875401],[-23.408492,-51.875557],[-23.409138,-51.874457],[-23.40935,-51.874587],[-23.408691,-51.875905],[-23.408915,-51.876086],[-23.410531,-51.873182],[-23.411182,-51.873315],[-23.411393,-51.873753],[-23.410592,-51.875083],[-23.409809,-51.875142],[-23.409139,-51.876318],[-23.407522,-51.875332],[-23.406755,-51.876919],[-23.407003,-51.877023],[-23.407733,-51.875757],[-23.407933,-51.875938],[-23.407275,-51.877089],[-23.407534,-51.877283],[-23.408216,-51.876107],[-23.408441,-51.876237],[-23.407854,-51.877414],[-23.408078,-51.877582],[-23.408748,-51.876431],[-23.408983,-51.876702],[-23.408266,-51.877892],[-23.407012,-51.877498],[-23.406927,-51.877806],[-23.408074,-51.878275],[-23.408393,-51.878457],[-23.410072,-51.875368],[-23.410396,-51.875509],[-23.409103,-51.877914],[-23.409363,-51.878095],[-23.411672,-51.873926],[-23.41192,-51.874081],[-23.411238,-51.875425],[-23.411427,-51.875516],[-23.412156,-51.87425],[-23.412404,-51.874418],[-23.411734,-51.875685],[-23.411934,-51.875879],[-23.4127,-51.874561],[-23.412876,-51.874742],[-23.412242,-51.875958],[-23.412525,-51.876152],[-23.413207,-51.874963],[-23.413458,-51.874618],[-23.413366,-51.874703]]},{"name":"","coords":[[-23.412806,-51.876323],[-23.413066,-51.876351],[-23.413737,-51.875174],[-23.414472,-51.874935],[-23.415035,-51.873847],[-23.414577,-51.873254],[-23.413225,-51.87345],[-23.413192,-51.872911],[-23.41298,-51.872755],[-23.412943,-51.872973],[-23.412554,-51.872676],[-23.412434,-51.872893],[-23.412942,-51.873282],[-23.412916,-51.873628],[-23.411888,-51.873044],[-23.411698,-51.873222],[-23.411803,-51.873402],[-23.411993,-51.87334],[-23.412997,-51.874039],[-23.413006,-51.874386],[-23.413207,-51.874477],[-23.4132,-51.873707],[-23.414503,-51.873703],[-23.41462,-51.874024],[-23.413316,-51.874041],[-23.413303,-51.874362],[-23.414488,-51.874357],[-23.414284,-51.87469],[-23.413691,-51.874904],[-23.413514,-51.874723],[-23.413288,-51.874966],[-23.412806,-51.876323]]},{"name":"","coords":[[-23.411096,-51.86852],[-23.411095,-51.868802],[-23.414129,-51.868604],[-23.414162,-51.868976],[-23.410547,-51.869235],[-23.410594,-51.869428],[-23.411921,-51.869372],[-23.411895,-51.869719],[-23.410449,-51.869825],[-23.410448,-51.870094],[-23.412035,-51.870053],[-23.412226,-51.869901],[-23.412228,-51.869438],[-23.41326,-51.869278],[-23.412309,-51.869798],[-23.411808,-51.870399],[-23.410896,-51.870431],[-23.410906,-51.870675],[-23.411617,-51.870654],[-23.411616,-51.870859],[-23.411818,-51.870809],[-23.41226,-51.870183],[-23.413199,-51.869548],[-23.414125,-51.869271],[-23.414123,-51.869592],[-23.413185,-51.869958],[-23.412662,-51.870301],[-23.412269,-51.87071],[-23.412042,-51.87108],[-23.412277,-51.871313],[-23.412635,-51.870866],[-23.413076,-51.870458],[-23.413622,-51.870218],[-23.414547,-51.87007],[-23.414404,-51.868156],[-23.411096,-51.86852]]},{"name":"","coords":[[-23.412504,-51.980546],[-23.412634,-51.980358],[-23.412219,-51.979976],[-23.412019,-51.980312],[-23.412504,-51.980546]]},{"name":"","coords":[[-23.432481,-51.896509],[-23.43296,-51.895678],[-23.432671,-51.895464],[-23.432186,-51.896289],[-23.432481,-51.896509]]},{"name":"","coords":[[-23.382304,-51.917085],[-23.383578,-51.91599],[-23.38471,-51.916858],[-23.384375,-51.917382],[-23.383503,-51.916619],[-23.383205,-51.916912],[-23.38416,-51.917663],[-23.383875,-51.917853],[-23.383015,-51.91709],[-23.382693,-51.917306],[-23.383566,-51.917992],[-23.383364,-51.918184],[-23.382491,-51.91742],[-23.382205,-51.917726],[-23.383042,-51.918425],[-23.38259,-51.918717],[-23.382742,-51.919065],[-23.384574,-51.917833],[-23.385172,-51.916874],[-23.383392,-51.915283],[-23.383095,-51.915551],[-23.383188,-51.915769],[-23.382009,-51.916788],[-23.382304,-51.917085]]},{"name":"","coords":[[-23.384625,-51.919245],[-23.384825,-51.919477],[-23.385858,-51.919009],[-23.386059,-51.919139],[-23.384538,-51.919937],[-23.383901,-51.919458],[-23.383686,-51.919675],[-23.384229,-51.920115],[-23.383944,-51.920241],[-23.384013,-51.920498],[-23.384393,-51.92036],[-23.384546,-51.920592],[-23.38413,-51.920859],[-23.384235,-51.921129],[-23.384663,-51.920849],[-23.384803,-51.921146],[-23.385077,-51.920968],[-23.384726,-51.920208],[-23.38633,-51.919423],[-23.386399,-51.919693],[-23.385307,-51.920174],[-23.385435,-51.920457],[-23.386516,-51.920002],[-23.386633,-51.920285],[-23.385587,-51.920817],[-23.385763,-51.921191],[-23.386713,-51.920774],[-23.386817,-51.921134],[-23.385677,-51.921678],[-23.385746,-51.921961],[-23.38685,-51.92157],[-23.386908,-51.921866],[-23.385732,-51.922346],[-23.385801,-51.922654],[-23.386942,-51.922187],[-23.387011,-51.922521],[-23.385882,-51.922988],[-23.385928,-51.923233],[-23.387056,-51.922932],[-23.387136,-51.923318],[-23.386033,-51.923618],[-23.386102,-51.923901],[-23.387253,-51.923665],[-23.387275,-51.923909],[-23.386016,-51.924363],[-23.386062,-51.924697],[-23.386644,-51.924495],[-23.386837,-51.925767],[-23.385746,-51.926016],[-23.38591,-51.92639],[-23.388009,-51.928009],[-23.388414,-51.927601],[-23.387755,-51.926801],[-23.394469,-51.925487],[-23.394234,-51.925049],[-23.386857,-51.926435],[-23.38693,-51.926179],[-23.393953,-51.924636],[-23.393291,-51.924246],[-23.392872,-51.923011],[-23.391783,-51.922952],[-23.390228,-51.921376],[-23.388081,-51.919743],[-23.386897,-51.919633],[-23.386122,-51.918575],[-23.385588,-51.918699],[-23.384625,-51.919245]]},{"name":"","coords":[[-23.379864,-51.926977],[-23.38421,-51.925364],[-23.385824,-51.924811],[-23.385408,-51.923036],[-23.38294,-51.923789],[-23.378544,-51.925787],[-23.377733,-51.926705],[-23.377847,-51.927527],[-23.379864,-51.926977]]},{"name":"","coords":[[-23.423376,-51.978928],[-23.423776,-51.979445],[-23.424528,-51.978577],[-23.424151,-51.978241],[-23.423996,-51.978304],[-23.423376,-51.978928]]},{"name":"","coords":[[-23.418884,-51.970718],[-23.41974,-51.966436],[-23.418631,-51.961781],[-23.417896,-51.961852],[-23.418476,-51.963962],[-23.419033,-51.965738],[-23.418641,-51.967917],[-23.418341,-51.970457],[-23.417938,-51.970454],[-23.418884,-51.970718]]},{"name":"","coords":[[-23.4133,-51.928532],[-23.414049,-51.926021],[-23.414334,-51.926048],[-23.413995,-51.927253],[-23.414656,-51.927617],[-23.41526,-51.925593],[-23.4137,-51.924966],[-23.412519,-51.928347],[-23.4133,-51.928532]]},{"name":"","coords":[[-23.423079,-51.977238],[-23.423854,-51.976435],[-23.423625,-51.97608],[-23.422791,-51.976844],[-23.423079,-51.977238]]},{"name":"","coords":[[-23.465947,-51.941806],[-23.465929,-51.940805],[-23.46031,-51.94133],[-23.460186,-51.942253],[-23.465947,-51.941806]]},{"name":"","coords":[[-23.45995,-51.942149],[-23.460075,-51.940994],[-23.458751,-51.940625],[-23.458573,-51.942627],[-23.45995,-51.942149]]},{"name":"","coords":[[-23.44762,-51.937644],[-23.447619,-51.937824],[-23.44598,-51.938557],[-23.446214,-51.939073],[-23.447448,-51.938747],[-23.447767,-51.944811],[-23.448814,-51.951778],[-23.449478,-51.95168],[-23.449981,-51.948884],[-23.450224,-51.951788],[-23.449748,-51.952221],[-23.449957,-51.952865],[-23.450647,-51.952382],[-23.45034,-51.948245],[-23.449013,-51.948338],[-23.448816,-51.945717],[-23.449221,-51.94536],[-23.449104,-51.945103],[-23.448703,-51.944817],[-23.448285,-51.937444],[-23.44762,-51.937644]]},{"name":"","coords":[[-23.460176,-51.918059],[-23.460264,-51.917263],[-23.460918,-51.916921],[-23.460754,-51.916599],[-23.46022,-51.916737],[-23.460443,-51.914979],[-23.460111,-51.913089],[-23.459219,-51.911683],[-23.458135,-51.910622],[-23.457288,-51.909653],[-23.4554,-51.908254],[-23.455533,-51.907869],[-23.457243,-51.909101],[-23.457365,-51.908537],[-23.455748,-51.907447],[-23.4555,-51.907445],[-23.454639,-51.908672],[-23.452917,-51.913502],[-23.453378,-51.913723],[-23.455065,-51.908842],[-23.455206,-51.909087],[-23.453496,-51.913711],[-23.455172,-51.914814],[-23.455318,-51.914186],[-23.454149,-51.913497],[-23.455727,-51.909168],[-23.455951,-51.909272],[-23.454506,-51.913333],[-23.454813,-51.913476],[-23.45622,-51.909839],[-23.456492,-51.910046],[-23.455157,-51.913401],[-23.455452,-51.913596],[-23.45699,-51.909908],[-23.457178,-51.910102],[-23.45577,-51.913842],[-23.45662,-51.914336],[-23.456894,-51.914081],[-23.456222,-51.913614],[-23.456318,-51.913332],[-23.456897,-51.913722],[-23.457076,-51.91335],[-23.45651,-51.912923],[-23.456606,-51.912705],[-23.457527,-51.913354],[-23.457647,-51.912995],[-23.456715,-51.912321],[-23.456835,-51.912129],[-23.457755,-51.912752],[-23.457816,-51.912495],[-23.456943,-51.911821],[-23.457052,-51.911514],[-23.457984,-51.91215],[-23.458081,-51.911726],[-23.457172,-51.911155],[-23.457412,-51.910643],[-23.458768,-51.911705],[-23.458298,-51.913153],[-23.45851,-51.913322],[-23.459038,-51.91226],[-23.459728,-51.913715],[-23.45997,-51.914873],[-23.459448,-51.91704],[-23.458912,-51.917537],[-23.459656,-51.917927],[-23.460176,-51.918059]]},{"name":"","coords":[[-23.429952,-51.889739],[-23.430276,-51.889991],[-23.43093,-51.889681],[-23.430126,-51.889329],[-23.429952,-51.889739]]},{"name":"","coords":[[-23.429468,-51.890487],[-23.425928,-51.896318],[-23.42352,-51.894709],[-23.425997,-51.890489],[-23.424509,-51.889542],[-23.424053,-51.890566],[-23.424914,-51.891278],[-23.424852,-51.891753],[-23.423743,-51.891001],[-23.423061,-51.892151],[-23.424088,-51.892787],[-23.423812,-51.893402],[-23.422797,-51.892779],[-23.42202,-51.893993],[-23.422928,-51.894705],[-23.422843,-51.895],[-23.42558,-51.897137],[-23.423462,-51.900666],[-23.423909,-51.901183],[-23.43,-51.890721],[-23.42922,-51.890331],[-23.429468,-51.890487]]},{"name":"","coords":[[-23.419098,-51.889044],[-23.41587,-51.889998],[-23.416585,-51.893494],[-23.41812,-51.894352],[-23.417088,-51.896579],[-23.417654,-51.897071],[-23.417315,-51.898249],[-23.418457,-51.901646],[-23.418813,-51.901546],[-23.41838,-51.898565],[-23.421258,-51.900792],[-23.424741,-51.896656],[-23.422618,-51.895024],[-23.421435,-51.894683],[-23.424594,-51.889286],[-23.423224,-51.888455],[-23.422366,-51.889374],[-23.421652,-51.889959],[-23.420665,-51.888412],[-23.419597,-51.888688],[-23.418957,-51.88876],[-23.419098,-51.889044]]},{"name":"","coords":[[-23.412946,-51.89985],[-23.411789,-51.901306],[-23.412178,-51.90154],[-23.413074,-51.900275],[-23.413346,-51.900431],[-23.412546,-51.901439],[-23.412699,-51.901723],[-23.413557,-51.900792],[-23.413758,-51.900921],[-23.413052,-51.902021],[-23.413334,-51.902562],[-23.416937,-51.898221],[-23.416478,-51.89764],[-23.414008,-51.900628],[-23.41382,-51.900472],[-23.41611,-51.897728],[-23.415345,-51.896888],[-23.41303,-51.899697],[-23.412946,-51.89985]]},{"name":"","coords":[[-23.400173,-51.887788],[-23.401164,-51.888436],[-23.404957,-51.881953],[-23.404025,-51.881228],[-23.403799,-51.881406],[-23.400173,-51.887788]]},{"name":"","coords":[[-23.402205,-51.890856],[-23.401224,-51.890362],[-23.400688,-51.890975],[-23.400346,-51.890651],[-23.401777,-51.889005],[-23.40178,-51.888543],[-23.404879,-51.883044],[-23.404728,-51.882606],[-23.401532,-51.8884],[-23.401553,-51.888914],[-23.399944,-51.890572],[-23.398719,-51.891308],[-23.397986,-51.893087],[-23.398978,-51.893646],[-23.399241,-51.893288],[-23.398782,-51.892785],[-23.399131,-51.891901],[-23.399857,-51.891264],[-23.399031,-51.892709],[-23.399243,-51.892942],[-23.400236,-51.891292],[-23.401213,-51.892339],[-23.400758,-51.893196],[-23.401453,-51.893971],[-23.401955,-51.893152],[-23.402637,-51.894068],[-23.404359,-51.891282],[-23.40279,-51.890013],[-23.402205,-51.890856]]},{"name":"","coords":[[-23.389818,-51.944438],[-23.38996,-51.938624],[-23.392123,-51.939448],[-23.391627,-51.941023],[-23.392012,-51.942027],[-23.391805,-51.942963],[-23.392125,-51.942991],[-23.392629,-51.941942],[-23.393353,-51.939765],[-23.393671,-51.938034],[-23.392749,-51.937681],[-23.392197,-51.93891],[-23.392285,-51.938127],[-23.39193,-51.938009],[-23.391428,-51.938724],[-23.390033,-51.938317],[-23.390035,-51.937957],[-23.389632,-51.93798],[-23.389558,-51.938429],[-23.389131,-51.938426],[-23.388929,-51.936589],[-23.387969,-51.936646],[-23.38808,-51.937892],[-23.388696,-51.938012],[-23.388738,-51.938782],[-23.389627,-51.938789],[-23.389542,-51.939109],[-23.388274,-51.939228],[-23.388354,-51.939588],[-23.389563,-51.93952],[-23.389525,-51.939995],[-23.388114,-51.940177],[-23.388206,-51.940691],[-23.389485,-51.940662],[-23.389431,-51.941739],[-23.388151,-51.941923],[-23.388243,-51.942411],[-23.389333,-51.942278],[-23.389391,-51.944524],[-23.389818,-51.944438]]},{"name":"","coords":[[-23.416049,-51.942236],[-23.412709,-51.94211],[-23.413032,-51.943627],[-23.416087,-51.943854],[-23.416049,-51.942236]]},{"name":"","coords":[[-23.417541,-51.946329],[-23.416567,-51.946707],[-23.416419,-51.947733],[-23.4144,-51.94854],[-23.414771,-51.949852],[-23.418452,-51.948441],[-23.417541,-51.946329]]},{"name":"","coords":[[-23.39029,-51.894415],[-23.389971,-51.894227],[-23.388443,-51.896181],[-23.388571,-51.896612],[-23.39029,-51.894415]]},{"name":"","coords":[[-23.418306,-51.926962],[-23.418677,-51.925263],[-23.418475,-51.923401],[-23.418267,-51.923508],[-23.418394,-51.925159],[-23.418324,-51.925884],[-23.418034,-51.92687],[-23.418306,-51.926962]]},{"name":"","coords":[[-23.411398,-51.986183],[-23.411365,-51.985669],[-23.410718,-51.98492],[-23.411258,-51.983961],[-23.411046,-51.983754],[-23.410008,-51.984915],[-23.410984,-51.986013],[-23.410374,-51.986894],[-23.406816,-51.9838],[-23.406304,-51.984156],[-23.410381,-51.987729],[-23.411398,-51.986183]]}];
+const DATA_SPT = [{"name":"SP1","ponto":"P1 - Córrego Osório (Rua Guarino Basseto)","ensaio":"","lat":-23.3924316,"lng":-51.8973364,"status":"FEITO"},
+{"name":"SP2","ponto":"P1 - Córrego Osório (Rua Guarino Basseto)","ensaio":"","lat":-23.3923873,"lng":-51.8971698,"status":"FEITO"},
+{"name":"SP3","ponto":"P2 - Rua Califórnia","ensaio":"","lat":-23.4094407,"lng":-51.9652731,"status":"FEITO"},
+{"name":"SP4","ponto":"P2 - Rua Califórnia","ensaio":"","lat":-23.4094512,"lng":-51.9650481,"status":"FEITO"},
+{"name":"SP5","ponto":"P3 - Jusante do Parque Alfredo Nyffeler","ensaio":"","lat":-23.4091496,"lng":-51.9145759,"status":"FEITO"},
+{"name":"SP6","ponto":"P3 - Jusante do Parque Alfredo Nyffeler","ensaio":"","lat":-23.4090406,"lng":-51.914673,"status":"FEITO"},
+{"name":"SP7","ponto":"P4 - Av. Sofia Rasgulaeff","ensaio":"","lat":-23.3999222,"lng":-51.9062139,"status":"FEITO"},
+{"name":"SP8","ponto":"P4 - Av. Sofia Rasgulaeff","ensaio":"","lat":-23.3999472,"lng":-51.9065762,"status":"FEITO"},
+{"name":"SP9","ponto":"P5 - Av. das Palmeiras","ensaio":"","lat":-23.3842068,"lng":-51.9472623,"status":"FEITO"},
+{"name":"SP10","ponto":"P5 - Av. das Palmeiras","ensaio":"","lat":-23.3843316,"lng":-51.9475371,"status":"FEITO"},
+{"name":"SP11","ponto":"P6 - Av. Alziro Zarur","ensaio":"","lat":-23.3987662,"lng":-51.966507,"status":"FEITO"},
+{"name":"SP12","ponto":"P6 - Av. Alziro Zarur","ensaio":"","lat":-23.398756,"lng":-51.966604,"status":"FEITO"},
+{"name":"SM1","ponto":"P6 - Av. Alziro Zarur","ensaio":"","lat":-23.398747,"lng":-51.9666928,"status":"FEITO"},
+{"name":"SP13","ponto":"P7 - Av. Ranulfo Rodrigues da Mota","ensaio":"","lat":-23.3977301,"lng":-51.9424166,"status":"FEITO"},
+{"name":"SP14","ponto":"P7 - Av. Ranulfo Rodrigues da Mota","ensaio":"","lat":-23.3975568,"lng":-51.9426992,"status":"FEITO"},
+{"name":"SP15","ponto":"P8 - Ribeirão Bandeirantes do Sul","ensaio":"","lat":-23.4239092,"lng":-51.9828,"status":"FEITO"},
+{"name":"SP15B","ponto":"P8 - Ribeirão Bandeirantes do Sul","ensaio":"","lat":-23.423107,"lng":-51.982559,"status":"FEITO"},
+{"name":"SP16","ponto":"P8 - Ribeirão Bandeirantes do Sul","ensaio":"","lat":-23.4229974,"lng":-51.9841638,"status":"FEITO"},
+{"name":"SP17","ponto":"P8 - Ribeirão Bandeirantes do Sul","ensaio":"","lat":-23.4228298,"lng":-51.9835361,"status":"FEITO"},
+{"name":"SM3","ponto":"P8 - Ribeirão Bandeirantes do Sul","ensaio":"","lat":-23.4234421,"lng":-51.9838343,"status":"FEITO"},
+{"name":"SM4","ponto":"P8 - Ribeirão Bandeirantes do Sul","ensaio":"","lat":-23.422612,"lng":-51.9851201,"status":"FEITO"},
+{"name":"SP18","ponto":"P9 - Rua Rio Tocantins","ensaio":"","lat":-23.3953347,"lng":-51.8982465,"status":"FEITO"},
+{"name":"SP19","ponto":"P9 - Rua Rio Tocantins","ensaio":"","lat":-23.3953,"lng":-51.8980505,"status":"FEITO"},
+{"name":"SM5","ponto":"P9 - Rua Rio Tocantins","ensaio":"","lat":-23.3953987,"lng":-51.8981099,"status":"FEITO"},
+{"name":"SP20","ponto":"P10 - Rua Rio Paranapanema II","ensaio":"","lat":-23.408896,"lng":-51.906989,"status":"FEITO"},
+{"name":"SP21","ponto":"P10 - Rua Rio Paranapanema II","ensaio":"","lat":-23.409191,"lng":-51.907451,"status":"FEITO"},
+{"name":"SM6","ponto":"P10 - Rua Rio Paranapanema II","ensaio":"","lat":-23.409158,"lng":-51.906854,"status":"FEITO"},
+{"name":"SM7","ponto":"P10 - Rua Rio Paranapanema II","ensaio":"","lat":-23.408974,"lng":-51.907479,"status":"FEITO"},
+{"name":"SP22","ponto":"P11","ensaio":"SPT","lat":-23.411599,"lng":-51.949589,"status":"FEITO"},
+{"name":"SP23","ponto":"P11","ensaio":"SPT","lat":-23.411947,"lng":-51.949692,"status":"FEITO"},
+{"name":"SP24","ponto":"P12","ensaio":"SPT","lat":-23.412482,"lng":-51.966693,"status":"FEITO"},
+{"name":"SP25","ponto":"P12","ensaio":"SPT","lat":-23.413152,"lng":-51.967119,"status":"FEITO"},
+{"name":"SP26","ponto":"P13","ensaio":"SPT","lat":-23.397181,"lng":-51.937423,"status":"FEITO"},
+{"name":"SP27","ponto":"P13","ensaio":"SPT","lat":-23.397347,"lng":-51.937742,"status":"FEITO"},
+{"name":"SP28","ponto":"P15","ensaio":"SPT","lat":-23.410718,"lng":-51.899778,"status":"FEITO"},
+{"name":"SP29","ponto":"P15","ensaio":"SPT","lat":-23.410581,"lng":-51.899688,"status":"FEITO"},
+{"name":"SP30","ponto":"P16","ensaio":"SPT","lat":-23.39806,"lng":-51.899281,"status":"FEITO"},
+{"name":"SP31","ponto":"P16","ensaio":"SPT","lat":-23.398212,"lng":-51.899009,"status":"FEITO"},
+{"name":"SP32","ponto":"P17","ensaio":"SPT","lat":-23.448169,"lng":-51.93844,"status":"FEITO"},
+{"name":"SP33","ponto":"P17","ensaio":"SPT","lat":-23.448216,"lng":-51.938735,"status":"FEITO"},
+{"name":"SP34","ponto":"P18","ensaio":"SPT","lat":-23.374252,"lng":-51.930386,"status":"FEITO"},
+{"name":"SP35","ponto":"P18","ensaio":"SPT","lat":-23.37436,"lng":-51.930545,"status":"FEITO"},
+{"name":"SP36","ponto":"P19","ensaio":"SPT","lat":-23.373079,"lng":-51.929449,"status":"FEITO"},
+{"name":"SP37","ponto":"P19","ensaio":"SPT","lat":-23.373191,"lng":-51.929395,"status":"FEITO"},
+{"name":"SP38","ponto":"P20","ensaio":"SPT","lat":-23.408039,"lng":-51.965211,"status":"FEITO"},
+{"name":"SP39","ponto":"P20","ensaio":"SPT","lat":-23.408212,"lng":-51.965309,"status":"FEITO"},
+{"name":"SP40","ponto":"P21","ensaio":"SPT","lat":-23.441129,"lng":-51.945913,"status":"FEITO"},
+{"name":"SP41","ponto":"P21","ensaio":"SPT","lat":-23.441002,"lng":-51.94587,"status":"FEITO"},
+{"name":"SP42","ponto":"P23","ensaio":"SPT","lat":-23.412651,"lng":-51.995409,"status":"FEITO"},
+{"name":"SP43","ponto":"P23","ensaio":"SPT","lat":-23.412311,"lng":-51.995358,"status":"FEITO"},
+{"name":"SP45","ponto":"P24","ensaio":"SPT","lat":-23.404603,"lng":-51.948461,"status":"FEITO"},
+{"name":"SP46","ponto":"P25","ensaio":"SPT","lat":-23.454733,"lng":-51.971027,"status":"FEITO"},
+{"name":"SP47","ponto":"P25","ensaio":"SPT","lat":-23.455545,"lng":-51.970592,"status":"FEITO"},
+{"name":"SP48","ponto":"P26","ensaio":"SPT","lat":-23.434864,"lng":-51.924237,"status":"FEITO"},
+{"name":"SP49","ponto":"P26","ensaio":"SPT","lat":-23.435174,"lng":-51.924458,"status":"FEITO"}];
+const DATA_AI = [{"name":"AI1","ponto":"P3 - Jusante do Parque Alfredo Nyffeler","ensaio":"-Caract. Completa","lat":-23.4090858,"lng":-51.9146734,"status":"FEITO"},
+{"name":"AI2","ponto":"P4 - Av. Sofia Rasgulaeff","ensaio":"-Caract. Completa","lat":-23.3999491,"lng":-51.9062533,"status":"FEITO"},
+{"name":"AI3","ponto":"P6 - Av. Alziro Zarur","ensaio":"-Caract. Completa","lat":-23.3987382,"lng":-51.9666536,"status":"FEITO"},
+{"name":"AI4","ponto":"P7 - Av. Ranulfo Rodrigues da Mota","ensaio":"","lat":-23.3976208,"lng":-51.9425626,"status":"FEITO"},
+{"name":"AI5","ponto":"P8 - Ribeirão Bandeirantes do Sul","ensaio":"-Caract. Completa","lat":-23.4232926,"lng":-51.9831872,"status":"FEITO"},
+{"name":"AI6","ponto":"P8 - Ribeirão Bandeirantes do Sul","ensaio":"-Caract. Completa","lat":-23.4225383,"lng":-51.9839255,"status":"FEITO"},
+{"name":"AI7","ponto":"P9 - Rua Rio Tocantins","ensaio":"-Caract. Completa","lat":-23.395308,"lng":-51.8981778,"status":"FEITO"},
+{"name":"AI8","ponto":"P10 - Rua Rio Paranapanema II","ensaio":"-Caract. Completa","lat":-23.409049,"lng":-51.907079,"status":"FEITO"},
+{"name":"AI9","ponto":"P11","ensaio":"Caract. Completa","lat":-23.411782,"lng":-51.949407,"status":"FEITO"},
+{"name":"AI10","ponto":"P13","ensaio":"Caract. Completa","lat":-23.397191,"lng":-51.937486,"status":"FEITO"},
+{"name":"AI11","ponto":"P15","ensaio":"Caract. Completa","lat":-23.410681,"lng":-51.899745,"status":"FEITO"},
+{"name":"AI12","ponto":"P21","ensaio":"Caract. Completa","lat":-23.441111,"lng":-51.945833,"status":"FEITO"},
+{"name":"AI13","ponto":"P23","ensaio":"Caract. Completa","lat":-23.412479,"lng":-51.995439,"status":"FEITO"},
+{"name":"AI14","ponto":"P26","ensaio":"Caract. Completa","lat":-23.434904,"lng":-51.924172,"status":"FEITO"}];
+const DATA_SECFEITO = [{"name":"SEÇÃO 1A","cod":"IT01B01","numKmz":"S1","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.4183164,"lng":-51.9613617,"feito":true},
+{"name":"SEÇÃO 1B","cod":"","numKmz":"S3","bacia":"","micro":"","lat":-23.4180474,"lng":-51.9615139,"feito":true},
+{"name":"SEÇÃO 2A","cod":"IT02B01","numKmz":"S5","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.4123212,"lng":-51.9636096,"feito":true},
+{"name":"SEÇÃO 2B","cod":"","numKmz":"S6","bacia":"","micro":"","lat":-23.4122105,"lng":-51.9636723,"feito":true},
+{"name":"SEÇÃO 4A","cod":"IT04B01","numKmz":"S10","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.3991174,"lng":-51.9666201,"feito":true},
+{"name":"SEÇÃO 4B","cod":"","numKmz":"S11","bacia":"","micro":"","lat":-23.3988071,"lng":-51.9665463,"feito":true},
+{"name":"SEÇÃO 5A","cod":"IT05B01","numKmz":"S13","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.3936268,"lng":-51.9644351,"feito":true},
+{"name":"SEÇÃO 5B","cod":"","numKmz":"S14","bacia":"","micro":"","lat":-23.3934782,"lng":-51.9643317,"feito":true},
+{"name":"SEÇÃO 6A","cod":"IT06B01","numKmz":"S15","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.3874311,"lng":-51.9664874,"feito":true},
+{"name":"SEÇÃO 6B","cod":"","numKmz":"S17","bacia":"","micro":"","lat":-23.3869843,"lng":-51.9668144,"feito":true},
+{"name":"SEÇÃO 6C","cod":"","numKmz":"S19","bacia":"","micro":"","lat":-23.3868116,"lng":-51.9668456,"feito":true},
+{"name":"SEÇÃO 6D","cod":"","numKmz":"S21","bacia":"","micro":"","lat":-23.3873815,"lng":-51.9666113,"feito":true},
+{"name":"SEÇÃO 7A","cod":"IT07B01","numKmz":"S22","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.379088,"lng":-51.970847,"feito":true},
+{"name":"SEÇÃO 7B","cod":"","numKmz":"S24","bacia":"","micro":"","lat":-23.3789542,"lng":-51.9708004,"feito":true},
+{"name":"SEÇÃO 8A","cod":"IT08B01","numKmz":"S26","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.3745267,"lng":-51.9692827,"feito":true},
+{"name":"SEÇÃO 8B","cod":"","numKmz":"S27","bacia":"","micro":"","lat":-23.3744322,"lng":-51.969199,"feito":true},
+{"name":"SEÇÃO 10A","cod":"IT10B01","numKmz":"S31","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.4133965,"lng":-51.96717,"feito":true},
+{"name":"SEÇÃO 10B","cod":"","numKmz":"S32","bacia":"","micro":"","lat":-23.4132651,"lng":-51.9671466,"feito":true},
+{"name":"SEÇÃO 11A","cod":"IT11B01","numKmz":"S33","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.4115373,"lng":-51.9662842,"feito":true},
+{"name":"SEÇÃO 12A","cod":"IT12B01","numKmz":"S35","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.404262,"lng":-51.9724344,"feito":true},
+{"name":"SEÇÃO 12B","cod":"","numKmz":"S36","bacia":"","micro":"","lat":-23.4040625,"lng":-51.9723786,"feito":true},
+{"name":"SEÇÃO 13A","cod":"IT13B01","numKmz":"S38","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.3903539,"lng":-51.9806768,"feito":true},
+{"name":"SEÇÃO 13B","cod":"","numKmz":"S40","bacia":"","micro":"","lat":-23.3902696,"lng":-51.9805183,"feito":true},
+{"name":"SEÇÃO 1A","cod":"IT01B02","numKmz":"S41","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.4053194,"lng":-51.9486707,"feito":true},
+{"name":"SEÇÃO 1B","cod":"","numKmz":"S43","bacia":"","micro":"","lat":-23.4049128,"lng":-51.9487113,"feito":true},
+{"name":"SEÇÃO 2A","cod":"IT02B02","numKmz":"S45","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.4041884,"lng":-51.9486421,"feito":true},
+{"name":"SEÇÃO 2B","cod":"","numKmz":"S47","bacia":"","micro":"","lat":-23.4040583,"lng":-51.9486451,"feito":true},
+{"name":"SEÇÃO 3A","cod":"IT03B02","numKmz":"S49","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.3975404,"lng":-51.946676,"feito":true},
+{"name":"SEÇÃO 3B","cod":"","numKmz":"S50","bacia":"","micro":"","lat":-23.3972683,"lng":-51.946574,"feito":true},
+{"name":"SEÇÃO 4A","cod":"IT04B02","numKmz":"S52","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.3938709,"lng":-51.943634,"feito":true},
+{"name":"SEÇÃO 4B","cod":"","numKmz":"S53","bacia":"","micro":"","lat":-23.3937604,"lng":-51.9436031,"feito":true},
+{"name":"SEÇÃO 4C","cod":"","numKmz":"S54","bacia":"","micro":"","lat":-23.3937177,"lng":-51.9435877,"feito":true},
+{"name":"SEÇÃO 4D","cod":"","numKmz":"S56","bacia":"","micro":"","lat":-23.3936046,"lng":-51.9435718,"feito":true},
+{"name":"SEÇÃO 5A","cod":"IT05B02","numKmz":"S57","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.3895301,"lng":-51.9445669,"feito":true},
+{"name":"SEÇÃO 5B","cod":"","numKmz":"S59","bacia":"","micro":"","lat":-23.3893841,"lng":-51.9445635,"feito":true},
+{"name":"SEÇÃO 6A","cod":"IT06B02","numKmz":"S60","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.3845859,"lng":-51.9473106,"feito":true},
+{"name":"SEÇÃO 6B","cod":"","numKmz":"S61","bacia":"","micro":"","lat":-23.3842661,"lng":-51.9474002,"feito":true},
+{"name":"SEÇÃO 7A","cod":"IT07B02","numKmz":"S62","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.3799273,"lng":-51.9485098,"feito":true},
+{"name":"SEÇÃO 7B","cod":"","numKmz":"S64","bacia":"","micro":"","lat":-23.3793027,"lng":-51.9486509,"feito":true},
+{"name":"SEÇÃO 8A","cod":"IT08B02","numKmz":"S65","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.3968162,"lng":-51.9397156,"feito":true},
+{"name":"SEÇÃO 8B","cod":"","numKmz":"S66","bacia":"","micro":"","lat":-23.3967414,"lng":-51.9398807,"feito":true},
+{"name":"SEÇÃO 9A","cod":"IT09B02","numKmz":"S67","bacia":"Ribeirão Maringá","micro":"B02","lat":-23.3962733,"lng":-51.9420812,"feito":true},
+{"name":"SEÇÃO 9B","cod":"","numKmz":"S68","bacia":"","micro":"","lat":-23.3962069,"lng":-51.9423594,"feito":true},
+{"name":"SEÇÃO 1A","cod":"IT01B03","numKmz":"S69","bacia":"Ribeirão Maringá","micro":"B03","lat":-23.3788907,"lng":-51.9243122,"feito":true},
+{"name":"SEÇÃO 1B","cod":"","numKmz":"S70","bacia":"","micro":"","lat":-23.3787264,"lng":-51.9247074,"feito":true},
+{"name":"SEÇÃO 2A","cod":"IT02B03","numKmz":"S72","bacia":"Ribeirão Maringá","micro":"B03","lat":-23.3729704,"lng":-51.9297688,"feito":true},
+{"name":"SEÇÃO 2B","cod":"","numKmz":"S74","bacia":"","micro":"","lat":-23.3723449,"lng":-51.9289412,"feito":true},
+{"name":"SEÇÃO 1A","cod":"IT01B04","numKmz":"S75","bacia":"Ribeirão Morangueiro","micro":"B04","lat":-23.3817685,"lng":-51.9108461,"feito":true},
+{"name":"SEÇÃO 1B","cod":"","numKmz":"S77","bacia":"","micro":"","lat":-23.3814783,"lng":-51.9102192,"feito":true},
+{"name":"SEÇÃO 1A","cod":"IT01B05","numKmz":"S78","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.4069525,"lng":-51.9123006,"feito":true},
+{"name":"SEÇÃO 1B","cod":"","numKmz":"S79","bacia":"","micro":"","lat":-23.4067916,"lng":-51.9121478,"feito":true},
+{"name":"SEÇÃO 2A","cod":"IT02B05","numKmz":"S81","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.4050057,"lng":-51.9075027,"feito":true},
+{"name":"SEÇÃO 2B","cod":"","numKmz":"S83","bacia":"","micro":"","lat":-23.4047468,"lng":-51.9074821,"feito":true},
+{"name":"SEÇÃO 4A","cod":"IT04B05","numKmz":"S92","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.3941501,"lng":-51.9047551,"feito":true},
+{"name":"SEÇÃO 4B","cod":"","numKmz":"S94","bacia":"","micro":"","lat":-23.3939028,"lng":-51.9045017,"feito":true},
+{"name":"SEÇÃO 5A","cod":"IT05B05","numKmz":"S95","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.3906287,"lng":-51.9005844,"feito":true},
+{"name":"SEÇÃO 5B","cod":"","numKmz":"S96","bacia":"","micro":"","lat":-23.3905445,"lng":-51.9002462,"feito":true},
+{"name":"SEÇÃO 6A","cod":"IT06B05","numKmz":"S86","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.3891238,"lng":-51.8964176,"feito":true},
+{"name":"SEÇÃO 6B","cod":"","numKmz":"S87","bacia":"","micro":"","lat":-23.3890674,"lng":-51.8959895,"feito":true},
+{"name":"SEÇÃO 6C","cod":"","numKmz":"S89","bacia":"","micro":"","lat":-23.3888993,"lng":-51.8956274,"feito":true},
+{"name":"SEÇÃO 6D","cod":"","numKmz":"S91","bacia":"","micro":"","lat":-23.3887581,"lng":-51.8954455,"feito":true},
+{"name":"SEÇÃO 7A","cod":"IT07B05","numKmz":"S97","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.4111214,"lng":-51.9002123,"feito":true},
+{"name":"SEÇÃO 7B","cod":"","numKmz":"S99","bacia":"","micro":"","lat":-23.4107539,"lng":-51.900167,"feito":true},
+{"name":"SEÇÃO 8A","cod":"IT08B05","numKmz":"S100","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.4085152,"lng":-51.9002212,"feito":true},
+{"name":"SEÇÃO 8B","cod":"","numKmz":"S101","bacia":"","micro":"","lat":-23.4082299,"lng":-51.9003615,"feito":true},
+{"name":"SEÇÃO 9A","cod":"IT09B05","numKmz":"S103","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.4034603,"lng":-51.9000869,"feito":true},
+{"name":"SEÇÃO 9B","cod":"","numKmz":"S104","bacia":"","micro":"","lat":-23.4031871,"lng":-51.899969,"feito":true},
+{"name":"SEÇÃO 10A","cod":"IT10B05","numKmz":"S106","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.4009783,"lng":-51.8998875,"feito":true},
+{"name":"SEÇÃO 10B","cod":"","numKmz":"S108","bacia":"","micro":"","lat":-23.4003864,"lng":-51.8996741,"feito":true},
+{"name":"SEÇÃO 11A","cod":"IT11B05","numKmz":"S109","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.3984004,"lng":-51.8992817,"feito":true},
+{"name":"SEÇÃO 11B","cod":"","numKmz":"S111","bacia":"","micro":"","lat":-23.398229,"lng":-51.8991795,"feito":true},
+{"name":"SEÇÃO 12A","cod":"IT12B05","numKmz":"S112","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.3967744,"lng":-51.8988727,"feito":true},
+{"name":"SEÇÃO 12B","cod":"","numKmz":"S114","bacia":"","micro":"","lat":-23.3965433,"lng":-51.8986933,"feito":true},
+{"name":"SEÇÃO 13A","cod":"IT13B05","numKmz":"S116","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.3954745,"lng":-51.8982494,"feito":true},
+{"name":"SEÇÃO 13B","cod":"","numKmz":"S118","bacia":"","micro":"","lat":-23.3952904,"lng":-51.8982224,"feito":true},
+{"name":"SEÇÃO 15A","cod":"IT15B05","numKmz":"S123","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.399849,"lng":-51.8901311,"feito":true},
+{"name":"SEÇÃO 15B","cod":"","numKmz":"S125","bacia":"","micro":"","lat":-23.3996124,"lng":-51.8902985,"feito":true},
+{"name":"SEÇÃO 16A","cod":"IT16B05","numKmz":"S126","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.3954725,"lng":-51.8921781,"feito":true},
+{"name":"SEÇÃO 16B","cod":"","numKmz":"S127","bacia":"","micro":"","lat":-23.39521,"lng":-51.8922134,"feito":true},
+{"name":"SEÇÃO 17A","cod":"IT17B05","numKmz":"S128","bacia":"Rib. Morangueiro","micro":"B05","lat":-23.3907689,"lng":-51.8939409,"feito":true},
+{"name":"SEÇÃO 18A","cod":"IT18B05","numKmz":"S130","bacia":"Ribeirão Morangueiro","micro":"B05","lat":-23.3642846,"lng":-51.8824938,"feito":true},
+{"name":"SEÇÃO 18B","cod":"","numKmz":"S132","bacia":"","micro":"","lat":-23.3641872,"lng":-51.8823254,"feito":true},
+{"name":"SEÇÃO 1A","cod":"","numKmz":"S169","bacia":"Córrego Borba Gato","micro":"B07","lat":-23.4510683,"lng":-51.9705564,"feito":true},
+{"name":"SEÇÃO 1B","cod":"","numKmz":"S171","bacia":"","micro":"","lat":-23.451442,"lng":-51.9703909,"feito":true},
+{"name":"SEÇÃO 2A","cod":"","numKmz":"S173","bacia":"Córrego Borba Gato","micro":"B07","lat":-23.4549856,"lng":-51.9708462,"feito":true},
+{"name":"SEÇÃO 2B","cod":"","numKmz":"S175","bacia":"","micro":"","lat":-23.4551299,"lng":-51.9709414,"feito":true}];
+const DATA_SECPEND = [{"name":"SEÇÃO 9A","cod":"","numKmz":"S29","bacia":"Ribeirão Maringá","micro":"B01","lat":-23.4194197,"lng":-51.9681742,"feito":false},
+{"name":"SEÇÃO 9B","cod":"","numKmz":"S30","bacia":"","micro":"","lat":-23.4188302,"lng":-51.9681654,"feito":false},
+{"name":"SEÇÃO 1A","cod":"IT01B06","numKmz":"S133","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4320482,"lng":-51.9269668,"feito":false},
+{"name":"SEÇÃO 1B","cod":"","numKmz":"S135","bacia":"","micro":"","lat":-23.4323115,"lng":-51.9268417,"feito":false},
+{"name":"SEÇÃO 2A","cod":"IT02B06","numKmz":"S137","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4345812,"lng":-51.9248411,"feito":false},
+{"name":"SEÇÃO 2B","cod":"","numKmz":"S139","bacia":"","micro":"","lat":-23.4347208,"lng":-51.924723,"feito":false},
+{"name":"SEÇÃO 3A","cod":"IT03B06","numKmz":"S140","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4407134,"lng":-51.9205915,"feito":false},
+{"name":"SEÇÃO 3B","cod":"","numKmz":"S142","bacia":"","micro":"","lat":-23.4408769,"lng":-51.9206339,"feito":false},
+{"name":"SEÇÃO 4A","cod":"IT04B06","numKmz":"S143","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4426408,"lng":-51.9204481,"feito":false},
+{"name":"SEÇÃO 4B","cod":"","numKmz":"S145","bacia":"","micro":"","lat":-23.4428379,"lng":-51.9204761,"feito":false},
+{"name":"SEÇÃO 5A","cod":"IT05B06","numKmz":"S147","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4434676,"lng":-51.9204471,"feito":false},
+{"name":"SEÇÃO 5B","cod":"","numKmz":"S148","bacia":"","micro":"","lat":-23.4437589,"lng":-51.9205857,"feito":false},
+{"name":"SEÇÃO 6A","cod":"IT06B06","numKmz":"S149","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4511938,"lng":-51.9247793,"feito":false},
+{"name":"SEÇÃO 6B","cod":"","numKmz":"S151","bacia":"","micro":"","lat":-23.4514446,"lng":-51.9248955,"feito":false},
+{"name":"SEÇÃO 7A","cod":"","numKmz":"","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4544422,"lng":-51.9308175,"feito":false},
+{"name":"SEÇÃO 7B","cod":"","numKmz":"","bacia":"","micro":"","lat":-23.4547055,"lng":-51.931226,"feito":false},
+{"name":"SEÇÃO 8A","cod":"","numKmz":"","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4567327,"lng":-51.9325104,"feito":false},
+{"name":"SEÇÃO 8B","cod":"","numKmz":"","bacia":"","micro":"","lat":-23.4568189,"lng":-51.9326319,"feito":false},
+{"name":"SEÇÃO 9A","cod":"","numKmz":"","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4595466,"lng":-51.9329145,"feito":false},
+{"name":"SEÇÃO 9B","cod":"","numKmz":"","bacia":"","micro":"","lat":-23.4596903,"lng":-51.9329406,"feito":false},
+{"name":"SEÇÃO 10A","cod":"","numKmz":"","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4344769,"lng":-51.9421203,"feito":false},
+{"name":"SEÇÃO 10B","cod":"","numKmz":"","bacia":"","micro":"","lat":-23.4347486,"lng":-51.9423655,"feito":false},
+{"name":"SEÇÃO 11A","cod":"","numKmz":"","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4410399,"lng":-51.94543,"feito":false},
+{"name":"SEÇÃO 11B","cod":"","numKmz":"","bacia":"","micro":"","lat":-23.4410597,"lng":-51.9457724,"feito":false},
+{"name":"SEÇÃO 12A","cod":"","numKmz":"","bacia":"Córrego Cleópatra","micro":"B06","lat":-23.4478552,"lng":-51.9385452,"feito":false},
+{"name":"SEÇÃO 12B","cod":"","numKmz":"","bacia":"","micro":"","lat":-23.4481699,"lng":-51.938471,"feito":false},
+{"name":"SEÇÃO 3A","cod":"","numKmz":"S177","bacia":"Córrego Borba Gato","micro":"B07","lat":-23.4604496,"lng":-51.970405,"feito":false},
+{"name":"SEÇÃO 3B","cod":"","numKmz":"S179","bacia":"","micro":"","lat":-23.4606439,"lng":-51.9703289,"feito":false}];
+
+const PHASES=[
+  {id:'diagnostico',name:'Diagnóstico e Cadastro'},
+  {id:'topografia',name:'Levantamento Topográfico'},
+  {id:'hidrologico',name:'Estudo Hidrológico'},
+  {id:'plano',name:'Plano de Ação Climática'},
+  {id:'relatorio',name:'Relatório Final'},
+];
+const SCOL={concluido:'#1A9B6C',em_andamento:'#C87F00',nao_iniciado:'#6B7280',problema:'#DC2626'};
+const SLBL={concluido:'Concluído',em_andamento:'Em andamento',nao_iniciado:'Não iniciado',problema:'Problema'};
+const PHLBL={diagnostico:'Diagnóstico',topografia:'Topografia',hidrologico:'Hidrológico',plano:'Plano',relatorio:'Relatório'};
+
+/* ═══════════ STATE ═══════════ */
+let map, records=[], lgps={}, lvis={};
+let mode='view', currentPhotos=[];
+let searchTimer=null, searchBusy=false;
+let pendingImport=null, legendCollapsed=false;
+
+/* ═══════════ INIT ═══════════ */
+function init(){
+  try{const r=localStorage.getItem('iam007_v3');if(r)records=JSON.parse(r);}catch(e){}
+  initMap();renderStats();renderPhases();renderLayers();renderList();
+}
+function saveRecs(){try{localStorage.setItem('iam007_v3',JSON.stringify(records));}catch(e){}}
+
+/* ═══════════ MAP ═══════════ */
+function initMap(){
+  map=L.map('map',{center:[-23.425,-51.935],zoom:13});
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{
+    attribution:'Tiles &copy; <a href="https://www.esri.com/">Esri</a>, HERE, Garmin, USGS',
+    maxZoom:19
+  }).addTo(map);
+
+  Object.keys(LDEFS).forEach(k=>{lgps[k]=L.layerGroup().addTo(map);lvis[k]=true;});
+
+  addLider(); addPrio(); addSubbacias(); addHidro();
+  addSondSpt(); addSondAi(); addSecFeito(); addSecPend();
+  records.forEach(r=>addPinMkr(r));
+
+  map.on('click',e=>{
+    if(mode!=='pin')return;
+    openForm({lat:e.latlng.lat,lng:e.latlng.lng});
+  });
+}
+
+/* ─── Icons ─────────── */
+function mkDiamond(c){c=c||'#7C3AED';
+  return L.divIcon({html:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="10,1 19,10 10,19 1,10" fill="${c}" stroke="white" stroke-width="1.5"/><circle cx="10" cy="10" r="2.5" fill="white"/></svg>`,
+    className:'',iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-12]});}
+function mkPrioIcon(){
+  return L.divIcon({html:`<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"><polygon points="11,1 21,11 11,21 1,11" fill="#DC2626" stroke="white" stroke-width="1.5"/><circle cx="11" cy="11" r="3" fill="white"/></svg>`,
+    className:'',iconSize:[22,22],iconAnchor:[11,11],popupAnchor:[0,-13]});}
+function mkPinIcon(status){
+  const c=SCOL[status]||'#6B7280';
+  return L.divIcon({html:`<svg xmlns="http://www.w3.org/2000/svg" width="26" height="34" viewBox="0 0 26 34"><path d="M13 0C5.82 0 0 5.82 0 13C0 22.75 13 34 13 34S26 22.75 26 13C26 5.82 20.18 0 13 0Z" fill="${c}" stroke="white" stroke-width="1.5"/><circle cx="13" cy="13" r="5.5" fill="white"/></svg>`,
+    className:'',iconSize:[26,34],iconAnchor:[13,34],popupAnchor:[0,-36]});}
+
+/* ─── Add real layers ─────────── */
+function addLider(){
+  DATA_LIDER.forEach(p=>{
+    L.polygon(p.coords,{color:'#C87F00',weight:2.5,dashArray:'8,5',fillColor:'#C87F00',fillOpacity:0.10})
+     .bindPopup(`<b>Levantamento LIDER</b><br>${esc(p.name||'')}`)
+     .addTo(lgps['lider_areas']);
+  });
+}
+function addPrio(){
+  DATA_PRIO.forEach(p=>{
+    L.marker([p.lat,p.lng],{icon:mkPrioIcon()})
+     .bindPopup(`<b style="font-size:13px">${esc(p.name)}</b>${p.desc?'<br><span style="font-size:12px;color:#555">'+esc(p.desc)+'</span>':''}<br><span style="font-size:11px;color:#DC2626;font-weight:600">Prioridade Erosão</span>`)
+     .addTo(lgps['prio_erosao']);
+  });
+}
+function addSubbacias(){
+  DATA_SUB.forEach(p=>{
+    L.polygon(p.coords,{color:'#0E7490',weight:1.5,fillColor:'#0E7490',fillOpacity:0.07})
+     .bindPopup(`<b>${esc(p.name||'Subbacia')}</b><br>Subbacia hidrográfica IAM`)
+     .addTo(lgps['subbacias']);
+  });
+}
+function addHidro(){
+  DATA_HIDRO.forEach(ln=>{
+    L.polyline(ln.coords,{color:'#2563EB',weight:2.5,opacity:.75})
+     .bindPopup(`<b>Hidrografia</b>${ln.name?'<br>'+esc(ln.name):''}`)
+     .addTo(lgps['hidrografia']);
+  });
+}
+function addAreasPrio(){
+  DATA_AREASPRIO.forEach(p=>{
+    L.polygon(p.coords,{color:'#F97316',weight:2,dashArray:'6,4',fillColor:'#F97316',fillOpacity:0.18})
+     .bindPopup(`<b>Área Prioritária — Microdrenagem</b>${p.name?'<br><span style="font-size:12px;color:#555">'+esc(p.name)+'</span>':''}<br><span style="font-size:11px;color:#F97316;font-weight:600">Meta 03 — Área de contribuição prioritária</span>`)
+     .addTo(lgps['areas_prio']);
+  });
+}
+function mkSptIcon(isSM){
+  const c=isSM?'#7C3AED':'#1D4ED8';
+  return L.divIcon({html:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="9" fill="${c}" stroke="white" stroke-width="1.5"/><line x1="10" y1="3" x2="10" y2="17" stroke="white" stroke-width="2"/><line x1="3" y1="10" x2="17" y2="10" stroke="white" stroke-width="2"/></svg>`,
+    className:'',iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-12]});}
+function mkAiIcon(){
+  return L.divIcon({html:`<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><rect x="1" y="1" width="16" height="16" rx="3" fill="#D97706" stroke="white" stroke-width="1.5"/><text x="9" y="13" text-anchor="middle" fill="white" font-size="9" font-weight="bold">AI</text></svg>`,
+    className:'',iconSize:[18,18],iconAnchor:[9,9],popupAnchor:[0,-11]});}
+function mkSecFeitoIcon(){
+  return L.divIcon({html:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="10,1 19,10 10,19 1,10" fill="#059669" stroke="white" stroke-width="1.5"/><circle cx="10" cy="10" r="2.5" fill="white"/></svg>`,
+    className:'',iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-12]});}
+function mkSecPendIcon(){
+  return L.divIcon({html:`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="10,1 19,10 10,19 1,10" fill="white" stroke="#9CA3AF" stroke-width="2"/><circle cx="10" cy="10" r="2.5" fill="#9CA3AF"/></svg>`,
+    className:'',iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-12]});}
+function addSondSpt(){
+  DATA_SPT.forEach(p=>{
+    const isSM=p.name.startsWith('SM');
+    L.marker([p.lat,p.lng],{icon:mkSptIcon(isSM)})
+     .bindPopup(`<b>${esc(p.name)}</b><br><span style="font-size:11px;color:#1D4ED8;font-weight:600">${isSM?'Presssiômetro Ménard':'Sondagem SPT'}</span><br><span style="font-size:11px;color:#555">${esc(p.ponto)}</span>${p.ensaio?'<br><span style="font-size:11px">'+esc(p.ensaio)+'</span>':''}<br><span style="font-size:11px;color:#059669;font-weight:600">✓ ${esc(p.status)}</span>`)
+     .addTo(lgps['sond_spt']);
+  });
+}
+function addSondAi(){
+  DATA_AI.forEach(p=>{
+    L.marker([p.lat,p.lng],{icon:mkAiIcon()})
+     .bindPopup(`<b>${esc(p.name)}</b><br><span style="font-size:11px;color:#D97706;font-weight:600">Caracterização de Solo</span><br><span style="font-size:11px;color:#555">${esc(p.ponto)}</span>${p.ensaio?'<br><span style="font-size:11px">'+esc(p.ensaio)+'</span>':''}<br><span style="font-size:11px;color:#059669;font-weight:600">✓ ${esc(p.status)}</span>`)
+     .addTo(lgps['sond_ai']);
+  });
+}
+function addSecFeito(){
+  DATA_SECFEITO.forEach(p=>{
+    L.marker([p.lat,p.lng],{icon:mkSecFeitoIcon()})
+     .bindPopup(`<b>${esc(p.name)}</b>${p.cod?'<br><span style="font-size:11px;color:#555">'+esc(p.cod)+'</span>':''}<br><span style="font-size:11px;color:#555">${esc(p.bacia)}${p.micro?' — '+esc(p.micro):''}</span><br><span style="font-size:11px;color:#059669;font-weight:600">✓ Topografia Concluída</span>`)
+     .addTo(lgps['sec_feito']);
+  });
+}
+function addSecPend(){
+  DATA_SECPEND.forEach(p=>{
+    L.marker([p.lat,p.lng],{icon:mkSecPendIcon()})
+     .bindPopup(`<b>${esc(p.name)}</b>${p.cod?'<br><span style="font-size:11px;color:#555">'+esc(p.cod)+'</span>':''}<br><span style="font-size:11px;color:#555">${esc(p.bacia)}${p.micro?' — '+esc(p.micro):''}</span><br><span style="font-size:11px;color:#DC2626;font-weight:600">⏳ Topografia Pendente</span>`)
+     .addTo(lgps['sec_pend']);
+  });
+}
+function addPinMkr(r){
+  if(!r.lat||!r.lng)return;
+  const m=L.marker([r.lat,r.lng],{icon:mkPinIcon(r.status)})
+    .bindPopup(`<div style="min-width:170px"><b style="font-size:14px">${esc(r.rua)}</b>
+      <div style="margin-top:5px"><span style="background:${SCOL[r.status]};color:#fff;border-radius:4px;padding:2px 8px;font-size:11px">${SLBL[r.status]}</span></div>
+      <div style="font-size:12px;color:#374151;margin-top:5px">${esc(r.ativ||'')} · ${PHLBL[r.fase]||''}</div>
+      <div style="font-size:12px;color:#6B7280;margin-top:3px">👷 ${esc(r.tec)} · ${r.data||''}</div>
+      ${r.obs?`<div style="font-size:12px;color:#374151;margin-top:4px;font-style:italic">${esc(r.obs)}</div>`:''}
+      <button onclick="openForm('${r.id}')" style="margin-top:8px;width:100%;padding:5px;background:#1A9B6C;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:12px">Editar</button>
+    </div>`)
+    .addTo(lgps['campo']);
+  r._mkr=m;
+}
+
+/* ═══════════ LAYER TOGGLES ═══════════ */
+function renderLayers(){
+  const m01=['lider_areas','prio_erosao','sond_spt','sond_ai'];
+  const m03=['areas_prio','sec_feito','sec_pend'];
+  const base=['subbacias','hidrografia'];
+  document.getElementById('layersM01El').innerHTML=buildLRows(m01);
+  document.getElementById('layersM03El').innerHTML=buildLRows(m03);
+  document.getElementById('layersBaseEl').innerHTML=buildLRows(base);
+  document.getElementById('layersCampoEl').innerHTML=buildLRows(['campo']);
+}
+function buildLRows(keys){
+  return keys.map(k=>{
+    const d=LDEFS[k],sw=buildSw(k,d),cnt=lcount(k);
+    return `<div class="layer-row" onclick="toggleLayer('${k}')">
+      <input type="checkbox" id="chk_${k}" checked onclick="event.stopPropagation()" onchange="toggleLayer('${k}')">
+      <div style="width:16px;height:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0">${sw}</div>
+      <span class="llabel">${d.label}</span>
+      <span class="lcount">${cnt}</span>
+    </div>`;
+  }).join('');
+}
+function buildSw(k,d){
+  if(k==='lider_areas')return`<svg width="14" height="14"><rect x="1" y="1" width="12" height="12" fill="rgba(200,127,0,.2)" stroke="${d.color}" stroke-width="2" stroke-dasharray="3,2"/></svg>`;
+  if(k==='prio_erosao')return`<svg width="14" height="14"><polygon points="7,1 13,7 7,13 1,7" fill="${d.color}" stroke="white" stroke-width="1"/><circle cx="7" cy="7" r="2" fill="white"/></svg>`;  if(k==='areas_prio')return`<svg width="14" height="14"><polygon points="7,1 13,7 7,13 1,7" fill="rgba(249,115,22,.25)" stroke="#F97316" stroke-width="2" stroke-dasharray="3,2"/></svg>`;
+  if(k==='sond_spt')return`<svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="${d.color}" stroke="white" stroke-width="1.5"/><line x1="7" y1="2" x2="7" y2="12" stroke="white" stroke-width="1.5"/></svg>`;
+  if(k==='sond_ai')return`<svg width="14" height="14"><rect x="1" y="1" width="12" height="12" rx="2" fill="${d.color}" stroke="white" stroke-width="1.5"/></svg>`;
+  if(k==='sec_feito')return`<svg width="14" height="14"><polygon points="7,1 13,7 7,13 1,7" fill="${d.color}" stroke="white" stroke-width="1.2"/></svg>`;
+  if(k==='sec_pend') return`<svg width="14" height="14"><polygon points="7,1 13,7 7,13 1,7" fill="none" stroke="${d.color}" stroke-width="2"/></svg>`;
+  if(k==='subbacias')return`<svg width="14" height="14"><rect x="1" y="1" width="12" height="12" fill="rgba(14,116,144,.12)" stroke="${d.color}" stroke-width="2"/></svg>`;
+  if(k==='hidrografia')return`<svg width="14" height="5"><line x1="0" y1="2.5" x2="14" y2="2.5" stroke="${d.color}" stroke-width="2.5"/></svg>`;
+  return`<svg width="10" height="14"><path d="M5 0C2.24 0 0 2.24 0 5C0 8.75 5 14 5 14S10 8.75 10 5C10 2.24 7.76 0 5 0Z" fill="#1A9B6C"/></svg>`;
+}
+function lcount(k){
+  if(k==='lider_areas') return DATA_LIDER.length;
+  if(k==='prio_erosao') return DATA_PRIO.length;
+  if(k==='subbacias')   return DATA_SUB.length;
+  if(k==='hidrografia') return DATA_HIDRO.length;
+  if(k==='sond_spt')    return DATA_SPT.length;
+  if(k==='sond_ai')     return DATA_AI.length;
+  if(k==='areas_prio')  return DATA_AREASPRIO.length;
+  if(k==='sec_feito')   return DATA_SECFEITO.length;
+  if(k==='sec_pend')    return DATA_SECPEND.length;
+  return records.filter(r=>r.lat).length;
+}
+function toggleLayer(k){
+  lvis[k]=!lvis[k];
+  const c=document.getElementById('chk_'+k);if(c)c.checked=lvis[k];
+  lvis[k]?map.addLayer(lgps[k]):map.removeLayer(lgps[k]);
+}
+
+/* ═══════════ STATS & PHASES ═══════════ */
+function renderStats(){
+  const total=records.length,done=records.filter(r=>r.status==='concluido').length;
+  document.getElementById('statsEl').innerHTML=`
+    <div class="scard"><div class="v" style="color:var(--amber)">${DATA_LIDER.length}</div><div class="l">Áreas LIDER</div></div>
+    <div class="scard"><div class="v" style="color:var(--red)">${DATA_PRIO.length}<span style="font-size:11px;color:var(--text-muted)">/${PRIO_TOTAL}</span></div><div class="l">Erosão (mapeados)</div></div>
+    <div class="scard"><div class="v" style="color:#1D4ED8">${DATA_SPT.length+DATA_AI.length}</div><div class="l">Sondagens</div></div>
+    <div class="scard"><div class="v" style="color:#059669">${DATA_SECFEITO.length}/${DATA_SECFEITO.length+DATA_SECPEND.length}</div><div class="l">Seções (concl.)</div></div>`;
+}
+function renderPhases(){
+  document.getElementById('phaseEl').innerHTML=PHASES.map(p=>{
+    const pr=records.filter(r=>r.fase===p.id),d=pr.filter(r=>r.status==='concluido').length;
+    const pct=pr.length?Math.round(d/pr.length*100):0;
+    return`<div class="prow"><span class="pname">${p.name}</span><div class="pbar"><div class="pfill" style="width:${pct}%"></div></div><span class="ppct">${pct}%</span></div>`;
+  }).join('');
+}
+
+/* ═══════════ RECORD LIST ═══════════ */
+function renderList(){
+  const el=document.getElementById('recList');
+  el.innerHTML=records.map(r=>`<div class="reccard" onclick="flyTo('${r.id}')"><div class="rectop"><div class="recdot" style="background:${SCOL[r.status]||'#6B7280'}"></div><span class="recaddr">${esc(r.rua||'Sem endereço')}</span><span class="recphase">${PHLBL[r.fase]||r.fase}</span></div><div class="recmeta">${esc(r.tec||'')}${r.data?' · '+r.data:''}${r.bairro?' · '+esc(r.bairro):''}</div></div>`).join('');
+}
+function flyTo(id){const r=records.find(x=>x.id===id);if(!r||!r.lat)return;map.flyTo([r.lat,r.lng],16,{duration:.7});setTimeout(()=>r._mkr&&r._mkr.openPopup(),800);}
+
+/* ═══════════ SEARCH ═══════════ */
+function onSearchInput(){
+  clearTimeout(searchTimer);
+  const q=document.getElementById('sinp').value.trim();
+  if(q.length<3){document.getElementById('sres').style.display='none';return;}
+  searchTimer=setTimeout(doSearch,450);
+}
+async function doSearch(){
+  if(searchBusy)return;
+  const q=document.getElementById('sinp').value.trim();if(!q)return;
+  searchBusy=true;document.getElementById('sspin').style.display='block';
+  try{
+    const r=await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q+', Maringá, Paraná, Brasil')}&format=json&limit=5&countrycodes=br`,{headers:{'Accept-Language':'pt-BR'}});
+    const d=await r.json();showSRes(d);
+  }catch(e){toast('Erro na busca');}
+  finally{searchBusy=false;document.getElementById('sspin').style.display='none';}
+}
+function showSRes(data){
+  const el=document.getElementById('sres');
+  if(!data.length){el.innerHTML='<div class="sresitem" style="color:var(--text-muted)">Nenhum resultado</div>';el.style.display='block';return;}
+  el.innerHTML=data.map(r=>`<div class="sresitem" onclick="goToRes(${r.lat},${r.lon},'${esc(r.display_name.split(',')[0])}')">${esc(r.display_name.split(',').slice(0,3).join(', '))}</div>`).join('');
+  el.style.display='block';
+}
+function goToRes(lat,lng,name){map.setView([lat,lng],16);document.getElementById('sres').style.display='none';document.getElementById('sinp').value=name;}
+document.addEventListener('click',e=>{if(!e.target.closest('.sbox'))document.getElementById('sres').style.display='none';});
+
+/* ═══════════ MODE ═══════════ */
+function setMode(m){
+  mode=m;
+  document.getElementById('mbview').classList.toggle('on',m==='view');
+  document.getElementById('mbpin').classList.toggle('on',m==='pin');
+  map.getContainer().style.cursor=m==='pin'?'crosshair':'';
+}
+
+/* ═══════════ RECORD FORM ═══════════ */
+function openForm(arg){
+  let rec=null;
+  if(typeof arg==='string')rec=records.find(r=>r.id===arg);
+  else if(arg&&arg.lat)rec=arg;
+  document.getElementById('formTitle').textContent=rec&&rec.id?'Editar registro':'Novo registro';
+  document.getElementById('fId').value=rec&&rec.id?rec.id:'';
+  document.getElementById('fLat').value=rec?rec.lat||'':'';
+  document.getElementById('fLng').value=rec?rec.lng||'':'';
+  document.getElementById('fRua').value=rec?rec.rua||'':'';
+  document.getElementById('fBairro').value=rec?rec.bairro||'':'';
+  document.getElementById('fFase').value=rec?rec.fase||'diagnostico':'diagnostico';
+  document.getElementById('fStatus').value=rec?rec.status||'nao_iniciado':'nao_iniciado';
+  document.getElementById('fAtiv').value=rec?rec.ativ||'':'';
+  document.getElementById('fTec').value=rec?rec.tec||'':'';
+  document.getElementById('fData').value=rec?rec.data||today():today();
+  document.getElementById('fObs').value=rec?rec.obs||'':'';
+  renderPStrip(rec?rec.fotos||[]:[]);
+  document.getElementById('delBtn').style.display=rec&&rec.id?'block':'none';
+  document.getElementById('formOverlay').classList.add('open');
+  setMode('view');
+}
+function closeForm(){document.getElementById('formOverlay').classList.remove('open');}
+function today(){return new Date().toISOString().split('T')[0];}
+
+function saveRec(){
+  const id=document.getElementById('fId').value||('r'+Date.now());
+  const lat=parseFloat(document.getElementById('fLat').value);
+  const lng=parseFloat(document.getElementById('fLng').value);
+  const rec={id,lat:isNaN(lat)?null:lat,lng:isNaN(lng)?null:lng,
+    rua:document.getElementById('fRua').value.trim(),
+    bairro:document.getElementById('fBairro').value.trim(),
+    fase:document.getElementById('fFase').value,
+    status:document.getElementById('fStatus').value,
+    ativ:document.getElementById('fAtiv').value.trim(),
+    tec:document.getElementById('fTec').value.trim(),
+    data:document.getElementById('fData').value,
+    obs:document.getElementById('fObs').value.trim(),
+    fotos:currentPhotos};
+  const idx=records.findIndex(r=>r.id===id);
+  if(idx>=0){if(records[idx]._mkr)lgps['campo'].removeLayer(records[idx]._mkr);records[idx]=rec;}
+  else records.push(rec);
+  if(rec.lat&&rec.lng)addPinMkr(rec);
+  saveRecs();renderStats();renderPhases();renderLayers();renderList();
+  closeForm();toast('Registro salvo ✓');
+}
+function deleteRec(){
+  const id=document.getElementById('fId').value;if(!id)return;
+  if(!confirm('Excluir este registro?'))return;
+  const idx=records.findIndex(r=>r.id===id);
+  if(idx>=0){if(records[idx]._mkr)lgps['campo'].removeLayer(records[idx]._mkr);records.splice(idx,1);}
+  saveRecs();renderStats();renderPhases();renderLayers();renderList();closeForm();toast('Excluído');
+}
+
+/* photos */
+function renderPStrip(fotos){
+  currentPhotos=[...fotos];
+  const el=document.getElementById('pstrip');
+  el.innerHTML=currentPhotos.map((f,i)=>`<img class="pthumb" src="${f}" title="Clique para remover" onclick="rmPhoto(${i})">`).join('')
+    +(currentPhotos.length<5?`<div class="padd" onclick="document.getElementById('photoInp').click()">+</div>`:'');
+}
+function addPhotos(inp){
+  Array.from(inp.files).slice(0,5-currentPhotos.length).forEach(f=>{
+    const rd=new FileReader();rd.onload=e=>{currentPhotos.push(e.target.result);renderPStrip(currentPhotos);};rd.readAsDataURL(f);
+  });inp.value='';
+}
+function rmPhoto(i){currentPhotos.splice(i,1);renderPStrip(currentPhotos);}
+
+/* ═══════════ IMPORT ═══════════ */
+function openImport(){document.getElementById('importOverlay').classList.add('open');}
+function closeImport(){document.getElementById('importOverlay').classList.remove('open');document.getElementById('iresult').innerHTML='';document.getElementById('ilayerrow').style.display='none';document.getElementById('iconfirm').style.display='none';pendingImport=null;}
+function handleDrop(e){e.preventDefault();document.getElementById('izone').classList.remove('drag');const f=e.dataTransfer.files[0];if(f)procFile(f);}
+function handleIFile(inp){const f=inp.files[0];if(f)procFile(f);inp.value='';}
+function procFile(file){
+  const ext=file.name.split('.').pop().toLowerCase();
+  const rd=new FileReader();
+  rd.onload=e=>{
+    try{
+      if(ext==='csv'){const rows=parseCSV(e.target.result);pendingImport={type:'csv',rows};document.getElementById('iresult').innerHTML=`<span style="color:var(--green)">✓ ${rows.length} linhas encontradas.</span>`;}
+      else if(ext==='geojson'||ext==='json'){const gj=JSON.parse(e.target.result);pendingImport={type:'geojson',gj};document.getElementById('iresult').innerHTML=`<span style="color:var(--green)">✓ GeoJSON com ${gj.features?.length||0} feições.</span>`;}
+      else{document.getElementById('iresult').innerHTML='<span style="color:var(--red)">Formato não suportado.</span>';return;}
+      document.getElementById('ilayerrow').style.display='block';document.getElementById('iconfirm').style.display='inline-flex';
+    }catch(err){document.getElementById('iresult').innerHTML=`<span style="color:var(--red)">Erro: ${err.message}</span>`;}
+  };rd.readAsText(file);
+}
+function parseCSV(text){
+  const lines=text.trim().split('\n');if(!lines.length)return[];
+  const hdrs=lines[0].split(',').map(h=>h.trim().toLowerCase().replace(/"/g,''));
+  return lines.slice(1).map(line=>{const vals=line.split(',').map(v=>v.trim().replace(/"/g,''));const o={};hdrs.forEach((h,i)=>o[h]=vals[i]||'');return o;}).filter(r=>r.lat&&r.lng);
+}
+function confirmImport(){
+  if(!pendingImport)return;const tgt=document.getElementById('ilayer').value;let cnt=0;
+  const rows=pendingImport.type==='csv'?pendingImport.rows:(pendingImport.gj.features||[]).map(f=>{
+    if(!f.geometry||f.geometry.type!=='Point')return null;
+    const[lng,lat]=f.geometry.coordinates;return{lat:lat+'',lng:lng+'',name:(f.properties?.name||f.properties?.nome||'')}; 
+  }).filter(Boolean);
+  rows.forEach(row=>{
+    const lat=parseFloat(row.lat||row.latitude),lng=parseFloat(row.lng||row.longitude||row.lon);if(isNaN(lat)||isNaN(lng))return;
+    const name=row.name||row.nome||'Importado';
+    if(tgt==='campo'){const r={id:'i'+Date.now()+Math.random(),lat,lng,rua:name,bairro:'',fase:'diagnostico',ativ:'Importado',status:'nao_iniciado',tec:'',data:today(),obs:'',fotos:[]};records.push(r);addPinMkr(r);}
+    else{L.marker([lat,lng],{icon:mkPrioIcon()}).bindPopup(`<b>${esc(name)}</b>`).addTo(lgps[tgt]);}
+    cnt++;
+  });
+  saveRecs();renderStats();renderPhases();renderLayers();renderList();toast(`${cnt} item(ns) importado(s) ✓`);closeImport();
+}
+
+/* ═══════════ EXPORT ═══════════ */
+function exportCSV(){
+  const rows=[['id','lat','lng','rua','bairro','fase','status','atividade','tecnico','data','obs'],...records.map(r=>[r.id,r.lat,r.lng,r.rua,r.bairro,r.fase,r.status,r.ativ,r.tec,r.data,r.obs])];
+  const csv=rows.map(r=>r.map(v=>`"${String(v||'').replace(/"/g,'""')}"`).join(',')).join('\n');
+  navigator.clipboard.writeText(csv).then(()=>toast('CSV copiado para a área de transferência ✓')).catch(()=>toast('Erro ao copiar CSV'));
+}
+
+/* ═══════════ LEGEND / THEME ═══════════ */
+function toggleLegend(){legendCollapsed=!legendCollapsed;document.getElementById('flegbody').style.display=legendCollapsed?'none':'';document.getElementById('flegtoggle').textContent=legendCollapsed?'▼':'▲';}
+function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');}
+
+/* ═══════════ UTILS ═══════════ */
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+let toastTm;
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastTm);toastTm=setTimeout(()=>el.classList.remove('show'),3000);}
+
+document.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>
